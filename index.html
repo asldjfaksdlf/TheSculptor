@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Sculptor — Build Your Plan</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Helvetica+Neue:wght@200;300;400&family=Montserrat:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+<style>
+
+/* ── RESET & ROOT ─────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:        #080808;
+  --surface:   #0f0f0f;
+  --border:    rgba(255,255,255,0.07);
+  --border-hi: rgba(255,255,255,0.18);
+  --silver:    #C8C8C8;
+  --silver-lo: rgba(200,200,200,0.45);
+  --silver-hi: #E8E8E8;
+  --white:     #F4F4F4;
+  --accent:    #A0A0A0;
+  --selected:  rgba(200,200,200,0.10);
+  --sel-border:rgba(200,200,200,0.55);
+  --danger:    #8B3A3A;
+}
+
+html, body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--silver);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  overflow: hidden;
+}
+
+/* ── GRAIN OVERLAY ───────────────────────────── */
+body::before {
+  content: '';
+  position: fixed; inset: 0; z-index: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+/* ── WORDMARK ────────────────────────────────── */
+#wordmark {
+  position: fixed;
+  top: 32px; left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: 13px;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: var(--silver-lo);
+  white-space: nowrap;
+  transition: opacity 0.4s;
+}
+
+/* ── PROGRESS BAR ────────────────────────────── */
+#progress-bar {
+  position: fixed;
+  bottom: 0; left: 0;
+  height: 1px;
+  background: var(--silver-lo);
+  width: 0%;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 100;
+}
+
+#progress-label {
+  position: fixed;
+  bottom: 16px; right: 32px;
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(200,200,200,0.2);
+  z-index: 100;
+  font-weight: 400;
+}
+
+/* ── SCREEN SHELL ────────────────────────────── */
+#screen {
+  position: fixed; inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  padding: 80px 24px 80px;
+}
+
+/* ── QUESTION CARD ───────────────────────────── */
+.q-card {
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+
+  opacity: 0;
+  transform: translateY(24px);
+  animation: slideIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes slideIn {
+  to { opacity: 1; transform: none; }
+}
+
+.q-card.exiting {
+  animation: slideOut 0.3s cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
+@keyframes slideOut {
+  to { opacity: 0; transform: translateY(-18px); }
+}
+
+/* ── STEP LABEL ──────────────────────────────── */
+.q-step {
+  font-size: 9px;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: rgba(200,200,200,0.22);
+  margin-bottom: 28px;
+  font-weight: 400;
+}
+
+/* ── QUESTION TEXT ───────────────────────────── */
+.q-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(24px, 5vw, 38px);
+  font-weight: 300;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.q-sub {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(200,200,200,0.3);
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+
+/* ── OPTIONS ─────────────────────────────────── */
+.options {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.options.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.opt {
+  width: 100%;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--silver);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 16px 24px;
+  cursor: pointer;
+  text-align: center;
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    color 0.18s ease,
+    transform 0.12s ease;
+  -webkit-appearance: none;
+  border-radius: 0;
+  position: relative;
+}
+
+.opt:hover {
+  border-color: var(--border-hi);
+  color: var(--silver-hi);
+  transform: translateY(-1px);
+}
+
+.opt.selected {
+  background: var(--selected);
+  border-color: var(--sel-border);
+  color: var(--white);
+}
+
+.opt.selected::after {
+  content: '';
+  position: absolute;
+  top: 50%; right: 18px;
+  transform: translateY(-50%);
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--silver-hi);
+}
+
+/* ── INPUT FIELDS ────────────────────────────── */
+.input-row {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.field-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  max-width: 200px;
+}
+
+.field-label {
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(200,200,200,0.3);
+  font-weight: 400;
+}
+
+.field-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border-hi);
+  color: var(--white);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  font-size: 28px;
+  letter-spacing: 0.04em;
+  width: 100%;
+  padding: 8px 0 10px;
+  text-align: center;
+  outline: none;
+  -webkit-appearance: none;
+  transition: border-color 0.2s;
+}
+
+.field-input:focus {
+  border-bottom-color: var(--silver);
+}
+
+.field-input::placeholder {
+  color: rgba(200,200,200,0.15);
+  font-size: 22px;
+}
+
+/* hide number arrows */
+.field-input::-webkit-outer-spin-button,
+.field-input::-webkit-inner-spin-button { -webkit-appearance: none; }
+.field-input[type=number] { -moz-appearance: textfield; }
+
+.field-unit {
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(200,200,200,0.25);
+  text-align: center;
+  margin-top: 4px;
+}
+
+/* email field */
+.email-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border-hi);
+  color: var(--white);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  font-size: clamp(16px, 3vw, 22px);
+  letter-spacing: 0.06em;
+  width: 100%;
+  padding: 12px 0 14px;
+  text-align: center;
+  outline: none;
+  -webkit-appearance: none;
+  transition: border-color 0.2s;
+}
+
+.email-input:focus { border-bottom-color: var(--silver); }
+.email-input::placeholder { color: rgba(200,200,200,0.18); }
+
+/* ── CONTINUE BUTTON ─────────────────────────── */
+.btn-continue {
+  margin-top: 36px;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--silver-lo);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 9px;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  padding: 14px 40px;
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    color 0.2s,
+    transform 0.15s;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+.btn-continue:hover {
+  border-color: var(--border-hi);
+  color: var(--silver-hi);
+  transform: translateY(-1px);
+}
+
+.btn-continue:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* submit CTA */
+.btn-submit {
+  margin-top: 36px;
+  background: var(--silver);
+  border: 1px solid var(--silver);
+  color: var(--bg);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 9px;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  padding: 16px 48px;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+.btn-submit:hover { opacity: 0.88; transform: translateY(-1px); }
+.btn-submit:disabled { opacity: 0.3; cursor: not-allowed; transform: none; }
+
+/* ── ERROR ───────────────────────────────────── */
+.err-msg {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #9E5A5A;
+  margin-top: 12px;
+  text-align: center;
+  min-height: 14px;
+  font-weight: 400;
+}
+
+/* ── CONFIRMATION SCREEN ─────────────────────── */
+#confirm-screen {
+  position: fixed; inset: 0; z-index: 200;
+  background: var(--bg);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+#confirm-screen.show { display: flex; }
+
+.confirm-mark {
+  font-size: 11px;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: rgba(200,200,200,0.2);
+  margin-bottom: 48px;
+}
+
+.confirm-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 7vw, 56px);
+  font-weight: 300;
+  color: var(--white);
+  margin-bottom: 20px;
+  letter-spacing: 0.02em;
+}
+
+.confirm-sub {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--silver-lo);
+  max-width: 340px;
+  line-height: 2;
+}
+
+.confirm-divider {
+  width: 40px;
+  height: 1px;
+  background: var(--border-hi);
+  margin: 36px auto;
+}
+
+/* ── MOBILE ──────────────────────────────────── */
+@media (max-width: 480px) {
+  .options.grid-2 { grid-template-columns: 1fr; }
+  .input-row { flex-direction: column; align-items: center; }
+  .field-wrap { max-width: 100%; }
+}
+
+</style>
+</head>
+<body>
+
+<div id="wordmark">The Sculptor</div>
+<div id="progress-bar"></div>
+<div id="progress-label"></div>
+
+<div id="screen"></div>
+
+<!-- CONFIRMATION -->
+<div id="confirm-screen">
+  <p class="confirm-mark">The Sculptor</p>
+  <h1 class="confirm-title">Your plan is on its way.</h1>
+  <div class="confirm-divider"></div>
+  <p class="confirm-sub">Check your inbox. Your custom workout plan has been sent.</p>
+</div>
+
+<script>
+/* ── QUESTION DEFINITIONS ─────────────────────── */
+const questions = [
+  {
+    key: 'sex',
+    text: 'What is your sex?',
+    type: 'choice',
+    grid: true,
+    options: ['Male', 'Female']
+  },
+  {
+    key: 'age',
+    text: 'How old are you?',
+    sub: 'Helps us tailor recovery and intensity',
+    type: 'choice',
+    options: ['Under 18', '18 – 25', '26 – 35', '36 – 45', '45+']
+  },
+  {
+    key: 'height',
+    text: 'Your height.',
+    type: 'height'
+  },
+  {
+    key: 'weight',
+    text: 'Your weight.',
+    type: 'number',
+    unit: 'lbs',
+    placeholder: '165'
+  },
+  {
+    key: 'experience',
+    text: 'Training experience.',
+    type: 'choice',
+    options: ['Beginner  ·  0 – 6 months', 'Intermediate  ·  6 – 24 months', 'Advanced  ·  2+ years']
+  },
+  {
+    key: 'goal',
+    text: 'What is your primary goal?',
+    type: 'choice',
+    options: [
+      'Fat loss',
+      'Muscle gain',
+      'Recomp — lose fat + build muscle',
+      'Strength',
+      'Athletic performance',
+      'Glutes / physique focus',
+      'General fitness'
+    ]
+  },
+  {
+    key: 'days',
+    text: 'Days per week available.',
+    type: 'choice',
+    grid: true,
+    options: ['1 – 2', '3', '4', '5+']
+  },
+  {
+    key: 'duration',
+    text: 'Time per session.',
+    type: 'choice',
+    options: ['20 – 30 min', '30 – 45 min', '45 – 60 min', '60 – 90 min']
+  },
+  {
+    key: 'equipment',
+    text: 'Equipment access.',
+    type: 'choice',
+    options: [
+      'Full gym',
+      'Dumbbells only',
+      'Bodyweight only',
+      'Home + limited equipment'
+    ]
+  },
+  {
+    key: 'limitation',
+    text: 'Any limitations or focus areas?',
+    sub: 'Select all that apply',
+    type: 'multi',
+    options: [
+      'No limitations',
+      'Knee issues',
+      'Back issues',
+      'Shoulder issues',
+      'Low stamina',
+      'Beginner motivation',
+      'Abs focus',
+      'Glute focus',
+      'Fat loss priority'
+    ]
+  },
+  {
+    key: 'email',
+    text: 'Where should we send your plan?',
+    sub: 'Your custom workout will be delivered to your inbox',
+    type: 'email'
+  }
+];
+
+/* ── STATE ────────────────────────────────────── */
+let step = 0;
+let answers = {};
+let multiSelected = new Set();
+
+/* ── RENDER ───────────────────────────────────── */
+function render(direction = 'forward') {
+  const screen = document.getElementById('screen');
+  const q = questions[step];
+  const total = questions.length;
+
+  // progress
+  const pct = (step / total) * 100;
+  document.getElementById('progress-bar').style.width = pct + '%';
+  document.getElementById('progress-label').textContent =
+    step === 0 ? '' : `${step} / ${total}`;
+
+  // reset multi on new question
+  if (q.type === 'multi') multiSelected = new Set();
+
+  // build card HTML
+  let inner = '';
+
+  if (q.type === 'choice') {
+    const gridClass = q.grid ? ' grid-2' : '';
+    inner = `<div class="options${gridClass}">` +
+      q.options.map(opt =>
+        `<button class="opt" data-val="${opt}" onclick="selectOpt(this,'${q.key}')">${opt}</button>`
+      ).join('') +
+    `</div>
+    <button class="btn-continue" id="btn-next" onclick="advance()" disabled>Continue</button>
+    <p class="err-msg" id="err"></p>`;
+  }
+
+  else if (q.type === 'multi') {
+    inner = `<div class="options">` +
+      q.options.map(opt =>
+        `<button class="opt" data-val="${opt}" onclick="toggleMulti(this,'${opt}')">${opt}</button>`
+      ).join('') +
+    `</div>
+    <button class="btn-continue" id="btn-next" onclick="advance()">Continue</button>
+    <p class="err-msg" id="err"></p>`;
+  }
+
+  else if (q.type === 'height') {
+    inner = `<div class="input-row">
+      <div class="field-wrap">
+        <span class="field-label">Feet</span>
+        <input class="field-input" id="h-ft" type="number" min="3" max="8" placeholder="5" oninput="onHeightInput()">
+        <span class="field-unit">ft</span>
+      </div>
+      <div class="field-wrap">
+        <span class="field-label">Inches</span>
+        <input class="field-input" id="h-in" type="number" min="0" max="11" placeholder="10" oninput="onHeightInput()">
+        <span class="field-unit">in</span>
+      </div>
+    </div>
+    <button class="btn-continue" id="btn-next" onclick="advance()" disabled>Continue</button>
+    <p class="err-msg" id="err"></p>`;
+  }
+
+  else if (q.type === 'number') {
+    inner = `<div class="field-wrap" style="max-width:200px">
+      <input class="field-input" id="num-input" type="number" min="50" max="700"
+        placeholder="${q.placeholder}" oninput="onNumInput()">
+      <span class="field-unit">${q.unit}</span>
+    </div>
+    <button class="btn-continue" id="btn-next" onclick="advance()" disabled>Continue</button>
+    <p class="err-msg" id="err"></p>`;
+  }
+
+  else if (q.type === 'email') {
+    inner = `<input class="email-input" id="email-input" type="email"
+      placeholder="you@email.com" oninput="onEmailInput()">
+    <button class="btn-submit" id="btn-next" onclick="submit()" disabled>Send My Plan</button>
+    <p class="err-msg" id="err"></p>`;
+  }
+
+  const stepLabel = step < total - 1
+    ? `Step ${step + 1} of ${total}`
+    : 'Final Step';
+
+  const cardHTML = `
+    <div class="q-card" id="q-card">
+      <p class="q-step">${stepLabel}</p>
+      <h2 class="q-text">${q.text}</h2>
+      ${q.sub ? `<p class="q-sub">${q.sub}</p>` : ''}
+      ${inner}
+    </div>`;
+
+  screen.innerHTML = cardHTML;
+
+  // autofocus inputs
+  const focus = document.querySelector('.email-input, #h-ft, #num-input');
+  if (focus) setTimeout(() => focus.focus(), 400);
+}
+
+/* ── INTERACTION HANDLERS ─────────────────────── */
+function selectOpt(el, key) {
+  document.querySelectorAll('.opt').forEach(b => b.classList.remove('selected'));
+  el.classList.add('selected');
+  answers[key] = el.dataset.val;
+  document.getElementById('btn-next').disabled = false;
+  document.getElementById('err').textContent = '';
+}
+
+function toggleMulti(el, val) {
+  if (val === 'No limitations') {
+    // exclusive
+    multiSelected.clear();
+    document.querySelectorAll('.opt').forEach(b => b.classList.remove('selected'));
+    multiSelected.add(val);
+    el.classList.add('selected');
+  } else {
+    // deselect "No limitations" if present
+    const noLimBtn = [...document.querySelectorAll('.opt')]
+      .find(b => b.dataset.val === 'No limitations');
+    if (noLimBtn) noLimBtn.classList.remove('selected');
+    multiSelected.delete('No limitations');
+
+    if (multiSelected.has(val)) {
+      multiSelected.delete(val);
+      el.classList.remove('selected');
+    } else {
+      multiSelected.add(val);
+      el.classList.add('selected');
+    }
+  }
+}
+
+function onHeightInput() {
+  const ft = document.getElementById('h-ft').value;
+  const ins = document.getElementById('h-in').value;
+  document.getElementById('btn-next').disabled = !(ft && ins !== '');
+}
+
+function onNumInput() {
+  const v = document.getElementById('num-input').value;
+  document.getElementById('btn-next').disabled = !v;
+}
+
+function onEmailInput() {
+  const v = document.getElementById('email-input').value;
+  const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+  document.getElementById('btn-next').disabled = !valid;
+}
+
+/* ── ADVANCE ──────────────────────────────────── */
+function advance() {
+  const q = questions[step];
+  const err = document.getElementById('err');
+
+  // validate
+  if (q.type === 'choice' && !answers[q.key]) {
+    err.textContent = 'Please make a selection.'; return;
+  }
+  if (q.type === 'multi') {
+    answers[q.key] = [...multiSelected];
+    if (answers[q.key].length === 0) answers[q.key] = ['No limitations'];
+  }
+  if (q.type === 'height') {
+    const ft = document.getElementById('h-ft').value;
+    const ins = document.getElementById('h-in').value;
+    if (!ft || ins === '') { err.textContent = 'Please enter your height.'; return; }
+    answers[q.key] = `${ft}'${ins}"`;
+  }
+  if (q.type === 'number') {
+    const v = document.getElementById('num-input').value;
+    if (!v) { err.textContent = 'Please enter your weight.'; return; }
+    answers[q.key] = v + ' ' + q.unit;
+  }
+
+  // animate out
+  const card = document.getElementById('q-card');
+  if (card) card.classList.add('exiting');
+
+  setTimeout(() => {
+    step++;
+    render('forward');
+  }, 280);
+}
+
+/* ── SUBMIT ───────────────────────────────────── */
+function submit() {
+  const emailVal = document.getElementById('email-input').value.trim();
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
+    document.getElementById('err').textContent = 'Please enter a valid email.';
+    return;
+  }
+  answers.email = emailVal;
+
+  const btn = document.getElementById('btn-next');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+
+  // ── MAILCHIMP HOOK (add your URL + audience fields here later) ──
+  // fetch('YOUR_MAILCHIMP_JSONP_URL', { method:'POST', body: buildPayload() })
+  //   .then(() => showConfirm()).catch(() => showConfirm());
+
+  // Simulate network latency for MVP
+  console.log('Collected answers:', answers);
+  setTimeout(showConfirm, 1200);
+}
+
+function showConfirm() {
+  document.getElementById('progress-bar').style.width = '100%';
+  document.getElementById('confirm-screen').classList.add('show');
+}
+
+/* ── KEYBOARD SUPPORT ─────────────────────────── */
+document.addEventListener('keydown', e => {
+  if (e.key !== 'Enter') return;
+  const btn = document.getElementById('btn-next');
+  if (btn && !btn.disabled) btn.click();
+});
+
+/* ── INIT ─────────────────────────────────────── */
+render();
+</script>
+</body>
+</html>
