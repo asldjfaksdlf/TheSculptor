@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Sculptor — 11 Questions to a Better Body</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='none'/%3E%3Ctext x='16' y='24' font-family='Georgia%2C serif' font-size='26' font-weight='400' text-anchor='middle' fill='none' stroke='%23C8C8C8' stroke-width='1.2'%3ES%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Montserrat:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#080808;--border:rgba(255,255,255,0.07);--border-hi:rgba(255,255,255,0.18);
+  --silver:#C8C8C8;--silver-lo:rgba(200,200,200,0.4);--silver-hi:#E8E8E8;
+  --white:#F4F4F4;--accent:#A0A0A0;--sel:rgba(200,200,200,0.10);
+  --sel-b:rgba(200,200,200,0.55);--gold:#C9A84C;
+}
+html,body{height:100%;background:var(--bg);color:var(--silver);font-family:'Montserrat',sans-serif;font-weight:300;overflow:hidden;}
+body::before{content:'';position:fixed;inset:0;z-index:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;}
+#progress-bar{position:fixed;bottom:0;left:0;height:1px;background:var(--silver-lo);width:0%;transition:width 0.6s cubic-bezier(0.4,0,0.2,1);z-index:100;}
+#progress-label{position:fixed;bottom:16px;right:28px;font-size:9px;letter-spacing:0.3em;text-transform:uppercase;color:rgba(200,200,200,0.18);z-index:100;}
+#hero{position:fixed;inset:0;z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 24px;background:var(--bg);transition:opacity 0.8s ease,transform 0.8s ease;}
+#hero.hidden{opacity:0;pointer-events:none;transform:translateY(-20px);}
+.hero-presents{font-family:'Cormorant Garamond',serif;font-size:clamp(13px,2vw,17px);font-weight:300;font-style:italic;letter-spacing:0.12em;color:rgba(200,200,200,0.7);margin-bottom:16px;letter-spacing:0.2em;animation:fadeUp 1s 0.1s ease both;}
+.hero-title{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(38px,8vw,88px);line-height:0.92;letter-spacing:0.06em;text-transform:uppercase;text-align:center;animation:fadeUp 1s 0.15s ease both;margin-bottom:24px;background:linear-gradient(
+    135deg,
+    #4a4a4a 0%,
+    #8a8a8a 12%,
+    #d4d4d4 22%,
+    #ffffff 32%,
+    #f8f8f8 38%,
+    #ffffff 44%,
+    #e0e0e0 50%,
+    #ffffff 56%,
+    #d0d0d0 64%,
+    #f0f0f0 72%,
+    #ffffff 80%,
+    #b0b0b0 88%,
+    #787878 100%
+  );
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  filter:drop-shadow(0 0 40px rgba(255,255,255,0.15)) drop-shadow(0 2px 8px rgba(0,0,0,0.8));
+  animation:fadeUp 1s 0.15s ease both, shimmer 4s ease-in-out 1.2s infinite alternate;}
+.hero-tagline{font-family:'Cormorant Garamond',serif;font-size:clamp(16px,2.5vw,22px);font-weight:300;font-style:italic;color:var(--silver);text-align:center;letter-spacing:0.04em;line-height:1.5;max-width:520px;margin-bottom:52px;animation:fadeUp 1s 0.25s ease both;}
+.hero-tagline em{font-style:normal;color:var(--silver);}
+.hero-divider{width:1px;height:48px;background:linear-gradient(to bottom,transparent,var(--silver-lo),transparent);margin-bottom:36px;animation:fadeUp 1s 0.35s ease both;}
+.btn-hero{background:transparent;border:1px solid rgba(200,200,200,0.35);color:var(--silver);font-family:'Montserrat',sans-serif;font-weight:400;font-size:11px;letter-spacing:0.45em;text-transform:uppercase;padding:16px 52px;cursor:pointer;transition:border-color 0.2s,color 0.2s,transform 0.15s;border-radius:0;animation:fadeUp 1s 0.4s ease both;}
+.btn-hero:hover{border-color:rgba(200,200,200,0.45);color:var(--silver-hi);transform:translateY(-1px);}
+#wordmark{position:fixed;top:28px;left:50%;transform:translateX(-50%);z-index:200;font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:300;letter-spacing:0.5em;text-transform:uppercase;color:var(--silver-lo);white-space:nowrap;opacity:0;transition:opacity 0.6s;}
+#wordmark.show{opacity:1;}
+#screen{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;z-index:10;padding:80px 24px 40px;opacity:0;pointer-events:none;transition:opacity 0.5s ease;overflow-y:auto;}
+#screen.active{opacity:1;pointer-events:all;}
+.q-card{width:100%;max-width:520px;display:flex;flex-direction:column;align-items:center;opacity:0;transform:translateY(24px);animation:slideIn 0.55s cubic-bezier(0.22,1,0.36,1) forwards;padding-bottom:40px;}
+@keyframes slideIn{to{opacity:1;transform:none;}}
+.q-card.exiting{animation:slideOut 0.28s cubic-bezier(0.4,0,1,1) forwards;}
+@keyframes slideOut{to{opacity:0;transform:translateY(-16px);}}
+.q-step{font-size:9px;letter-spacing:0.45em;text-transform:uppercase;color:rgba(200,200,200,0.5);margin-bottom:28px;font-weight:400;}
+.q-text{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,5vw,38px);font-weight:300;line-height:1.25;color:var(--white);text-align:center;margin-bottom:10px;}
+.q-sub{font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(200,200,200,0.6);text-align:center;margin-bottom:40px;}
+.options{width:100%;display:flex;flex-direction:column;gap:10px;}
+.options.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.opt{width:100%;background:transparent;border:1px solid var(--border);color:var(--silver);font-family:'Montserrat',sans-serif;font-weight:300;font-size:13px;letter-spacing:0.15em;text-transform:uppercase;padding:18px 24px;cursor:pointer;text-align:center;transition:background 0.15s,border-color 0.15s,color 0.15s,transform 0.1s;border-radius:0;position:relative;-webkit-appearance:none;}
+.opt:hover{border-color:var(--border-hi);color:var(--silver-hi);transform:translateY(-1px);}
+.opt.selected{background:var(--sel);border-color:var(--sel-b);color:var(--white);}
+.opt.selected::after{content:'';position:absolute;top:50%;right:16px;transform:translateY(-50%);width:4px;height:4px;border-radius:50%;background:var(--silver-hi);}
+.input-row{display:flex;gap:12px;width:100%;align-items:flex-end;justify-content:center;}
+.field-wrap{display:flex;flex-direction:column;gap:8px;flex:1;max-width:200px;}
+.field-label{font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:rgba(200,200,200,0.6);}
+.field-input{background:transparent;border:none;border-bottom:1px solid var(--border-hi);color:var(--white);font-family:'Montserrat',sans-serif;font-weight:200;font-size:28px;letter-spacing:0.04em;width:100%;padding:8px 0 10px;text-align:center;outline:none;-webkit-appearance:none;transition:border-color 0.2s;}
+.field-input:focus{border-bottom-color:var(--silver);}
+.field-input::placeholder{color:rgba(200,200,200,0.13);font-size:22px;}
+.field-input::-webkit-outer-spin-button,.field-input::-webkit-inner-spin-button{-webkit-appearance:none;}
+.field-input[type=number]{-moz-appearance:textfield;}
+.field-unit{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(200,200,200,0.55);text-align:center;margin-top:4px;}
+.email-input{background:transparent;border:none;border-bottom:1px solid var(--border-hi);color:var(--white);font-family:'Montserrat',sans-serif;font-weight:200;font-size:clamp(16px,3vw,22px);letter-spacing:0.06em;width:100%;padding:12px 0 14px;text-align:center;outline:none;-webkit-appearance:none;transition:border-color 0.2s;}
+.email-input:focus{border-bottom-color:var(--silver);}
+.email-input::placeholder{color:rgba(200,200,200,0.16);}
+.btn-continue{margin-top:36px;background:transparent;border:1px solid var(--border);color:var(--silver);font-family:'Montserrat',sans-serif;font-weight:400;font-size:11px;letter-spacing:0.35em;text-transform:uppercase;padding:16px 40px;cursor:pointer;transition:border-color 0.2s,color 0.2s,transform 0.15s;border-radius:0;-webkit-appearance:none;}
+.btn-continue:hover{border-color:var(--border-hi);color:var(--silver-hi);transform:translateY(-1px);}
+.btn-continue:disabled{opacity:0.22;cursor:not-allowed;transform:none;}
+.btn-submit{margin-top:36px;background:var(--silver);border:1px solid var(--silver);color:var(--bg);font-family:'Montserrat',sans-serif;font-weight:500;font-size:11px;letter-spacing:0.4em;text-transform:uppercase;padding:18px 48px;cursor:pointer;transition:opacity 0.2s,transform 0.15s;border-radius:0;-webkit-appearance:none;}
+.btn-submit:hover{opacity:0.88;transform:translateY(-1px);}
+.btn-submit:disabled{opacity:0.28;cursor:not-allowed;transform:none;}
+.err-msg{font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:#9E5A5A;margin-top:12px;text-align:center;min-height:14px;}
+#upsell-screen{position:fixed;inset:0;z-index:300;background:var(--bg);display:none;flex-direction:column;align-items:center;justify-content:flex-start;padding:60px 24px;overflow-y:auto;}
+#upsell-screen.show{display:flex;}
+.upsell-card{width:100%;max-width:480px;display:flex;flex-direction:column;align-items:center;opacity:0;transform:translateY(20px);animation:slideIn 0.6s 0.1s cubic-bezier(0.22,1,0.36,1) forwards;padding-bottom:40px;}
+.upsell-sent{font-size:9px;letter-spacing:0.45em;text-transform:uppercase;color:rgba(200,200,200,0.55);margin-bottom:24px;}
+.upsell-title{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,5vw,40px);font-weight:300;color:var(--white);text-align:center;margin-bottom:10px;line-height:1.2;}
+.upsell-sub{font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--silver);text-align:center;margin-bottom:44px;}
+.upsell-divider{width:100%;height:1px;background:var(--border);margin:32px 0;}
+.offer-card{width:100%;border:1px solid rgba(201,168,76,0.3);padding:32px 28px;text-align:center;position:relative;overflow:hidden;}
+.offer-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+.offer-badge{font-size:9px;letter-spacing:0.45em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+.offer-price{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,7vw,58px);font-weight:300;color:var(--white);line-height:1;margin-bottom:6px;}
+.offer-price span{font-size:18px;vertical-align:super;color:var(--silver-lo);}
+.offer-period{font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--silver);margin-bottom:28px;}
+.offer-perks{list-style:none;margin-bottom:28px;display:flex;flex-direction:column;gap:10px;}
+.offer-perks li{font-size:13px;letter-spacing:0.08em;color:var(--silver);display:flex;align-items:center;gap:12px;text-align:left;}
+.offer-perks li::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--gold);flex-shrink:0;}
+.btn-upgrade{width:100%;background:var(--gold);border:1px solid var(--gold);color:#080808;font-family:'Montserrat',sans-serif;font-weight:500;font-size:11px;letter-spacing:0.4em;text-transform:uppercase;padding:18px 24px;cursor:pointer;transition:opacity 0.2s,transform 0.15s;border-radius:0;}
+.btn-upgrade:hover{opacity:0.88;transform:translateY(-1px);}
+.btn-skip{margin-top:16px;background:transparent;border:none;color:rgba(200,200,200,0.45);font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:0.25em;text-transform:uppercase;cursor:pointer;padding:8px;transition:color 0.2s;}
+.btn-skip:hover{color:var(--silver-lo);}
+#confirm-screen{position:fixed;inset:0;z-index:400;background:var(--bg);display:none;flex-direction:column;align-items:center;justify-content:center;padding:40px 24px;text-align:center;}
+#confirm-screen.show{display:flex;}
+.confirm-mark{font-size:9px;letter-spacing:0.5em;text-transform:uppercase;color:rgba(200,200,200,0.18);margin-bottom:48px;}
+.confirm-title{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,6vw,52px);font-weight:300;color:var(--white);margin-bottom:20px;}
+.confirm-divider{width:40px;height:1px;background:var(--border-hi);margin:0 auto 28px;}
+.confirm-sub{font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:var(--silver);max-width:380px;line-height:2;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:none;}}
+@keyframes shimmer{
+  0%{background:linear-gradient(135deg,#4a4a4a 0%,#8a8a8a 12%,#d4d4d4 22%,#ffffff 32%,#f8f8f8 38%,#ffffff 44%,#e0e0e0 50%,#ffffff 56%,#d0d0d0 64%,#f0f0f0 72%,#ffffff 80%,#b0b0b0 88%,#787878 100%);-webkit-background-clip:text;background-clip:text;}
+  100%{background:linear-gradient(135deg,#787878 0%,#c0c0c0 10%,#ffffff 20%,#e8e8e8 30%,#ffffff 40%,#f0f0f0 48%,#ffffff 54%,#e4e4e4 62%,#ffffff 70%,#d8d8d8 78%,#ffffff 86%,#a0a0a0 93%,#555 100%);-webkit-background-clip:text;background-clip:text;}
+}
+#already-screen{position:fixed;inset:0;z-index:400;background:var(--bg);display:none;flex-direction:column;align-items:center;justify-content:center;padding:40px 24px;text-align:center;}
+#already-screen.show{display:flex;}
+.already-card{width:100%;max-width:440px;display:flex;flex-direction:column;align-items:center;opacity:0;transform:translateY(20px);animation:slideIn 0.6s 0.1s cubic-bezier(0.22,1,0.36,1) forwards;}
+.already-mark{font-size:9px;letter-spacing:0.5em;text-transform:uppercase;color:rgba(200,200,200,0.18);margin-bottom:40px;}
+.already-title{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,6vw,46px);font-weight:300;color:var(--white);margin-bottom:16px;line-height:1.2;}
+.already-sub{font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:var(--silver);max-width:360px;line-height:2;margin-bottom:44px;}
+.already-divider{width:40px;height:1px;background:var(--border-hi);margin:0 auto 32px;}
+@media(max-width:480px){.options.grid-2{grid-template-columns:1fr;}.input-row{flex-direction:column;align-items:center;}.field-wrap{max-width:100%;}}
+</style>
+</head>
+<body>
+<div id="progress-bar"></div>
+<div id="progress-label"></div>
+<div id="wordmark">The Sculptor</div>
+
+<div id="hero">
+  <p class="hero-presents">The Sculptor presents</p>
+  <h1 class="hero-title">Eleven Questions<br>to a Better<br>Body</h1>
+  <p class="hero-tagline">Answer honestly. Train precisely.<br><em>Your custom plan is waiting.</em></p>
+  <div class="hero-divider"></div>
+  <button class="btn-hero" onclick="startQuiz()">Begin &nbsp;&rarr;</button>
+</div>
+
+<div id="screen"></div>
+
+<div id="upsell-screen">
+  <div class="upsell-card">
+    <p class="upsell-sent">&#10003; &nbsp; Plan sent to your inbox</p>
+    <h2 class="upsell-title">Keep the momentum.</h2>
+    <p class="upsell-sub">One plan is a start. Pro keeps you progressing.</p>
+    <div class="upsell-divider"></div>
+    <div class="offer-card">
+      <p class="offer-badge">The Sculptor &mdash; Pro</p>
+      <p class="offer-price"><span>$</span>5</p>
+      <p class="offer-period">per month &nbsp;&middot;&nbsp; cancel anytime</p>
+      <ul class="offer-perks">
+        <li>A new tailored plan every month — so your body never plateaus</li>
+        <li>Nutrition targets adjusted to match each plan</li>
+        <li>Ask any fitness question by email and get a real answer</li>
+        <li>Your plan updates as your weight, goals, or schedule change</li>
+        <li>Unlock the full exercise library — 100+ movements with coaching cues</li>
+        <li>$5 — less than one protein bar (and most protein bars are terrible anyway)</li>
+      </ul>
+      <button class="btn-upgrade" onclick="goUpgrade()">Upgrade for $5 / month</button>
+    </div>
+    <button class="btn-skip" onclick="showConfirm()">No thanks, I'm good with my free plan</button>
+  </div>
+</div>
+
+<div id="already-screen">
+  <div class="already-card">
+    <p class="already-mark">The Sculptor</p>
+    <h2 class="already-title">You're already<br>in the system.</h2>
+    <div class="already-divider"></div>
+    <p class="already-sub">A plan has already been sent to this address.<br>Upgrade to Pro for a fresh plan every month.</p>
+    <div class="offer-card" style="width:100%;max-width:420px;">
+      <p class="offer-badge">The Sculptor &mdash; Pro</p>
+      <p class="offer-price"><span>$</span>5</p>
+      <p class="offer-period">per month &nbsp;&middot;&nbsp; cancel anytime</p>
+      <ul class="offer-perks">
+        <li>A new tailored plan every month — so your body never plateaus</li>
+        <li>Nutrition targets adjusted to match each plan</li>
+        <li>Ask any fitness question by email and get a real answer</li>
+        <li>Your plan updates as your weight, goals, or schedule change</li>
+        <li>Unlock the full exercise library — 100+ movements with coaching cues</li>
+        <li>$5 — less than one protein bar (and most protein bars are terrible anyway)</li>
+      </ul>
+      <button class="btn-upgrade" onclick="goUpgrade()">Upgrade for $5 / month</button>
+    </div>
+    <button class="btn-skip" style="margin-top:20px;" onclick="window.location.reload()">Start over with a different email</button>
+  </div>
+</div>
+
+<div id="confirm-screen">
+  <p class="confirm-mark">The Sculptor</p>
+  <h2 class="confirm-title">Your plan is on<br>its way.</h2>
+  <div class="confirm-divider"></div>
+  <p class="confirm-sub">Your custom workout has been sent to your inbox.</p>
+  <p class="confirm-sub" style="margin-top:16px;color:rgba(200,200,200,0.35);">&#9888; If you don't see it, check your spam or junk folder and mark it as safe to ensure future emails land in your inbox.</p>
+  <p class="confirm-sub" style="margin-top:24px;">Train with precision.</p>
+</div>
+
+<script>
+// ═══════════════════════════════════════════
+// WORKOUT LIBRARY
+// ═══════════════════════════════════════════
+var WORKOUTS = [
+  {
+    id:'M-FATLOSS-GYM',
+    tags:{sex:'Male',goal:'Fat loss',equipment:'Full gym'},
+    title:'Male Fat Loss — Gym',
+    summary:'4-day Push/Pull/Legs/Metabolic. High volume, compound-focused, strict rest periods to maximise caloric burn. Requires a caloric deficit.',
+    plan:'DAY 1 — PUSH (Chest / Shoulders / Triceps)\n• Barbell Bench Press — 4x10-12, 60s rest\n• Incline Dumbbell Press — 3x12, 60s rest\n• Cable Lateral Raise — 3x15, 45s rest\n• Overhead Press (DB) — 3x10, 60s rest\n• Tricep Rope Pushdown — 3x15, 45s rest\n• Overhead Tricep Extension — 3x12, 45s rest\n\nDAY 2 — PULL (Back / Biceps)\n• Pull-Ups or Lat Pulldown — 4x10-12, 60s rest\n• Seated Cable Row — 3x12, 60s rest\n• Single-Arm DB Row — 3x12 ea, 45s rest\n• Face Pulls — 3x15, 45s rest\n• Barbell Curl — 3x12, 45s rest\n• Hammer Curl — 3x12 ea, 45s rest\n\nDAY 3 — REST or 30 min LISS cardio\n\nDAY 4 — LEGS\n• Barbell Back Squat — 4x10, 90s rest\n• Leg Press — 3x15, 60s rest\n• Walking Lunges (DB) — 3x12 ea, 60s rest\n• Leg Extension — 3x15, 45s rest\n• Leg Curl — 3x15, 45s rest\n• Standing Calf Raise — 4x20, 30s rest\n\nDAY 5 — FULL BODY METABOLIC\n• Dumbbell Thrusters — 4x15, 45s rest\n• Renegade Row — 3x10 ea, 45s rest\n• Box Jump — 3x12, 45s rest\n• KB Swing — 4x20, 45s rest\n• Battle Ropes — 3x30s, 30s rest\n• Plank — 3x45s, 30s rest\n\nNUTRITION: 400-600 cal deficit. Protein 0.8-1g/lb bodyweight.'
+  },
+  {
+    id:'F-FATLOSS-GYM',
+    tags:{sex:'Female',goal:'Fat loss',equipment:'Full gym'},
+    title:'Female Fat Loss — Gym',
+    summary:'4-day Upper/Lower split with cardio finishers. Compound lifts lead every session. Higher rep ranges for conditioning and caloric burn.',
+    plan:'DAY 1 — LOWER (Glute and Hamstring)\n• Romanian Deadlift — 4x12, 60s rest\n• Hip Thrust (Barbell) — 4x15, 60s rest\n• Cable Kickback — 3x15 ea, 45s rest\n• Lying Leg Curl — 3x15, 45s rest\n• Sumo Squat (DB) — 3x15, 45s rest\n• Hip Abduction Machine — 3x20, 30s rest\n\nDAY 2 — UPPER PUSH + CORE\n• DB Bench Press — 3x12, 60s rest\n• Shoulder Press (DB) — 3x12, 60s rest\n• Cable Lateral Raise — 3x15, 45s rest\n• Tricep Pushdown — 3x15, 45s rest\n• Dead Bug — 3x10 ea, 30s rest\n• Cable Crunch — 3x20, 30s rest\n\nDAY 3 — REST or 25 min walk\n\nDAY 4 — LOWER (Quad)\n• Barbell Back Squat — 4x12, 75s rest\n• Leg Press — 3x15, 60s rest\n• Reverse Lunge (DB) — 3x12 ea, 45s rest\n• Leg Extension — 3x20, 30s rest\n• Standing Calf Raise — 4x20, 30s rest\n\nDAY 5 — UPPER PULL + CORE\n• Lat Pulldown — 4x12, 60s rest\n• Seated Cable Row — 3x12, 60s rest\n• Face Pull — 3x15, 45s rest\n• DB Curl — 3x12, 45s rest\n• Plank — 3x45s, 30s rest\n• Bicycle Crunch — 3x20 ea, 30s rest\n\nNUTRITION: 300-500 cal deficit. Protein 0.8g/lb. Carbs around training.'
+  },
+  {
+    id:'F-GLUTES-GYM',
+    tags:{sex:'Female',goal:'Glutes / physique focus',equipment:'Full gym'},
+    title:'Female Glute and Physique — Gym',
+    summary:'Trains glutes directly 3x per week with varied angles and rep ranges. Posterior chain dominant. Eat at maintenance or slight surplus.',
+    plan:'DAY 1 — GLUTES AND HAMSTRINGS (Heavy)\n• Barbell Hip Thrust — 5x8-10, 90s rest\n• Romanian Deadlift — 4x10, 75s rest\n• Bulgarian Split Squat — 3x10 ea, 75s rest\n• Cable Pull-Through — 3x15, 60s rest\n• Lying Leg Curl — 3x12, 45s rest\n\nDAY 2 — UPPER BODY + CORE\n• Overhead Press (DB) — 3x12, 60s rest\n• Lat Pulldown — 3x12, 60s rest\n• DB Bench Press — 3x12, 60s rest\n• Face Pull — 3x15, 45s rest\n• Plank — 3x45s, 30s rest\n\nDAY 3 — REST or light walk\n\nDAY 4 — GLUTES AND QUADS (Volume)\n• Goblet Squat — 4x15, 60s rest\n• Leg Press (High Foot) — 4x15, 60s rest\n• Walking Lunge (DB) — 3x12 ea, 60s rest\n• Hip Abduction Machine — 4x20, 30s rest\n• Banded Clamshells — 3x20 ea, 30s rest\n• Glute Bridge — 3x25, 30s rest\n\nDAY 5 — FULL BODY + GLUTE FINISHER\n• Deadlift — 3x8, 90s rest\n• DB Bench Press — 3x12, 60s rest\n• Lat Pulldown — 3x12, 60s rest\n• Cable Kickback — 3x20 ea, 30s rest\n• Frog Pumps — 3x30, 30s rest\n• Plank Hold — 3x45s, 30s rest\n\nNUTRITION: Maintenance or +200-300 cal. Protein 0.8-1g/lb.'
+  },
+  {
+    id:'M-MUSCLE-GYM',
+    tags:{sex:'Male',goal:'Muscle gain',equipment:'Full gym'},
+    title:'Male Muscle Gain — Gym',
+    summary:'5-day Push/Pull/Legs hypertrophy split. Progressive overload is the primary driver. Every set taken within 1-2 reps of failure. Caloric surplus required.',
+    plan:'DAY 1 — PUSH A (Chest)\n• Barbell Bench Press — 4x6-8, 90s rest\n• Incline DB Press — 4x10, 75s rest\n• Cable Fly — 3x12, 60s rest\n• Overhead Press (BB) — 3x8, 75s rest\n• Lateral Raise — 4x15, 45s rest\n• Skull Crusher — 3x12, 60s rest\n\nDAY 2 — PULL A (Back)\n• Weighted Pull-Up — 4x6-8, 90s rest\n• Barbell Row — 4x8, 75s rest\n• Cable Row (wide) — 3x12, 60s rest\n• DB Pullover — 3x12, 60s rest\n• Incline DB Curl — 3x10, 60s rest\n• Hammer Curl — 3x12, 45s rest\n\nDAY 3 — LEGS A (Quad)\n• Barbell Back Squat — 5x5, 2min rest\n• Hack Squat — 4x10, 90s rest\n• Leg Press — 3x15, 75s rest\n• Leg Extension — 3x15, 45s rest\n• Leg Curl — 3x15, 45s rest\n• Seated Calf Raise — 5x15, 30s rest\n\nDAY 4 — REST\n\nDAY 5 — PUSH B (Shoulders)\n• Seated DB Press — 4x8-10, 75s rest\n• Arnold Press — 3x10, 60s rest\n• Lateral Raise (cable) — 4x15, 45s rest\n• Incline DB Press — 3x12, 60s rest\n• Dips (weighted) — 3x10, 75s rest\n• Overhead Tricep Extension — 3x12, 45s rest\n\nDAY 6 — PULL B + ARMS\n• Lat Pulldown (close) — 4x10, 75s rest\n• T-Bar Row — 4x10, 75s rest\n• Face Pull — 3x20, 45s rest\n• Barbell Curl — 4x10, 60s rest\n• Cable Curl — 3x15, 45s rest\n• Reverse Curl — 3x12, 45s rest\n\nDAY 7 — LEGS B (Posterior)\n• Romanian Deadlift — 4x10, 90s rest\n• Conventional Deadlift — 3x5, 2min rest\n• Hip Thrust — 4x12, 75s rest\n• Lying Leg Curl — 4x12, 60s rest\n• Walking Lunge — 3x12 ea, 60s rest\n• Standing Calf Raise — 5x12, 30s rest\n\nNUTRITION: +300-500 cal surplus. 1g protein/lb bodyweight.'
+  },
+  {
+    id:'M-RECOMP-GYM',
+    tags:{sex:'Male',goal:'Recomp — lose fat + build muscle',equipment:'Full gym'},
+    title:'Male Lean Muscle / Recomp — Gym',
+    summary:'Upper/Lower split, 4 days. Moderate rep ranges with post-session cardio. Best for men at 15-25% body fat wanting definition without a traditional bulk/cut cycle.',
+    plan:'DAY 1 — UPPER A (Push)\n• Bench Press — 4x8-10, 75s rest\n• Incline DB Press — 3x12, 60s rest\n• OHP (DB) — 3x10, 60s rest\n• Lateral Raise — 3x15, 45s rest\n• Tricep Pushdown — 3x15, 45s rest\n+ 10 min incline treadmill post-session\n\nDAY 2 — LOWER A (Squat)\n• Back Squat — 4x8, 90s rest\n• Leg Press — 3x12, 60s rest\n• DB Lunge — 3x12 ea, 60s rest\n• Leg Curl — 3x15, 45s rest\n• Calf Raise — 4x20, 30s rest\n+ 10 min incline treadmill post-session\n\nDAY 3 — REST\n\nDAY 4 — UPPER B (Pull)\n• Pull-Up or Lat Pulldown — 4x8-10, 75s rest\n• DB Row — 3x12 ea, 60s rest\n• Cable Row — 3x12, 60s rest\n• Face Pull — 3x15, 45s rest\n• DB Curl — 3x12, 45s rest\n+ 10 min bike or elliptical post-session\n\nDAY 5 — LOWER B (Hip hinge)\n• Romanian Deadlift — 4x10, 75s rest\n• Hip Thrust — 3x12, 60s rest\n• Leg Extension — 3x15, 45s rest\n• Leg Curl — 3x15, 45s rest\n• Calf Raise — 4x20, 30s rest\n+ 10 min incline treadmill post-session\n\nNUTRITION: Maintenance or -200 cal. Protein 1g/lb. Track everything.'
+  },
+  {
+    id:'F-MUSCLE-GYM',
+    tags:{sex:'Female',goal:'Muscle gain',equipment:'Full gym'},
+    title:'Female Muscle Gain — Gym',
+    summary:'Full body 4x per week with rotating emphasis. Compound lifts lead every session. Accessory work targets posterior chain, upper back, and shoulders.',
+    plan:'DAY 1 — FULL BODY A (Lower emphasis)\n• Barbell Back Squat — 4x8, 90s rest\n• DB Romanian Deadlift — 3x12, 75s rest\n• DB Bench Press — 3x10, 60s rest\n• Lat Pulldown — 3x12, 60s rest\n• Lateral Raise — 3x15, 45s rest\n• Plank — 3x40s, 30s rest\n\nDAY 2 — FULL BODY B (Upper emphasis)\n• Overhead Press (DB) — 4x10, 75s rest\n• Cable Row — 3x12, 60s rest\n• Leg Press — 4x15, 60s rest\n• Hip Thrust — 3x15, 60s rest\n• Tricep Pushdown — 3x15, 45s rest\n• DB Curl — 3x12, 45s rest\n\nDAY 3 — REST\n\nDAY 4 — FULL BODY C (Posterior chain)\n• Conventional Deadlift — 4x6, 2min rest\n• Pull-Up or Assisted — 3x8, 75s rest\n• Bulgarian Split Squat — 3x10 ea, 75s rest\n• Face Pull — 3x20, 45s rest\n• Glute Kickback (cable) — 3x15 ea, 45s rest\n• Ab Rollout — 3x10, 45s rest\n\nDAY 5 — FULL BODY D (Balanced)\n• Goblet Squat — 3x15, 60s rest\n• Incline DB Press — 3x12, 60s rest\n• Seated Cable Row — 3x12, 60s rest\n• Walking Lunge (DB) — 3x12 ea, 60s rest\n• Lateral Raise — 3x15, 45s rest\n• Bicycle Crunch — 3x20 ea, 30s rest\n\nNUTRITION: Eat at maintenance. Protein 0.8g/lb minimum. Sleep 7-9 hours.'
+  },
+  {
+    id:'BEGINNER-ANY',
+    tags:{sex:'any',goal:'any',equipment:'any',experience:'Beginner  \u00b7  0 \u2013 6 months'},
+    title:'Beginner Full Body — Gym',
+    summary:'3 days/week, full body A/B alternating. Master the movements for 4 full weeks before adding weight. Form is everything at this stage.',
+    plan:'WORKOUT A (Mon / alternate Fri)\n• Goblet Squat — 3x12, 60s rest\n• DB Bench Press — 3x12, 60s rest\n• Seated Cable Row — 3x12, 60s rest\n• DB Romanian Deadlift — 3x12, 60s rest\n• Shoulder Press (DB) — 3x12, 60s rest\n• Plank — 3x30s, 30s rest\n\nWORKOUT B (Wed / alternate Fri)\n• Leg Press — 3x15, 60s rest\n• Lat Pulldown — 3x12, 60s rest\n• Incline DB Press — 3x12, 60s rest\n• Hip Thrust (bodyweight) — 3x20, 45s rest\n• Lateral Raise — 3x15, 45s rest\n• Dead Bug — 3x8 ea, 30s rest\n\nPROGRESSION: Add 5 lbs upper / 10 lbs lower when all sets are clean.'
+  },
+  {
+    id:'BODYWEIGHT-ANY',
+    tags:{sex:'any',goal:'any',equipment:'Bodyweight only',experience:'any'},
+    title:'Bodyweight / Home — No Equipment',
+    summary:'4 days/week, zero equipment needed. Difficulty controlled by tempo, rest periods, and progressions listed for each exercise.',
+    plan:'DAY 1 — UPPER BODY\n• Push-Up — 4xmax, 60s rest\n• Pike Push-Up — 3x12, 60s rest\n• Inverted Row (table) — 3x12, 60s rest\n• Diamond Push-Up — 3x10, 60s rest\n• Superman Hold — 3x15, 30s rest\n• Plank — 3x45s, 30s rest\n\nDAY 2 — LOWER BODY\n• Squat — 4x20, 60s rest\n• Reverse Lunge — 3x15 ea, 60s rest\n• Glute Bridge — 4x25, 45s rest\n• Wall Sit — 3x45s, 30s rest\n• Step-Up (chair) — 3x15 ea, 45s rest\n• Calf Raise — 4x25, 30s rest\n\nDAY 3 — REST\n\nDAY 4 — UPPER (harder)\n• Decline Push-Up — 4xmax, 60s rest\n• Pike Push-Up — 3x15, 60s rest\n• Inverted Row — 4x12, 60s rest\n• Tricep Dip (chair) — 3x15, 60s rest\n• Side Plank — 3x30s ea, 30s rest\n\nDAY 5 — LOWER + CORE\n• Bulgarian Split Squat — 4x12 ea, 60s rest\n• Hip Thrust — 4x30, 45s rest\n• Bicycle Crunch — 3x20 ea, 30s rest\n• Leg Raise — 3x15, 30s rest\n• Hollow Body Hold — 3x30s, 30s rest\n• Burpee — 3x10, 60s rest'
+  },
+  {
+    id:'STRENGTH-GYM',
+    tags:{sex:'any',goal:'Strength',equipment:'Full gym'},
+    title:'Strength — Powerlifting Fundamentals',
+    summary:'4-day upper/lower split. Main lifts always come first. Add weight when you hit the top of the rep range for all sets.',
+    plan:'DAY 1 — SQUAT\n• Barbell Back Squat — 5x3-5, 3min rest\n• Pause Squat (60%) — 3x5, 2min rest\n• Leg Press — 3x10, 90s rest\n• Leg Curl — 3x12, 60s rest\n• Ab Wheel Rollout — 3x10, 60s rest\n\nDAY 2 — BENCH\n• Barbell Bench Press — 5x3-5, 3min rest\n• Close Grip Bench — 3x6-8, 2min rest\n• DB Row — 4x10 ea, 75s rest\n• Tricep Dips (weighted) — 3x8, 90s rest\n• Face Pull — 3x20, 45s rest\n\nDAY 3 — REST\n\nDAY 4 — DEADLIFT\n• Conventional Deadlift — 5x3-5, 3-4min rest\n• Romanian Deadlift — 3x8, 2min rest\n• Pull-Up (weighted) — 3x6, 2min rest\n• Hip Thrust — 3x10, 75s rest\n• Plank — 3x60s, 45s rest\n\nDAY 5 — OVERHEAD PRESS\n• Standing Barbell OHP — 5x3-5, 3min rest\n• DB Press (seated) — 3x8, 90s rest\n• Lateral Raise — 4x15, 45s rest\n• Chin-Up — 3x8, 90s rest\n• Barbell Curl — 3x10, 60s rest\n\nTrack every session. Numbers must go up or something must change.'
+  },
+  {
+    id:'ATHLETIC-GYM',
+    tags:{sex:'any',goal:'Athletic performance',equipment:'Full gym'},
+    title:'Athletic Performance — Power and Conditioning',
+    summary:'4 days structured around explosive power, functional strength, and conditioning. Every session ends with a conditioning finisher.',
+    plan:'DAY 1 — LOWER POWER\n• Box Jump — 5x5, 90s rest\n• Barbell Back Squat (75-80%) — 4x5, 2min rest\n• Power Clean — 4x3, 2min rest\n• Bulgarian Split Squat — 3x8 ea, 75s rest\n• Sled Push — 4x20m, 90s rest\n\nDAY 2 — UPPER POWER\n• Medicine Ball Chest Pass — 4x8, 75s rest\n• Bench Press (explosive) — 4x5, 2min rest\n• Pull-Up — 4x6, 90s rest\n• DB Row — 3x10 ea, 60s rest\n• Battle Ropes — 4x30s, 60s rest\n\nDAY 3 — REST\n\nDAY 4 — LOWER STRENGTH\n• Deadlift — 4x5, 3min rest\n• Leg Press — 3x10, 90s rest\n• Reverse Lunge — 3x10 ea, 60s rest\n• Leg Curl — 3x12, 60s rest\n• 400m Run — 3 rounds, 2min rest\n\nDAY 5 — UPPER STRENGTH + FINISHER\n• Overhead Press — 4x6, 2min rest\n• Weighted Pull-Up — 4x6, 90s rest\n• DB Bench Press — 3x10, 75s rest\n• Face Pull — 3x20, 45s rest\n• Circuit: 10 burpees + 10 KB swings + 10 box jumps x3'
+  },
+  {
+    id:'F-RECOMP-GYM',
+    tags:{sex:'Female',goal:'Recomp — lose fat + build muscle',equipment:'Full gym'},
+    title:'Female Recomp — Gym',
+    summary:'Full body 4x per week combining fat loss cardio with muscle-building compound lifts. Eat at maintenance. High protein is non-negotiable.',
+    plan:'DAY 1 — FULL BODY (Strength)\n• Barbell Back Squat — 4x8, 90s rest\n• DB Bench Press — 3x10, 75s rest\n• Lat Pulldown — 3x12, 60s rest\n• Hip Thrust — 3x12, 60s rest\n• Lateral Raise — 3x15, 45s rest\n+ 15 min incline treadmill walk\n\nDAY 2 — FULL BODY (Posterior)\n• Romanian Deadlift — 4x10, 75s rest\n• Pull-Up or Assisted — 3x8, 75s rest\n• Cable Row — 3x12, 60s rest\n• Walking Lunge (DB) — 3x12 ea, 60s rest\n• Glute Kickback — 3x15 ea, 45s rest\n+ 15 min steady bike\n\nDAY 3 — REST\n\nDAY 4 — FULL BODY (Volume)\n• Leg Press — 4x15, 60s rest\n• Incline DB Press — 3x12, 60s rest\n• Seated Row — 3x12, 60s rest\n• Hip Abduction Machine — 3x20, 30s rest\n• Face Pull — 3x15, 45s rest\n• Plank — 3x45s, 30s rest\n+ 15 min incline treadmill\n\nDAY 5 — FULL BODY (Power)\n• Goblet Squat — 3x15, 60s rest\n• OHP (DB) — 3x12, 60s rest\n• DB Row — 3x12 ea, 60s rest\n• Bulgarian Split Squat — 3x10 ea, 75s rest\n• Bicycle Crunch — 3x20 ea, 30s rest\n+ 10 min elliptical\n\nNUTRITION: Exact maintenance. Protein 0.85-1g/lb. Track 4 weeks minimum.'
+  }
+];
+
+// ═══════════════════════════════════════════
+// WORKOUT MATCHING ENGINE
+// ═══════════════════════════════════════════
+function matchWorkout(a) {
+  if (a.experience && a.experience.indexOf('Beginner') === 0) {
+    return WORKOUTS.filter(function(w){ return w.id === 'BEGINNER-ANY'; })[0];
+  }
+  if (a.equipment === 'Bodyweight only') {
+    return WORKOUTS.filter(function(w){ return w.id === 'BODYWEIGHT-ANY'; })[0];
+  }
+  var best = null, bestScore = -1;
+  WORKOUTS.forEach(function(w) {
+    var score = 0;
+    if (w.tags.sex === a.sex) score += 4;
+    if (w.tags.goal === a.goal) score += 5;
+    if (w.tags.equipment === a.equipment) score += 3;
+    var lims = Array.isArray(a.limitation) ? a.limitation : [];
+    if (lims.indexOf('Glute focus') > -1 && w.id.indexOf('GLUTE') > -1) score += 3;
+    if (lims.indexOf('Fat loss priority') > -1 && w.id.indexOf('FATLOSS') > -1) score += 2;
+    if (score > bestScore) { bestScore = score; best = w; }
+  });
+  return best || WORKOUTS[0];
+}
+
+// ═══════════════════════════════════════════
+// BREVO SUBMIT
+// ═══════════════════════════════════════════
+function submitToBrevo(a, workout) {
+  var KEY = BREVO_KEY;
+  var hdrs = {'accept':'application/json','content-type':'application/json','api-key':KEY};
+
+  fetch('https://api.brevo.com/v3/contacts',{
+    method:'POST', headers:hdrs,
+    body:JSON.stringify({
+      email:a.email, listIds:[3], updateEnabled:true,
+      attributes:{SEX:a.sex||'',AGE:a.age||'',GOAL:a.goal||'',EXPERIENCE:a.experience||'',EQUIPMENT:a.equipment||'',PLAN_ID:workout.id||''}
+    })
+  }).then(function(r){if(r.ok||r.status===201||r.status===204){return r.text();}return r.text();}).then(function(d){console.log('Contact result:',d);});
+
+  var html = '<!DOCTYPE html>'
+    +'<html lang="en" xmlns="http://www.w3.org/1999/xhtml">'
+    +'<head>'
+    +'<meta charset="UTF-8">'
+    +'<meta name="viewport" content="width=device-width,initial-scale=1.0">'
+    +'<meta name="color-scheme" content="dark">'
+    +'<meta name="supported-color-schemes" content="dark">'
+    +'<style>'
+    +':root{color-scheme:dark;}'
+    +'body,table,td,div,p,a,pre,h1,h2{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}'
+    +'body{margin:0!important;padding:0!important;background-color:#080808!important;color:#C8C8C8!important;}'
+    +'table{border-collapse:collapse!important;}'
+    +'@media only screen and (max-width:620px){'
+    +'.email-pad{padding:24px 20px!important;}'
+    +'.email-pad-sm{padding:20px!important;}'
+    +'.plan-text{font-size:12px!important;line-height:1.9!important;}'
+    +'}'
+    +'</style>'
+    +'</head>'
+    +'<body style="margin:0!important;padding:0!important;background-color:#080808!important;color:#C8C8C8!important;font-family:Arial,Helvetica,sans-serif;">'
+    +'<div style="display:none!important;visibility:hidden;max-height:0;overflow:hidden;opacity:0;font-size:1px;line-height:1px;color:#080808;">Your custom plan is ready — '+workout.title+'</div>'
+    +'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#080808!important;">'
+    +'<tr><td align="center" style="background-color:#080808!important;padding:32px 16px;">'
+    +'<table role="presentation" cellpadding="0" cellspacing="0" style="max-width:580px;width:100%;background-color:#0e0e0e!important;border:1px solid rgba(255,255,255,0.08);">'
+    +'<tr><td class="email-pad" style="background-color:#080808!important;padding:36px 40px 30px;border-bottom:1px solid rgba(255,255,255,0.07);">'
+    +'<p style="color:rgba(200,200,200,0.45)!important;font-size:9px;letter-spacing:0.55em;text-transform:uppercase;margin:0 0 18px 0;font-family:Arial,Helvetica,sans-serif;">The Sculptor</p>'
+    +'<h1 style="color:#F4F4F4!important;font-size:24px;font-weight:300;margin:0 0 6px 0;line-height:1.25;font-family:Georgia,serif;">Your Custom Plan</h1>'
+    +'<h2 style="color:#C8C8C8!important;font-size:16px;font-weight:300;margin:0;font-family:Georgia,serif;font-style:italic;">'+workout.title+'</h2>'
+    +'</td></tr>'
+    +'<tr><td class="email-pad" style="background-color:#0e0e0e!important;padding:32px 40px 24px;">'
+    +'<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>'
+    +'<td width="3" style="background-color:#C9A84C!important;border-radius:2px;">&nbsp;</td>'
+    +'<td style="padding-left:16px;"><p style="color:#A0A0A0!important;font-size:13px;line-height:1.8;margin:0;font-style:italic;font-family:Georgia,serif;">'+workout.summary+'</p></td>'
+    +'</tr></table>'
+    +'</td></tr>'
+    +'<tr><td style="background-color:#0e0e0e!important;padding:0 40px;"><div style="height:1px;background-color:rgba(255,255,255,0.07)!important;font-size:0;line-height:0;">&nbsp;</div></td></tr>'
+    +'<tr><td class="email-pad" style="background-color:#0e0e0e!important;padding:28px 40px 36px;">'
+    +'<pre class="plan-text" style="color:#C8C8C8!important;font-family:Courier New,Courier,monospace;font-size:13px;line-height:2;white-space:pre-wrap;word-break:break-word;margin:0;background-color:transparent!important;">'+workout.plan+'</pre>'
+    +'</td></tr>'
+    +'<tr><td class="email-pad-sm" style="background-color:#111111!important;padding:36px 40px;text-align:center;border-top:1px solid rgba(255,255,255,0.07);">'
+    +'<p style="color:#C9A84C!important;font-size:9px;letter-spacing:0.5em;text-transform:uppercase;margin:0 0 14px 0;font-family:Arial,Helvetica,sans-serif;">The Sculptor &mdash; Pro</p>'
+    +'<p style="color:#F4F4F4!important;font-size:20px;font-weight:300;margin:0 0 10px 0;font-family:Georgia,serif;">Want a new plan every month?</p>'
+    +'<p style="color:#A0A0A0!important;font-size:13px;line-height:1.8;margin:0 0 28px 0;font-family:Arial,Helvetica,sans-serif;">Fresh workout each month, nutrition guidance, and direct access to a fitness expert &mdash; all for $5/month.</p>'
+    +'<a href="https://buy.stripe.com/3cIcN48ht4gc4cDdXBgUM00" style="display:inline-block;background-color:#C9A84C!important;color:#080808!important;font-size:10px;letter-spacing:0.4em;text-transform:uppercase;font-weight:700;padding:16px 40px;text-decoration:none;font-family:Arial,Helvetica,sans-serif;">Upgrade for $5 / month</a>'
+    +'</td></tr>'
+    +'<tr><td class="email-pad-sm" style="background-color:#080808!important;padding:24px 40px;text-align:center;border-top:1px solid rgba(255,255,255,0.07);">'
+    +'<p style="color:rgba(200,200,200,0.3)!important;font-size:9px;letter-spacing:0.3em;text-transform:uppercase;margin:0 0 6px 0;font-family:Arial,Helvetica,sans-serif;">The Sculptor &middot; Personalized Training</p>'
+    +'<p style="color:rgba(200,200,200,0.18)!important;font-size:10px;margin:0;font-family:Arial,Helvetica,sans-serif;">You received this because you requested a custom plan.</p>'
+    +'</td></tr>'
+    +'</table>'
+    +'</td></tr></table>'
+    +'</body></html>';
+
+  fetch('https://api.brevo.com/v3/smtp/email',{
+    method:'POST', headers:hdrs,
+    body:JSON.stringify({
+      sender:{name:'The Sculptor',email:'hello@chzld.lifestyle'},
+      to:[{email:a.email}],
+      subject:'Your Custom Plan is Ready — The Sculptor',
+      htmlContent:html
+    })
+  }).then(function(r){if(r.ok||r.status===201||r.status===204){return r.text();}return r.text();}).then(function(d){console.log('Email result:',d);});
+}
+
+// ═══════════════════════════════════════════
+// QUESTIONS
+// ═══════════════════════════════════════════
+var questions = [
+  {key:'sex',text:'What is your sex?',type:'choice',grid:true,options:['Male','Female']},
+  {key:'age',text:'How old are you?',sub:'Helps us tailor recovery and intensity',type:'choice',options:['Under 18','18 \u2013 25','26 \u2013 35','36 \u2013 45','45+']},
+  {key:'height',text:'Your height.',type:'height'},
+  {key:'weight',text:'Your weight.',type:'number',unit:'lbs',placeholder:'165'},
+  {key:'experience',text:'Training experience.',type:'choice',options:['Beginner  \u00b7  0 \u2013 6 months','Intermediate  \u00b7  6 \u2013 24 months','Advanced  \u00b7  2+ years']},
+  {key:'goal',text:'What is your primary goal?',type:'choice',options:['Fat loss','Muscle gain','Recomp \u2014 lose fat + build muscle','Strength','Athletic performance','Glutes / physique focus','General fitness']},
+  {key:'days',text:'Days per week available.',type:'choice',grid:true,options:['1 \u2013 2','3','4','5+']},
+  {key:'duration',text:'Time per session.',type:'choice',options:['20 \u2013 30 min','30 \u2013 45 min','45 \u2013 60 min','60 \u2013 90 min']},
+  {key:'equipment',text:'Equipment access.',type:'choice',options:['Full gym','Dumbbells only','Bodyweight only','Home + limited equipment']},
+  {key:'limitation',text:'Any limitations or focus areas?',sub:'Select all that apply',type:'multi',options:['No limitations','Knee issues','Back issues','Shoulder issues','Low stamina','Beginner motivation','Abs focus','Glute focus','Fat loss priority']},
+  {key:'email',text:'Where should we send your plan?',sub:'Your custom workout will be delivered to your inbox',type:'email'}
+];
+
+// ═══════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════
+var step = 0;
+var answers = {};
+var multiSelected = [];
+var funnelAnswers = {};
+var BREVO_KEY = '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';
+var quizStarted = false;
+
+// ═══════════════════════════════════════════
+// HERO
+// ═══════════════════════════════════════════
+function startQuiz() {
+  if (quizStarted) return;
+  quizStarted = true;
+  document.getElementById('hero').classList.add('hidden');
+  setTimeout(function() {
+    document.getElementById('screen').classList.add('active');
+    document.getElementById('wordmark').classList.add('show');
+    render();
+  }, 600);
+}
+
+// ═══════════════════════════════════════════
+// RENDER
+// ═══════════════════════════════════════════
+function render() {
+  var screen = document.getElementById('screen');
+  var q = questions[step];
+  var total = questions.length;
+  document.getElementById('progress-bar').style.width = ((step/total)*100)+'%';
+  document.getElementById('progress-label').textContent = step===0?'':(step+' / '+total);
+  if (q.type==='multi') multiSelected = [];
+  var inner = '';
+  if (q.type==='choice') {
+    var gc = q.grid?' grid-2':'';
+    inner = '<div class="options'+gc+'">';
+    q.options.forEach(function(o) {
+      inner += '<button class="opt" data-val="'+o+'" onclick="selectOpt(this,\''+q.key+'\')">'+o+'</button>';
+    });
+    inner += '</div><button class="btn-continue" id="btn-next" onclick="advance()" disabled>Continue</button><p class="err-msg" id="err"></p>';
+  } else if (q.type==='multi') {
+    inner = '<div class="options">';
+    q.options.forEach(function(o) {
+      inner += '<button class="opt" data-val="'+o+'" onclick="toggleMulti(this,\''+o+'\')">'+o+'</button>';
+    });
+    inner += '</div><button class="btn-continue" id="btn-next" onclick="advance()">Continue</button><p class="err-msg" id="err"></p>';
+  } else if (q.type==='height') {
+    inner = '<div class="input-row"><div class="field-wrap"><span class="field-label">Feet</span><input class="field-input" id="h-ft" type="number" min="3" max="8" placeholder="5" oninput="onHeightInput()"><span class="field-unit">ft</span></div><div class="field-wrap"><span class="field-label">Inches</span><input class="field-input" id="h-in" type="number" min="0" max="11" placeholder="10" oninput="onHeightInput()"><span class="field-unit">in</span></div></div><button class="btn-continue" id="btn-next" onclick="advance()" disabled>Continue</button><p class="err-msg" id="err"></p>';
+  } else if (q.type==='number') {
+    inner = '<div class="field-wrap" style="max-width:200px"><input class="field-input" id="num-input" type="number" min="50" max="700" placeholder="'+q.placeholder+'" oninput="onNumInput()"><span class="field-unit">'+q.unit+'</span></div><button class="btn-continue" id="btn-next" onclick="advance()" disabled>Continue</button><p class="err-msg" id="err"></p>';
+  } else if (q.type==='email') {
+    inner = '<input class="email-input" id="email-input" type="email" placeholder="you@email.com" oninput="onEmailInput()"><button class="btn-submit" id="btn-next" onclick="submitQuiz()" disabled>Send My Plan</button><p class="err-msg" id="err"></p>';
+  }
+  var label = step < total-1 ? 'Step '+(step+1)+' of '+total : 'Final Step';
+  screen.innerHTML = '<div class="q-card" id="q-card"><p class="q-step">'+label+'</p><h2 class="q-text">'+q.text+'</h2>'+(q.sub?'<p class="q-sub">'+q.sub+'</p>':'')+inner+'</div>';
+  var focus = document.querySelector('.email-input,#h-ft,#num-input');
+  if (focus) setTimeout(function(){ focus.focus(); }, 400);
+}
+
+// ═══════════════════════════════════════════
+// HANDLERS
+// ═══════════════════════════════════════════
+function selectOpt(el, key) {
+  document.querySelectorAll('.opt').forEach(function(b){ b.classList.remove('selected'); });
+  el.classList.add('selected');
+  answers[key] = el.getAttribute('data-val');
+  document.getElementById('btn-next').disabled = false;
+  document.getElementById('err').textContent = '';
+}
+function toggleMulti(el, val) {
+  if (val==='No limitations') {
+    multiSelected = [];
+    document.querySelectorAll('.opt').forEach(function(b){ b.classList.remove('selected'); });
+    multiSelected.push(val); el.classList.add('selected');
+  } else {
+    var noBtn = null;
+    document.querySelectorAll('.opt').forEach(function(b){ if(b.getAttribute('data-val')==='No limitations') noBtn=b; });
+    if (noBtn) noBtn.classList.remove('selected');
+    var idx = multiSelected.indexOf('No limitations');
+    if (idx > -1) multiSelected.splice(idx,1);
+    var i = multiSelected.indexOf(val);
+    if (i > -1) { multiSelected.splice(i,1); el.classList.remove('selected'); }
+    else { multiSelected.push(val); el.classList.add('selected'); }
+  }
+}
+function onHeightInput() {
+  var ft = document.getElementById('h-ft').value;
+  var ins = document.getElementById('h-in').value;
+  document.getElementById('btn-next').disabled = !(ft && ins!=='');
+}
+function onNumInput() {
+  document.getElementById('btn-next').disabled = !document.getElementById('num-input').value;
+}
+function onEmailInput() {
+  var v = document.getElementById('email-input').value;
+  document.getElementById('btn-next').disabled = !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+}
+function advance() {
+  var q = questions[step];
+  var err = document.getElementById('err');
+  if (q.type==='choice' && !answers[q.key]) { err.textContent='Please make a selection.'; return; }
+  if (q.type==='multi') { answers[q.key] = multiSelected.length ? multiSelected.slice() : ['No limitations']; }
+  if (q.type==='height') {
+    var ft = document.getElementById('h-ft').value;
+    var ins = document.getElementById('h-in').value;
+    if (!ft||ins==='') { err.textContent='Please enter your height.'; return; }
+    answers[q.key] = ft+"'"+ins+'"';
+  }
+  if (q.type==='number') {
+    var v = document.getElementById('num-input').value;
+    if (!v) { err.textContent='Please enter your weight.'; return; }
+    answers[q.key] = v+' '+q.unit;
+  }
+  var card = document.getElementById('q-card');
+  if (card) card.classList.add('exiting');
+  setTimeout(function(){ step++; render(); }, 280);
+}
+
+// ═══════════════════════════════════════════
+// SUBMIT
+// ═══════════════════════════════════════════
+function submitQuiz() {
+  var emailVal = document.getElementById('email-input').value.trim();
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
+    document.getElementById('err').textContent='Please enter a valid email.'; return;
+  }
+  answers.email = emailVal;
+  var btn = document.getElementById('btn-next');
+  btn.disabled = true; btn.textContent = 'Checking...';
+  var err = document.getElementById('err');
+
+  // Check if email already exists in Brevo list 3
+  fetch('https://api.brevo.com/v3/contacts/'+encodeURIComponent(emailVal), {
+    method: 'GET',
+    headers: { 'accept': 'application/json', 'api-key': BREVO_KEY }
+  })
+  .then(function(r) { return r.json().then(function(d){ return {status:r.status, data:d}; }); })
+  .then(function(res) {
+    // Contact exists — check if they're in list 3
+    if (res.status === 200) {
+      var lists = (res.data.listIds || []);
+      if (lists.indexOf(3) > -1) {
+        // Already signed up — show block screen
+        btn.disabled = false; btn.textContent = 'Send My Plan';
+        showAlreadySignedUp(emailVal);
+        return;
+      }
+    }
+    // New contact (404) or exists but not in list 3 — proceed normally
+    btn.textContent = 'Sending...';
+    var matched = matchWorkout(answers);
+    console.log('Matched:', matched.id, matched.title);
+    document.getElementById('progress-bar').style.width='100%';
+    document.getElementById('screen').classList.remove('active');
+    document.getElementById('wordmark').classList.remove('show');
+    document.getElementById('upsell-screen').classList.add('show');
+    submitToBrevo(answers, matched);
+  })
+  .catch(function() {
+    // On network error, proceed anyway so we don't block legitimate users
+    btn.textContent = 'Sending...';
+    var matched = matchWorkout(answers);
+    document.getElementById('progress-bar').style.width='100%';
+    document.getElementById('screen').classList.remove('active');
+    document.getElementById('wordmark').classList.remove('show');
+    document.getElementById('upsell-screen').classList.add('show');
+    submitToBrevo(answers, matched);
+  });
+}
+
+function showAlreadySignedUp(email) {
+  document.getElementById('screen').classList.remove('active');
+  document.getElementById('wordmark').classList.remove('show');
+  document.getElementById('progress-bar').style.width='100%';
+  document.getElementById('already-screen').classList.add('show');
+}
+
+// ═══════════════════════════════════════════
+// UPGRADE + NAVIGATION
+// ═══════════════════════════════════════════
+function goUpgrade() {
+  window.open('https://buy.stripe.com/3cIcN48ht4gc4cDdXBgUM00','_blank');
+}
+function showConfirm() {
+  document.getElementById('upsell-screen').style.display='none';
+  document.getElementById('confirm-screen').classList.add('show');
+  document.getElementById('progress-bar').style.width='100%';
+}
+
+// ═══════════════════════════════════════════
+// KEYBOARD
+// ═══════════════════════════════════════════
+document.addEventListener('keydown', function(e) {
+  if (e.key!=='Enter') return;
+  var btn = document.getElementById('btn-next');
+  if (btn && !btn.disabled) btn.click();
+});
+</script>
+</body>
+</html>
