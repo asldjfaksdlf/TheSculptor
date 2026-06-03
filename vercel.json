@@ -1,0 +1,8 @@
+{
+  "functions": {
+    "api/brevo.js": {
+      "memory": 128,
+      "maxDuration": 10
+    }
+  }
+}
