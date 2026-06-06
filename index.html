@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Sculptor — 11 Questions to a Better Body</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='none'/%3E%3Ctext x='16' y='24' font-family='Georgia%2C serif' font-size='26' font-weight='400' text-anchor='middle' fill='none' stroke='%23C8C8C8' stroke-width='1.2'%3ES%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Montserrat:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#080808;--border:rgba(255,255,255,0.07);--border-hi:rgba(255,255,255,0.18);
+  --silver:#C8C8C8;--silver-lo:rgba(200,200,200,0.4);--silver-hi:#E8E8E8;
+  --white:#F4F4F4;--accent:#A0A0A0;--sel:rgba(200,200,200,0.10);
+  --sel-b:rgba(200,200,200,0.55);--gold:#C9A84C;
+}
+html,body{height:100%;background:var(--bg);color:var(--silver);font-family:'Montserrat',sans-serif;font-weight:300;overflow:hidden;}
+body::before{content:'';position:fixed;inset:0;z-index:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;}
+#progress-bar{position:fixed;bottom:0;left:0;height:1px;background:var(--silver-lo);width:0%;transition:width 0.6s cubic-bezier(0.4,0,0.2,1);z-index:100;}
+#progress-label{position:fixed;bottom:16px;right:28px;font-size:12px;letter-spacing:0.3em;text-transform:uppercase;color:#ffffff;z-index:100;}
+#hero{position:fixed;inset:0;z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 24px;background:var(--bg);transition:opacity 0.8s ease,transform 0.8s ease;}
+#hero.hidden{opacity:0;pointer-events:none;transform:translateY(-20px);}
+.hero-presents{font-family:'Cormorant Garamond',serif;font-size:clamp(13px,2vw,17px);font-weight:300;font-style:italic;letter-spacing:0.12em;color:rgba(200,200,200,0.7);margin-bottom:16px;letter-spacing:0.2em;animation:fadeUp 1s 0.1s ease both;}
+.hero-title{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(38px,8vw,88px);line-height:0.92;letter-spacing:0.06em;text-transform:uppercase;text-align:center;animation:fadeUp 1s 0.15s ease both;margin-bottom:24px;background:linear-gradient(
+    135deg,
+    #4a4a4a 0%,
+    #8a8a8a 12%,
+    #d4d4d4 22%,
+    #ffffff 32%,
+    #f8f8f8 38%,
+    #ffffff 44%,
+    #e0e0e0 50%,
+    #ffffff 56%,
+    #d0d0d0 64%,
+    #f0f0f0 72%,
+    #ffffff 80%,
+    #b0b0b0 88%,
+    #787878 100%
+  );
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  filter:drop-shadow(0 0 40px rgba(255,255,255,0.15)) drop-shadow(0 2px 8px rgba(0,0,0,0.8));
+  animation:fadeUp 1s 0.15s ease both, shimmer 4s ease-in-out 1.2s infinite alternate;}
+.hero-tagline{font-family:'Cormorant Garamond',serif;font-size:clamp(16px,2.5vw,22px);font-weight:300;font-style:italic;color:var(--silver);text-align:center;letter-spacing:0.04em;line-height:1.5;max-width:520px;margin-bottom:52px;animation:fadeUp 1s 0.25s ease both;}
+.hero-tagline em{font-style:normal;color:var(--silver);}
+.hero-divider{width:1px;height:48px;background:linear-gradient(to bottom,transparent,var(--silver-lo),transparent);margin-bottom:36px;animation:fadeUp 1s 0.35s ease both;}
+.btn-hero{background:transparent;border:1px solid rgba(200,200,200,0.35);color:var(--silver);font-family:'Montserrat',sans-serif;font-weight:400;font-size:11px;letter-spacing:0.45em;text-transform:uppercase;padding:16px 52px;cursor:pointer;transition:border-color 0.2s,color 0.2s,transform 0.15s;border-radius:0;animation:fadeUp 1s 0.4s ease both;}
+.btn-hero:hover{border-color:rgba(200,200,200,0.45);color:var(--silver-hi);transform:translateY(-1px);}
+#wordmark{position:fixed;top:28px;left:50%;transform:translateX(-50%);z-index:200;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:300;letter-spacing:0.5em;text-transform:uppercase;color:var(--silver);white-space:nowrap;opacity:0;transition:opacity 0.6s;}
+#wordmark.show{opacity:1;}
+#screen{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;z-index:10;padding:80px 24px 40px;opacity:0;pointer-events:none;transition:opacity 0.5s ease;overflow-y:auto;}
+#screen.active{opacity:1;pointer-events:all;}
+.q-card{width:100%;max-width:520px;display:flex;flex-direction:column;align-items:center;opacity:0;transform:translateY(24px);animation:slideIn 0.55s cubic-bezier(0.22,1,0.36,1) forwards;padding-bottom:40px;}
+@keyframes slideIn{to{opacity:1;transform:none;}}
+.q-card.exiting{animation:slideOut 0.28s cubic-bezier(0.4,0,1,1) forwards;}
+@keyframes slideOut{to{opacity:0;transform:translateY(-16px);}}
+.q-step{font-size:9px;letter-spacing:0.45em;text-transform:uppercase;color:rgba(200,200,200,0.5);margin-bottom:28px;font-weight:400;}
+.q-text{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,5vw,38px);font-weight:300;line-height:1.25;color:var(--white);text-align:center;margin-bottom:10px;}
+.q-sub{font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(200,200,200,0.6);text-align:center;margin-bottom:40px;}
+.options{width:100%;display:flex;flex-direction:column;gap:10px;}
+.options.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.opt{width:100%;background:transparent;border:1px solid var(--border);color:var(--silver);font-family:'Montserrat',sans-serif;font-weight:300;font-size:13px;letter-spacing:0.15em;text-transform:uppercase;padding:18px 24px;cursor:pointer;text-align:center;transition:background 0.15s,border-color 0.15s,color 0.15s,transform 0.1s;border-radius:0;position:relative;-webkit-appearance:none;}
+.opt:hover{border-color:var(--border-hi);color:var(--silver-hi);transform:translateY(-1px);}
+.opt.selected{background:var(--sel);border-color:var(--sel-b);color:var(--white);}
+.opt.selected::after{content:'';position:absolute;top:50%;right:16px;transform:translateY(-50%);width:4px;height:4px;border-radius:50%;background:var(--silver-hi);}
+.input-row{display:flex;gap:12px;width:100%;align-items:flex-end;justify-content:center;}
+.field-wrap{display:flex;flex-direction:column;gap:8px;flex:1;max-width:200px;}
+.field-label{font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:rgba(200,200,200,0.6);}
+.field-input{background:transparent;border:none;border-bottom:1px solid var(--border-hi);color:var(--white);font-family:'Montserrat',sans-serif;font-weight:200;font-size:28px;letter-spacing:0.04em;width:100%;padding:8px 0 10px;text-align:center;outline:none;-webkit-appearance:none;transition:border-color 0.2s;}
+.field-input:focus{border-bottom-color:var(--silver);}
+.field-input::placeholder{color:rgba(200,200,200,0.13);font-size:22px;}
+.field-input::-webkit-outer-spin-button,.field-input::-webkit-inner-spin-button{-webkit-appearance:none;}
+.field-input[type=number]{-moz-appearance:textfield;}
+.field-unit{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(200,200,200,0.55);text-align:center;margin-top:4px;}
+.email-input{background:transparent;border:none;border-bottom:1px solid var(--border-hi);color:var(--white);font-family:'Montserrat',sans-serif;font-weight:200;font-size:clamp(16px,3vw,22px);letter-spacing:0.06em;width:100%;padding:12px 0 14px;text-align:center;outline:none;-webkit-appearance:none;transition:border-color 0.2s;}
+.email-input:focus{border-bottom-color:var(--silver);}
+.email-input::placeholder{color:rgba(200,200,200,0.16);}
+.btn-continue{margin-top:36px;background:transparent;border:1px solid var(--border);color:var(--silver);font-family:'Montserrat',sans-serif;font-weight:400;font-size:11px;letter-spacing:0.35em;text-transform:uppercase;padding:16px 40px;cursor:pointer;transition:border-color 0.2s,color 0.2s,transform 0.15s;border-radius:0;-webkit-appearance:none;}
+.btn-continue:hover{border-color:var(--border-hi);color:var(--silver-hi);transform:translateY(-1px);}
+.btn-continue:disabled{opacity:0.22;cursor:not-allowed;transform:none;}
+.btn-submit{margin-top:36px;background:var(--silver);border:1px solid var(--silver);color:var(--bg);font-family:'Montserrat',sans-serif;font-weight:500;font-size:11px;letter-spacing:0.4em;text-transform:uppercase;padding:18px 48px;cursor:pointer;transition:opacity 0.2s,transform 0.15s;border-radius:0;-webkit-appearance:none;}
+.btn-submit:hover{opacity:0.88;transform:translateY(-1px);}
+.btn-submit:disabled{opacity:0.28;cursor:not-allowed;transform:none;}
+.err-msg{font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:#9E5A5A;margin-top:12px;text-align:center;min-height:14px;}
+#upsell-screen{position:fixed;inset:0;z-index:300;background:var(--bg);display:none;flex-direction:column;align-items:center;justify-content:flex-start;padding:60px 24px;overflow-y:auto;}
+#upsell-screen.show{display:flex;}
+.upsell-card{width:100%;max-width:480px;display:flex;flex-direction:column;align-items:center;opacity:0;transform:translateY(20px);animation:slideIn 0.6s 0.1s cubic-bezier(0.22,1,0.36,1) forwards;padding-bottom:40px;}
+.upsell-sent{font-size:9px;letter-spacing:0.45em;text-transform:uppercase;color:rgba(200,200,200,0.55);margin-bottom:24px;}
+.upsell-title{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,5vw,40px);font-weight:300;color:var(--white);text-align:center;margin-bottom:10px;line-height:1.2;}
+.upsell-sub{font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--silver);text-align:center;margin-bottom:44px;}
+.upsell-divider{width:100%;height:1px;background:var(--border);margin:32px 0;}
+.offer-card{width:100%;border:1px solid rgba(201,168,76,0.3);padding:32px 28px;text-align:center;position:relative;overflow:hidden;}
+.offer-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+.offer-badge{font-size:9px;letter-spacing:0.45em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+.offer-price{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,7vw,58px);font-weight:300;color:var(--white);line-height:1;margin-bottom:6px;}
+.offer-price span{font-size:18px;vertical-align:super;color:var(--silver-lo);}
+.offer-period{font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:#ffffff;margin-bottom:28px;}
+.offer-perks{list-style:none;margin-bottom:28px;display:flex;flex-direction:column;gap:10px;}
+.offer-perks li{font-size:13px;letter-spacing:0.08em;color:#ffffff;display:flex;align-items:center;gap:12px;text-align:left;}
+.offer-perks li::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--gold);flex-shrink:0;}
+.btn-upgrade{width:100%;background:var(--gold);border:1px solid var(--gold);color:#080808;font-family:'Montserrat',sans-serif;font-weight:500;font-size:11px;letter-spacing:0.4em;text-transform:uppercase;padding:18px 24px;cursor:pointer;transition:opacity 0.2s,transform 0.15s;border-radius:0;}
+.btn-upgrade:hover{opacity:0.88;transform:translateY(-1px);}
+.btn-skip{margin-top:16px;background:transparent;border:none;color:rgba(200,200,200,0.45);font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:0.25em;text-transform:uppercase;cursor:pointer;padding:8px;transition:color 0.2s;}
+.btn-skip:hover{color:var(--silver-lo);}
+#confirm-screen{position:fixed;inset:0;z-index:400;background:var(--bg);display:none;flex-direction:column;align-items:center;justify-content:center;padding:40px 24px;text-align:center;}
+#confirm-screen.show{display:flex;}
+.confirm-mark{font-size:9px;letter-spacing:0.5em;text-transform:uppercase;color:rgba(200,200,200,0.18);margin-bottom:48px;}
+.confirm-title{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,6vw,52px);font-weight:300;color:var(--white);margin-bottom:20px;}
+.confirm-divider{width:40px;height:1px;background:var(--border-hi);margin:0 auto 28px;}
+.confirm-sub{font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:var(--silver);max-width:380px;line-height:2;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:none;}}
+@keyframes shimmer{
+  0%{background:linear-gradient(135deg,#4a4a4a 0%,#8a8a8a 12%,#d4d4d4 22%,#ffffff 32%,#f8f8f8 38%,#ffffff 44%,#e0e0e0 50%,#ffffff 56%,#d0d0d0 64%,#f0f0f0 72%,#ffffff 80%,#b0b0b0 88%,#787878 100%);-webkit-background-clip:text;background-clip:text;}
+  100%{background:linear-gradient(135deg,#787878 0%,#c0c0c0 10%,#ffffff 20%,#e8e8e8 30%,#ffffff 40%,#f0f0f0 48%,#ffffff 54%,#e4e4e4 62%,#ffffff 70%,#d8d8d8 78%,#ffffff 86%,#a0a0a0 93%,#555 100%);-webkit-background-clip:text;background-clip:text;}
+}
+#already-screen{position:fixed;inset:0;z-index:400;background:var(--bg);display:none;flex-direction:column;align-items:center;justify-content:flex-start;padding:60px 24px;overflow-y:auto;text-align:center;}
+#already-screen.show{display:flex;}
+.already-card{width:100%;max-width:440px;display:flex;flex-direction:column;align-items:center;opacity:0;transform:translateY(20px);animation:slideIn 0.6s 0.1s cubic-bezier(0.22,1,0.36,1) forwards;padding-bottom:40px;}
+.already-mark{font-size:9px;letter-spacing:0.5em;text-transform:uppercase;color:rgba(200,200,200,0.18);margin-bottom:40px;}
+.already-title{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,6vw,46px);font-weight:300;color:var(--white);margin-bottom:16px;line-height:1.2;}
+.already-sub{font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:var(--silver);max-width:360px;line-height:2;margin-bottom:44px;}
+.already-divider{width:40px;height:1px;background:var(--border-hi);margin:0 auto 32px;}
+@media(max-width:480px){.options.grid-2{grid-template-columns:1fr;}.input-row{flex-direction:column;align-items:center;}.field-wrap{max-width:100%;}}
+</style>
+</head>
+<body>
+<div id="progress-bar"></div>
+<div id="progress-label"></div>
+<div id="wordmark">The Sculptor</div>
+
+<div id="hero">
+  <p class="hero-presents">The Sculptor presents</p>
+  <h1 class="hero-title">Eleven Questions<br>to a Better<br>Body</h1>
+  <p class="hero-tagline">Answer honestly. Train precisely.<br><em>Your custom plan is waiting.</em></p>
+  <div class="hero-divider"></div>
+  <button class="btn-hero" onclick="startQuiz()">Begin &nbsp;&rarr;</button>
+</div>
+
+<div id="screen"></div>
+
+<div id="upsell-screen">
+  <div class="upsell-card">
+    <p class="upsell-sent">&#10003; &nbsp; Plan sent to your inbox</p>
+    <h2 class="upsell-title">Keep the momentum.</h2>
+    <p class="upsell-sub">One plan is a start. Pro keeps you progressing.</p>
+    <div class="upsell-divider"></div>
+    <div class="offer-card">
+      <p class="offer-badge">The Sculptor &mdash; Pro</p>
+      <p class="offer-price"><span>$</span>5</p>
+      <p class="offer-period">per month &nbsp;&middot;&nbsp; cancel anytime</p>
+      <ul class="offer-perks">
+        <li>A new tailored plan every month — so your body never plateaus</li>
+        <li>Nutrition targets adjusted to match each plan</li>
+        <li>Ask any fitness question by email and get a real answer</li>
+        <li>Your plan updates as your weight, goals, or schedule change</li>
+        <li>Unlock the full exercise library — 100+ movements with coaching cues</li>
+        <li>$5 — less than one protein bar (and most protein bars are terrible anyway)</li>
+      </ul>
+      <button class="btn-upgrade" onclick="goUpgrade()">Upgrade for $5 / month</button>
+    </div>
+    <button class="btn-skip" onclick="showConfirm()">No thanks, I'm good with my free plan</button>
+  </div>
+</div>
+
+<div id="already-screen">
+  <div class="already-card">
+    <p class="already-mark">The Sculptor</p>
+    <h2 class="already-title">You're already<br>in the system.</h2>
+    <div class="already-divider"></div>
+    <p class="already-sub">A plan has already been sent to this address.<br>Upgrade to Pro for a fresh plan every month.</p>
+    <div class="offer-card" style="width:100%;max-width:420px;">
+      <p class="offer-badge">The Sculptor &mdash; Pro</p>
+      <p class="offer-price"><span>$</span>5</p>
+      <p class="offer-period">per month &nbsp;&middot;&nbsp; cancel anytime</p>
+      <ul class="offer-perks">
+        <li>A new tailored plan every month — so your body never plateaus</li>
+        <li>Nutrition targets adjusted to match each plan</li>
+        <li>Ask any fitness question by email and get a real answer</li>
+        <li>Your plan updates as your weight, goals, or schedule change</li>
+        <li>Unlock the full exercise library — 100+ movements with coaching cues</li>
+        <li>$5 — less than one protein bar (and most protein bars are terrible anyway)</li>
+      </ul>
+      <button class="btn-upgrade" onclick="goUpgrade()">Upgrade for $5 / month</button>
+    </div>
+    <button class="btn-skip" style="margin-top:20px;" onclick="window.location.reload()">Start over with a different email</button>
+  </div>
+</div>
+
+<div id="confirm-screen">
+  <p class="confirm-mark">The Sculptor</p>
+  <h2 class="confirm-title">Your plan is on<br>its way.</h2>
+  <div class="confirm-divider"></div>
+  <p class="confirm-sub">Your custom workout has been sent to your inbox.</p>
+  <p class="confirm-sub" style="margin-top:16px;color:#C9A84C;border:1px solid rgba(201,168,76,0.3);padding:16px 20px;line-height:2;"><span style="font-size:16px;">&#9888;</span> <span style="color:#ffffff;text-decoration:underline;text-underline-offset:3px;">Check your spam or junk folder</span> if you don't see it — mark it as safe to ensure future emails land in your inbox.</p>
+  <p class="confirm-sub" style="margin-top:24px;">Train with precision.</p>
+</div>
+
+<script>
+// ═══════════════════════════════════════════
+// WORKOUT LIBRARY
+// ═══════════════════════════════════════════
+var WORKOUTS = [];
+var workoutsLoaded = false;
+
+fetch('workouts.json')
+  .then(function(r){ return r.json(); })
+  .then(function(data){
+    WORKOUTS = data;
+    workoutsLoaded = true;
+  })
+  .catch(function(e){
+    console.error('Failed to load workouts.json:', e);
+  });
+
+// ═══════════════════════════════════════════
+// WORKOUT MATCHING ENGINE
+// ═══════════════════════════════════════════
+function matchWorkout(a) {
+  var age = parseInt(a.age) || 0;
+  var isOver40 = age >= 40;
+  var isBeginner = a.experience && a.experience.indexOf('Beginner') === 0;
+  var isBodyweightOnly = a.equipment === 'Bodyweight only';
+  var isDumbbellOnly = a.equipment === 'Dumbbells only';
+  var isBandsOnly = a.equipment === 'Resistance bands';
+  var is2Day = a.days === '1 – 2';
+  var is3Day = a.days === '3 – 4';
+  var is6Day = a.days === '5+';
+  var isAdvanced = a.experience && a.experience.indexOf('Advanced') === 0;
+  var isBootyGoal = a.goal === 'Booty / Glute Gains';
+  var find = function(id){ return WORKOUTS.filter(function(w){ return w.id === id; })[0] || WORKOUTS[0]; };
+
+  // Beginner routing
+  if (isBeginner) {
+    if (isBootyGoal) return find('BOOTY-BEGINNER');
+    if (isBodyweightOnly) return find('BEGINNER-HOME');
+    return find('BEGINNER-ANY');
+  }
+
+  // Booty goal routing
+  if (isBootyGoal) {
+    if (isAdvanced) return find('BOOTY-ADVANCED');
+    if (isBandsOnly) return find('BOOTY-BANDS');
+    if (isBodyweightOnly) return find('BOOTY-BODYWEIGHT');
+    if (isDumbbellOnly) return find('BOOTY-HOME');
+    return find('BOOTY-GYM');
+  }
+
+  // 2 days per week
+  if (is2Day) return find('MINIMALIST-2DAY');
+
+  // Over 40 routing
+  if (isOver40) {
+    if (isDumbbellOnly || isBodyweightOnly) return find('OVER40-HOME');
+    if (a.goal === 'Fat loss' || a.goal === 'Lose fat + build muscle') return find('OVER40-FATLOSS');
+    return find('OVER40-MUSCLE');
+  }
+
+  // Bodyweight only
+  if (isBodyweightOnly) {
+    if (a.goal === 'Fat loss') return find('HIIT-HOME');
+    if (a.goal === 'Athletic performance') return find('ATHLETE-HOME');
+    if (a.goal === 'Lose fat + build muscle') return find('RECOMP-BODYWEIGHT');
+    if (a.goal === 'General fitness') return find('GENERAL-FITNESS-HOME');
+    return find('BODYWEIGHT-ANY');
+  }
+
+  // Bands only
+  if (isBandsOnly) return find('BOOTY-BANDS');
+
+  // Dumbbell only routing
+  if (isDumbbellOnly) {
+    if (a.sex === 'Male' && a.goal === 'Fat loss') return find('M-FATLOSS-HOME');
+    if (a.sex === 'Female' && a.goal === 'Fat loss') return find('F-FATLOSS-HOME');
+    if (a.sex === 'Male' && a.goal === 'Muscle gain') return find('M-MUSCLE-HOME');
+    if (a.sex === 'Female' && a.goal === 'Muscle gain') return find('F-MUSCLE-HOME');
+    if (a.sex === 'Female' && a.goal === 'Lose fat + build muscle') return find('F-RECOMP-HOME');
+    if (a.sex === 'Male' && a.goal === 'Lose fat + build muscle') return find('M-RECOMP-HOME');
+    if (a.sex === 'Male' && a.goal === 'Strength') return find('M-STRENGTH-HOME');
+    return find('DB-MUSCLE-HOME');
+  }
+
+  // Full gym routing
+  if (is6Day && isAdvanced && a.sex === 'Male' && a.goal === 'Muscle gain') return find('PPL-6DAY');
+  if (is3Day && a.sex === 'Male' && a.goal === 'Muscle gain') return find('M-MUSCLE-3DAY');
+  if (a.sex === 'Male' && a.goal === 'General fitness') return find('M-GENERAL-GYM');
+  if (a.sex === 'Female' && a.goal === 'Athletic performance') return find('F-ATHLETIC-GYM');
+  if (a.goal === 'Athletic performance') return find('SPORT-SPECIFIC');
+
+  // Fat loss routing — multiple variants based on experience and days
+  if (a.sex === 'Male' && a.goal === 'Fat loss') {
+    if (isAdvanced) return find('M-FATLOSS-ADVANCED');
+    if (is6Day) return find('M-FATLOSS-CARDIO-HEAVY');
+    if (is3Day) return find('M-FATLOSS-MINIMAL-REST');
+    // Rotate through variants based on quiz fingerprint
+    var mScore = (parseInt(a.age)||0) + (a.weight ? parseInt(a.weight) : 0);
+    if (mScore % 5 === 0) return find('M-FATLOSS-AMRAP');
+    if (mScore % 4 === 0) return find('M-FATLOSS-SUPERSET');
+    if (mScore % 3 === 0) return find('M-FATLOSS-HIIT-GYM');
+    if (mScore % 2 === 0) return find('M-FATLOSS-CARDIO-HEAVY');
+    return find('M-FATLOSS-GYM');
+  }
+  if (a.sex === 'Female' && a.goal === 'Fat loss') {
+    if (is6Day) return find('F-FATLOSS-CARDIO-HEAVY');
+    if (is3Day) return find('F-FATLOSS-MINIMAL-REST');
+    var fScore = (parseInt(a.age)||0) + (a.weight ? parseInt(a.weight) : 0);
+    if (fScore % 5 === 0) return find('F-FATLOSS-AMRAP');
+    if (fScore % 4 === 0) return find('F-FATLOSS-SUPERSET');
+    if (fScore % 3 === 0) return find('F-FATLOSS-HIIT-GYM');
+    if (fScore % 2 === 0) return find('F-FATLOSS-CARDIO-HEAVY');
+    return find('F-FATLOSS-GYM');
+  }
+
+  // Score-based fallback
+  var best = null, bestScore = -1;
+  WORKOUTS.forEach(function(w) {
+    if (w.tags.ageGroup) return;
+    if (w.tags.equipment === 'Bodyweight only' || w.tags.equipment === 'Dumbbells only' || w.tags.equipment === 'Resistance bands') return;
+    var score = 0;
+    if (w.tags.sex === a.sex || w.tags.sex === 'any') score += 4;
+    if (w.tags.goal === a.goal) score += 5;
+    if (w.tags.equipment === a.equipment) score += 3;
+    if (isAdvanced && w.tags.experience) score += 2;
+    if (score > bestScore) { bestScore = score; best = w; }
+  });
+  return best || WORKOUTS[0];
+}
+
+
+// ═══════════════════════════════════════════
+// BREVO SUBMIT
+// ═══════════════════════════════════════════
+function submitToBrevo(a, workout) {
+  var hdrs = {'accept':'application/json','content-type':'application/json'};
+
+  fetch(BREVO_PROXY+'?endpoint=contacts',{
+    method:'POST', headers:hdrs,
+    body:JSON.stringify({
+      email:a.email, listIds:[3], updateEnabled:true,
+      attributes:{SEX:a.sex||'',AGE:a.age||'',GOAL:a.goal||'',EXPERIENCE:a.experience||'',EQUIPMENT:a.equipment||'',PLAN_ID:workout.id||''}
+    })
+  }).then(function(r){if(r.ok||r.status===201||r.status===204){return r.text();}return r.text();}).then(function(d){console.log('Contact result:',d);});
+
+  var html = '<!DOCTYPE html>'
+    +'<html lang="en" xmlns="http://www.w3.org/1999/xhtml">'
+    +'<head>'
+    +'<meta charset="UTF-8">'
+    +'<meta name="viewport" content="width=device-width,initial-scale=1.0">'
+    +'<meta name="color-scheme" content="dark">'
+    +'<meta name="supported-color-schemes" content="dark">'
+    +'<style>'
+    +':root{color-scheme:dark;}'
+    +'body,table,td,div,p,a,pre,h1,h2{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}'
+    +'body{margin:0!important;padding:0!important;background-color:#080808!important;color:#C8C8C8!important;}'
+    +'table{border-collapse:collapse!important;}'
+    +'@media only screen and (max-width:620px){'
+    +'.email-pad{padding:24px 20px!important;}'
+    +'.email-pad-sm{padding:20px!important;}'
+    +'.plan-text{font-size:12px!important;line-height:1.9!important;}'
+    +'}'
+    +'</style>'
+    +'</head>'
+    +'<body style="margin:0!important;padding:0!important;background-color:#080808!important;color:#C8C8C8!important;font-family:Arial,Helvetica,sans-serif;">'
+    +'<div style="display:none!important;visibility:hidden;max-height:0;overflow:hidden;opacity:0;font-size:1px;line-height:1px;color:#080808;">Your custom plan is ready — '+workout.title+'</div>'
+    +'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#080808!important;"><tr><td align="center" style="padding:16px 16px 0;"><p style="color:#ffffff!important;font-size:13px;font-family:Arial,Helvetica,sans-serif;margin:0;">To ensure delivery of future plans, add <span style="color:#C9A84C!important;font-weight:700;">hello@chzld.lifestyle</span> to your contacts.</p></td></tr></table>'
+    +'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#080808!important;">'
+    +'<tr><td align="center" style="background-color:#080808!important;padding:32px 16px;">'
+    +'<table role="presentation" cellpadding="0" cellspacing="0" style="max-width:580px;width:100%;background-color:#0e0e0e!important;border:1px solid rgba(255,255,255,0.08);">'
+    +'<tr><td class="email-pad" style="background-color:#080808!important;padding:36px 40px 30px;border-bottom:1px solid rgba(255,255,255,0.07);">'
+    +'<p style="color:rgba(200,200,200,0.45)!important;font-size:9px;letter-spacing:0.55em;text-transform:uppercase;margin:0 0 18px 0;font-family:Arial,Helvetica,sans-serif;">The Sculptor</p>'
+    +'<h1 style="color:#F4F4F4!important;font-size:24px;font-weight:300;margin:0 0 6px 0;line-height:1.25;font-family:Georgia,serif;">Your Custom Plan</h1>'
+    +'<h2 style="color:#C8C8C8!important;font-size:16px;font-weight:300;margin:0;font-family:Georgia,serif;font-style:italic;">'+workout.title+'</h2>'
+    +'</td></tr>'
+    +'<tr><td class="email-pad" style="background-color:#0e0e0e!important;padding:32px 40px 24px;">'
+    +'<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>'
+    +'<td width="3" style="background-color:#C9A84C!important;border-radius:2px;">&nbsp;</td>'
+    +'<td style="padding-left:16px;"><p style="color:#A0A0A0!important;font-size:13px;line-height:1.8;margin:0;font-style:italic;font-family:Georgia,serif;">'+workout.summary+'</p></td>'
+    +'</tr></table>'
+    +'</td></tr>'
+    +'<tr><td style="background-color:#0e0e0e!important;padding:0 40px;"><div style="height:1px;background-color:rgba(255,255,255,0.07)!important;font-size:0;line-height:0;">&nbsp;</div></td></tr>'
+    +'<tr><td class="email-pad" style="background-color:#0e0e0e!important;padding:28px 40px 36px;">'
+    +'<pre class="plan-text" style="color:#ffffff!important;font-family:Courier New,Courier,monospace;font-size:13px;line-height:2;white-space:pre-wrap;word-break:break-word;margin:0;background-color:transparent!important;">'+workout.plan+'</pre>'
+    +'</td></tr>'
+    +'<tr><td class="email-pad-sm" style="background-color:#111111!important;padding:36px 40px;text-align:center;border-top:1px solid rgba(255,255,255,0.07);">'
+    +'<p style="color:#C9A84C!important;font-size:9px;letter-spacing:0.5em;text-transform:uppercase;margin:0 0 14px 0;font-family:Arial,Helvetica,sans-serif;">The Sculptor &mdash; Pro</p>'
+    +'<p style="color:#F4F4F4!important;font-size:20px;font-weight:300;margin:0 0 10px 0;font-family:Georgia,serif;">Want a new plan every month?</p>'
+    +'<p style="color:#ffffff!important;font-size:13px;line-height:1.8;margin:0 0 28px 0;font-family:Arial,Helvetica,sans-serif;">Fresh workout each month, nutrition guidance, and direct access to a fitness expert &mdash; all for $5/month.</p>'
+    +'<a href="https://buy.stripe.com/3cIcN48ht4gc4cDdXBgUM00" style="display:inline-block;background-color:#C9A84C!important;color:#080808!important;font-size:10px;letter-spacing:0.4em;text-transform:uppercase;font-weight:700;padding:16px 40px;text-decoration:none;font-family:Arial,Helvetica,sans-serif;">Upgrade for $5 / month</a>'
+    +'</td></tr>'
+    +'<tr><td class="email-pad-sm" style="background-color:#080808!important;padding:24px 40px;text-align:center;border-top:1px solid rgba(255,255,255,0.07);">'
+    +'<p style="color:rgba(200,200,200,0.3)!important;font-size:9px;letter-spacing:0.3em;text-transform:uppercase;margin:0 0 6px 0;font-family:Arial,Helvetica,sans-serif;">The Sculptor &middot; Personalized Training</p>'
+    +'<p style="color:rgba(255,255,255,0.5)!important;font-size:10px;margin:0;font-family:Arial,Helvetica,sans-serif;">You received this because you requested a custom plan.</p>'
+    +'</td></tr>'
+    +'</table>'
+    +'</td></tr></table>'
+    +'</body></html>';
+
+  fetch(BREVO_PROXY+'?endpoint=smtp/email',{
+    method:'POST', headers:hdrs,
+    body:JSON.stringify({
+      sender:{name:'The Sculptor',email:'hello@chzld.lifestyle'},
+      replyTo:{name:'The Sculptor',email:'hello@chzld.lifestyle'},
+      to:[{email:a.email}],
+      subject:'Your '+workout.title+' Plan is Ready — The Sculptor',
+      htmlContent:html
+    })
+  }).then(function(r){if(r.ok||r.status===201||r.status===204){return r.text();}return r.text();}).then(function(d){console.log('Email result:',d);});
+}
+
+// ═══════════════════════════════════════════
+// QUESTIONS
+// ═══════════════════════════════════════════
+var questions = [
+  {key:'sex',text:'What is your sex?',type:'choice',grid:true,options:['Male','Female']},
+  {key:'age',text:'How old are you?',sub:'Helps us tailor recovery and intensity',type:'choice',options:['Under 18','18 \u2013 25','26 \u2013 35','36 \u2013 45','45+']},
+  {key:'height',text:'Your height.',type:'height'},
+  {key:'weight',text:'Your weight.',type:'number',unit:'lbs',placeholder:'165'},
+  {key:'experience',text:'Training experience.',type:'choice',options:['Beginner  \u00b7  0 \u2013 6 months','Intermediate  \u00b7  6 \u2013 24 months','Advanced  \u00b7  2+ years']},
+  {key:'goal',text:'What is your primary goal?',type:'choice',options:['Fat loss','Muscle gain','Lose fat + build muscle','Strength','Athletic performance','Booty / Glute Gains','General fitness']},
+  {key:'days',text:'Days per week available.',type:'choice',grid:true,options:['1 \u2013 2','3','4','5+']},
+  {key:'duration',text:'Time per session.',type:'choice',options:['20 \u2013 30 min','30 \u2013 45 min','45 \u2013 60 min','60 \u2013 90 min']},
+  {key:'equipment',text:'Equipment access.',type:'choice',options:['Full gym','Dumbbells only','Bodyweight only','Home + limited equipment']},
+  {key:'limitation',text:'Any limitations or focus areas?',sub:'Select all that apply',type:'multi',options:['No limitations','Knee issues','Back issues','Shoulder issues','Low stamina','Beginner motivation','Abs focus','Glute focus','Fat loss priority']},
+  {key:'email',text:'Where should we send your plan?',sub:'Your custom workout will be delivered to your inbox',type:'email'}
+];
+
+// ═══════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════
+var step = 0;
+var answers = {};
+var multiSelected = [];
+var funnelAnswers = {};
+var BREVO_PROXY = 'https://the-sculptor.vercel.app/api/brevo';
+var quizStarted = false;
+
+// ═══════════════════════════════════════════
+// HERO
+// ═══════════════════════════════════════════
+function startQuiz() {
+  if (quizStarted) return;
+  quizStarted = true;
+  document.getElementById('hero').classList.add('hidden');
+  setTimeout(function() {
+    document.getElementById('screen').classList.add('active');
+    document.getElementById('wordmark').classList.add('show');
+    render();
+  }, 600);
+}
+
+// ═══════════════════════════════════════════
+// RENDER
+// ═══════════════════════════════════════════
+function render() {
+  var screen = document.getElementById('screen');
+  var q = questions[step];
+  var total = questions.length;
+  document.getElementById('progress-bar').style.width = ((step/total)*100)+'%';
+  document.getElementById('progress-label').textContent = step===0?'':(step+' / '+total);
+  if (q.type==='multi') multiSelected = [];
+  var inner = '';
+  if (q.type==='choice') {
+    var gc = q.grid?' grid-2':'';
+    inner = '<div class="options'+gc+'">';
+    q.options.forEach(function(o) {
+      inner += '<button class="opt" data-val="'+o+'" onclick="selectOpt(this,\''+q.key+'\')">'+o+'</button>';
+    });
+    inner += '</div><button class="btn-continue" id="btn-next" onclick="advance()" disabled>Continue</button><p class="err-msg" id="err"></p>';
+  } else if (q.type==='multi') {
+    inner = '<div class="options">';
+    q.options.forEach(function(o) {
+      inner += '<button class="opt" data-val="'+o+'" onclick="toggleMulti(this,\''+o+'\')">'+o+'</button>';
+    });
+    inner += '</div><button class="btn-continue" id="btn-next" onclick="advance()">Continue</button><p class="err-msg" id="err"></p>';
+  } else if (q.type==='height') {
+    inner = '<div class="input-row"><div class="field-wrap"><span class="field-label">Feet</span><input class="field-input" id="h-ft" type="number" min="3" max="8" placeholder="5" oninput="onHeightInput()"><span class="field-unit">ft</span></div><div class="field-wrap"><span class="field-label">Inches</span><input class="field-input" id="h-in" type="number" min="0" max="11" placeholder="10" oninput="onHeightInput()"><span class="field-unit">in</span></div></div><button class="btn-continue" id="btn-next" onclick="advance()" disabled>Continue</button><p class="err-msg" id="err"></p>';
+  } else if (q.type==='number') {
+    inner = '<div class="field-wrap" style="max-width:200px"><input class="field-input" id="num-input" type="number" min="50" max="700" placeholder="'+q.placeholder+'" oninput="onNumInput()"><span class="field-unit">'+q.unit+'</span></div><button class="btn-continue" id="btn-next" onclick="advance()" disabled>Continue</button><p class="err-msg" id="err"></p>';
+  } else if (q.type==='email') {
+    inner = '<input class="email-input" id="email-input" type="email" placeholder="you@email.com" oninput="onEmailInput()"><button class="btn-submit" id="btn-next" onclick="submitQuiz()" disabled>Send My Plan</button><p class="err-msg" id="err"></p>';
+  }
+  var label = step < total-1 ? 'Step '+(step+1)+' of '+total : 'Final Step';
+  screen.innerHTML = '<div class="q-card" id="q-card"><p class="q-step">'+label+'</p><h2 class="q-text">'+q.text+'</h2>'+(q.sub?'<p class="q-sub">'+q.sub+'</p>':'')+inner+'</div>';
+  var focus = document.querySelector('.email-input,#h-ft,#num-input');
+  if (focus) setTimeout(function(){ focus.focus(); }, 400);
+}
+
+// ═══════════════════════════════════════════
+// HANDLERS
+// ═══════════════════════════════════════════
+function selectOpt(el, key) {
+  document.querySelectorAll('.opt').forEach(function(b){ b.classList.remove('selected'); });
+  el.classList.add('selected');
+  answers[key] = el.getAttribute('data-val');
+  document.getElementById('btn-next').disabled = false;
+  document.getElementById('err').textContent = '';
+}
+function toggleMulti(el, val) {
+  if (val==='No limitations') {
+    multiSelected = [];
+    document.querySelectorAll('.opt').forEach(function(b){ b.classList.remove('selected'); });
+    multiSelected.push(val); el.classList.add('selected');
+  } else {
+    var noBtn = null;
+    document.querySelectorAll('.opt').forEach(function(b){ if(b.getAttribute('data-val')==='No limitations') noBtn=b; });
+    if (noBtn) noBtn.classList.remove('selected');
+    var idx = multiSelected.indexOf('No limitations');
+    if (idx > -1) multiSelected.splice(idx,1);
+    var i = multiSelected.indexOf(val);
+    if (i > -1) { multiSelected.splice(i,1); el.classList.remove('selected'); }
+    else { multiSelected.push(val); el.classList.add('selected'); }
+  }
+}
+function onHeightInput() {
+  var ft = document.getElementById('h-ft').value;
+  var ins = document.getElementById('h-in').value;
+  document.getElementById('btn-next').disabled = !(ft && ins!=='');
+}
+function onNumInput() {
+  document.getElementById('btn-next').disabled = !document.getElementById('num-input').value;
+}
+function onEmailInput() {
+  var v = document.getElementById('email-input').value;
+  document.getElementById('btn-next').disabled = !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+}
+function advance() {
+  var q = questions[step];
+  var err = document.getElementById('err');
+  if (q.type==='choice' && !answers[q.key]) { err.textContent='Please make a selection.'; return; }
+  if (q.type==='multi') { answers[q.key] = multiSelected.length ? multiSelected.slice() : ['No limitations']; }
+  if (q.type==='height') {
+    var ft = document.getElementById('h-ft').value;
+    var ins = document.getElementById('h-in').value;
+    if (!ft||ins==='') { err.textContent='Please enter your height.'; return; }
+    answers[q.key] = ft+"'"+ins+'"';
+  }
+  if (q.type==='number') {
+    var v = document.getElementById('num-input').value;
+    if (!v) { err.textContent='Please enter your weight.'; return; }
+    answers[q.key] = v+' '+q.unit;
+  }
+  var card = document.getElementById('q-card');
+  if (card) card.classList.add('exiting');
+  setTimeout(function(){ step++; render(); }, 280);
+}
+
+// ═══════════════════════════════════════════
+// SUBMIT
+// ═══════════════════════════════════════════
+function submitQuiz() {
+  if (!workoutsLoaded) {
+    document.getElementById('err').textContent='Still loading — please try again in a moment.'; return;
+  }
+  var emailVal = document.getElementById('email-input').value.trim();
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
+    document.getElementById('err').textContent='Please enter a valid email.'; return;
+  }
+  answers.email = emailVal;
+  var btn = document.getElementById('btn-next');
+  btn.disabled = true; btn.textContent = 'Checking...';
+  var err = document.getElementById('err');
+
+  // Check if email already exists in Brevo list 3
+  fetch(BREVO_PROXY+'?endpoint=contacts/'+encodeURIComponent(emailVal), {
+    method: 'GET',
+    headers: { 'accept': 'application/json' }
+  })
+  .then(function(r) { return r.json().then(function(d){ return {status:r.status, data:d}; }); })
+  .then(function(res) {
+    // Contact exists — check if they're in list 3
+    if (res.status === 200) {
+      var lists = (res.data.listIds || []);
+      if (lists.indexOf(3) > -1) {
+        // Already signed up — show block screen
+        btn.disabled = false; btn.textContent = 'Send My Plan';
+        showAlreadySignedUp(emailVal);
+        return;
+      }
+    }
+    // New contact (404) or exists but not in list 3 — proceed normally
+    btn.textContent = 'Sending...';
+    var matched = matchWorkout(answers);
+    console.log('Matched:', matched.id, matched.title);
+    document.getElementById('progress-bar').style.width='100%';
+    document.getElementById('screen').classList.remove('active');
+    document.getElementById('wordmark').classList.remove('show');
+    document.getElementById('upsell-screen').classList.add('show');
+    submitToBrevo(answers, matched);
+  })
+  .catch(function() {
+    // On network error, proceed anyway so we don't block legitimate users
+    btn.textContent = 'Sending...';
+    var matched = matchWorkout(answers);
+    document.getElementById('progress-bar').style.width='100%';
+    document.getElementById('screen').classList.remove('active');
+    document.getElementById('wordmark').classList.remove('show');
+    document.getElementById('upsell-screen').classList.add('show');
+    submitToBrevo(answers, matched);
+  });
+}
+
+function showAlreadySignedUp(email) {
+  document.getElementById('screen').classList.remove('active');
+  document.getElementById('wordmark').classList.remove('show');
+  document.getElementById('progress-bar').style.width='100%';
+  document.getElementById('already-screen').classList.add('show');
+}
+
+// ═══════════════════════════════════════════
+// UPGRADE + NAVIGATION
+// ═══════════════════════════════════════════
+function goUpgrade() {
+  window.open('https://buy.stripe.com/3cIcN48ht4gc4cDdXBgUM00','_blank');
+}
+function showConfirm() {
+  document.getElementById('upsell-screen').style.display='none';
+  document.getElementById('confirm-screen').classList.add('show');
+  document.getElementById('progress-bar').style.width='100%';
+}
+
+// ═══════════════════════════════════════════
+// KEYBOARD
+// ═══════════════════════════════════════════
+document.addEventListener('keydown', function(e) {
+  if (e.key!=='Enter') return;
+  var btn = document.getElementById('btn-next');
+  if (btn && !btn.disabled) btn.click();
+});
+</script>
+</body>
+</html>
