@@ -1,0 +1,610 @@
+[
+  {
+    "id": "FATLOSS-MEDITERRANEAN",
+    "tags": {
+      "goal": "Lose fat",
+      "diet": "Mediterranean"
+    },
+    "title": "Fat Loss \u2014 Mediterranean",
+    "summary": "The Mediterranean diet is one of the most research-backed approaches to sustainable fat loss. High in vegetables, lean protein, healthy fats, and fibre. Naturally portion-friendly because whole foods are filling. The goal is a 300-500 calorie daily deficit through food quality and portion control \u2014 not starvation.",
+    "calories": "Calculate your TDEE (total daily energy expenditure) and subtract 400 calories. This is your daily target. Weigh yourself weekly \u2014 if losing more than 1.5 lbs/week, eat 200 more calories. If losing nothing after 2 weeks, cut another 100.",
+    "macros": "Protein: 0.8g per lb of bodyweight. Fat: 30-35% of calories (mostly olive oil, fish, nuts). Carbs: fill the rest \u2014 prioritise vegetables, legumes, and whole grains.",
+    "meals": "BREAKFAST\n\u2022 2 eggs scrambled in 1 tsp olive oil + 1 cup spinach + 1 slice whole grain toast\n\u2022 OR Greek yoghurt (plain, full fat) + handful of berries + 1 tbsp walnuts\n\u2022 Black coffee or herbal tea\n\nLUNCH\n\u2022 Large salad: mixed greens + cucumber + tomato + olives + chickpeas (\u00bd cup) + 4oz grilled chicken or tuna + 1 tbsp olive oil + lemon\n\u2022 OR lentil soup (1.5 cups) + side salad\n\nDINNER\n\u2022 5oz grilled salmon or white fish + roasted vegetables (zucchini, peppers, eggplant) + \u00bd cup quinoa or brown rice\n\u2022 OR chicken thigh (baked) + large plate of roasted vegetables + small amount of hummus\n\nSNACKS (pick 1-2 per day)\n\u2022 Handful of almonds or walnuts (measured \u2014 1oz)\n\u2022 Cucumber + 2 tbsp hummus\n\u2022 Apple + 1 tbsp almond butter\n\u2022 Hard boiled egg",
+    "portion_control": "Use a 9-inch plate. Half the plate is vegetables. One quarter is protein. One quarter is whole grains or legumes. Olive oil is healthy but calorie-dense \u2014 measure it, don't pour. Nuts are easy to overeat \u2014 pre-portion them.",
+    "struggle_tips": "CRAVINGS: The Mediterranean diet handles cravings well because fat and fibre keep you full. If cravings hit, drink water first \u2014 thirst mimics hunger. Dark chocolate (1-2 squares) is on plan.\nPORTION CONTROL: Eat slowly. Put the fork down between bites. Stop at 80% full \u2014 it takes 20 minutes for satiety signals to reach your brain.\nCONSISTENCY: Prep your lunch the night before. Decision fatigue kills diets \u2014 having food ready removes the choice.",
+    "foods_to_avoid": "Refined carbs (white bread, pastries), processed meats, sugary drinks, seed oils, fast food, alcohol (or limit to 1 glass of red wine occasionally)."
+  },
+  {
+    "id": "FATLOSS-KETO",
+    "tags": {
+      "goal": "Lose fat",
+      "diet": "Keto"
+    },
+    "title": "Fat Loss \u2014 Keto",
+    "summary": "Ketogenic fat loss works by switching your primary fuel source from carbohydrates to fat. When carbs drop below 20-30g per day, your body enters ketosis and begins burning stored body fat efficiently. Hunger is naturally reduced in ketosis \u2014 use this to your advantage with portion control.",
+    "calories": "Subtract 400-500 calories from your TDEE. Keto has a natural appetite-suppressing effect \u2014 most people find portion control easier once fat-adapted (2-4 weeks in). Don't track obsessively at first \u2014 focus on eliminating carbs. Then dial in calories if fat loss stalls.",
+    "macros": "Fat: 65-75% of calories. Protein: 0.8g per lb of bodyweight. Carbs: under 25g net per day \u2014 this is non-negotiable. Net carbs = total carbs minus fibre.",
+    "meals": "BREAKFAST\n\u2022 3 eggs scrambled in butter + 2 strips bacon + \u00bd avocado\n\u2022 OR bulletproof coffee (black coffee + 1 tbsp butter + 1 tbsp MCT oil, blended) if intermittent fasting\n\nLUNCH\n\u2022 5oz ground beef or chicken thigh cooked in butter + large salad (greens, cucumber, avocado, olive oil dressing)\n\u2022 OR tuna salad (canned tuna + mayo + celery) on lettuce wraps\n\nDINNER\n\u2022 6oz ribeye or salmon + roasted broccoli or cauliflower in butter or olive oil + side salad\n\u2022 OR chicken thighs (skin on, baked) + saut\u00e9ed spinach + creamy cauliflower mash\n\nSNACKS (pick 1 if hungry)\n\u2022 Cheese (1-2oz)\n\u2022 Hard boiled eggs (1-2)\n\u2022 Handful of macadamia nuts or pecans\n\u2022 Celery + almond butter (1 tbsp)",
+    "portion_control": "Protein portions matter on keto \u2014 too much protein converts to glucose via gluconeogenesis and can slow ketosis. Stick to 4-6oz protein per meal. Fat is filling \u2014 don't force extra fat if not hungry. Eat to satiety, not beyond it.",
+    "struggle_tips": "KETO FLU (week 1-2): Headaches and fatigue are normal as your body adapts. Salt your food liberally, drink bone broth, and supplement magnesium and potassium.\nCRAVINGS: Sugar cravings peak in week 1-2 then drop significantly. Push through \u2014 ketosis kills sugar addiction.\nEATING OUT: Steak and salad, burger without the bun, grilled fish with vegetables. Most restaurants can accommodate keto if you ask.",
+    "foods_to_avoid": "All grains (bread, pasta, rice, oats), sugar and sweeteners, most fruit, legumes, starchy vegetables (potato, corn, peas), beer, most alcohol, low-fat dairy products."
+  },
+  {
+    "id": "FATLOSS-CARNIVORE",
+    "tags": {
+      "goal": "Lose fat",
+      "diet": "Carnivore"
+    },
+    "title": "Fat Loss \u2014 Carnivore",
+    "summary": "The carnivore diet eliminates everything except animal products. It is highly satiating, eliminates food decisions, and naturally creates a calorie deficit for most people through protein's high thermic effect and extreme satiety. Simple, strict, and effective for those who commit to it.",
+    "calories": "Most carnivore dieters don't count calories \u2014 protein and fat are so satiating that overeating is difficult. However for deliberate fat loss, aim for 400 calories below TDEE. If fat loss stalls after 3 weeks, reduce fat intake slightly (lean more on lean cuts rather than fatty ones).",
+    "macros": "Protein: 1-1.2g per lb of bodyweight. Fat: the remainder of your calories. Carbs: zero. The ratio of protein to fat determines your deficit \u2014 leaner cuts = lower calories.",
+    "meals": "BREAKFAST\n\u2022 3-4 eggs cooked in butter + 3 strips bacon\n\u2022 OR 6oz ground beef patty (80/20) pan-fried in its own fat\n\u2022 Black coffee (some carnivore dieters include this, others don't)\n\nLUNCH\n\u2022 6oz chicken thighs or breast (skin on) + 2 hard boiled eggs\n\u2022 OR canned sardines or salmon + 2-3 slices deli turkey or beef\n\nDINNER\n\u2022 8oz ribeye, NY strip, or sirloin, cooked in butter\n\u2022 OR 8oz salmon or other fatty fish\n\u2022 OR ground beef (6oz) + lamb chops\n\nSNACKS (only if genuinely hungry)\n\u2022 Hard boiled eggs\n\u2022 Beef jerky (no sugar added)\n\u2022 Cheese (if tolerating dairy)\n\u2022 Sliced deli meat",
+    "portion_control": "Eat when hungry, stop when full. Carnivore is unique in that satiety signals are very clear \u2014 protein and fat together trigger strong fullness hormones. Don't eat out of habit or boredom. For faster fat loss, choose leaner cuts at dinner (sirloin over ribeye, chicken breast over thigh).",
+    "struggle_tips": "ADAPTATION (week 1-3): Fatigue, digestive changes, and cravings are normal. Salt heavily, stay hydrated, and push through. Most people feel significantly better by week 3.\nSOCIAL EATING: Steak, burger patty, eggs, and bacon exist on almost every menu. Order confidently.\nCONSTIPATION: Common early on. Drink more water. This typically resolves within 2-3 weeks as the gut adapts.",
+    "foods_to_avoid": "Everything that isn't an animal product \u2014 all plants, grains, vegetables, fruit, seed oils, sugar, and processed foods. Some carnivore dieters include dairy; others exclude it. If fat loss stalls, cut dairy first."
+  },
+  {
+    "id": "FATLOSS-VEGETARIAN",
+    "tags": {
+      "goal": "Lose fat",
+      "diet": "Vegetarian"
+    },
+    "title": "Fat Loss \u2014 Vegetarian",
+    "summary": "Vegetarian fat loss requires deliberate protein focus \u2014 the biggest pitfall is replacing meat with high-carb fillers that stall fat loss. Build every meal around a protein source first, then add vegetables, then a small amount of complex carbs. Portion control is critical because plant-based carbs are easy to overeat.",
+    "calories": "Subtract 400 calories from your TDEE. Vegetarian diets can be high in calories from carbs and oils without feeling like it \u2014 tracking for the first 2-3 weeks is strongly recommended to calibrate.",
+    "macros": "Protein: 0.8g per lb of bodyweight \u2014 this requires intention on a vegetarian diet. Fat: 25-30% of calories. Carbs: the remainder, prioritising high-fibre options.",
+    "meals": "BREAKFAST\n\u2022 3 egg omelette with spinach, mushrooms, and feta + \u00bd slice whole grain toast\n\u2022 OR Greek yoghurt (plain) + \u00bd cup berries + 2 tbsp hemp seeds\n\u2022 OR cottage cheese (\u00bd cup) + apple slices\n\nLUNCH\n\u2022 Large salad: mixed greens + chickpeas (\u00bd cup) + hard boiled egg + cucumber + 1 tbsp olive oil + lemon\n\u2022 OR lentil soup (1.5 cups) + side of Greek yoghurt\n\u2022 OR tofu stir-fry (5oz firm tofu) + lots of vegetables + 2 tbsp soy sauce, served over \u00bd cup brown rice\n\nDINNER\n\u2022 Tempeh (5oz) pan-fried with vegetables + small portion of quinoa\n\u2022 OR black bean tacos (corn tortillas, 2 small) + lots of salsa, lettuce, and hot sauce\n\u2022 OR vegetable curry with chickpeas + \u00bd cup brown rice\n\nSNACKS\n\u2022 Cottage cheese (\u00bd cup)\n\u2022 Hard boiled eggs (1-2)\n\u2022 Edamame (\u00bd cup)\n\u2022 Apple + 1 tbsp almond butter",
+    "portion_control": "Grains and legumes are healthy but calorie-dense \u2014 measure them until you have a feel for correct portions. \u00bd cup cooked grains is a serving, not 2 cups. Cheese adds up fast \u2014 weigh it. Load the plate with vegetables first, then add protein, then add a small scoop of carbs.",
+    "struggle_tips": "PROTEIN: Aim for 25-30g protein per meal. Greek yoghurt, eggs, cottage cheese, tofu, tempeh, and legumes are your main tools. Don't rely solely on legumes \u2014 the carbs add up.\nCRAVINGS: High-fibre vegetables and protein at every meal reduce cravings significantly. If sweet cravings hit, Greek yoghurt with berries handles it without breaking the plan.\nEATING OUT: Ask for extra vegetables, choose egg-based dishes, lentil soups, or tofu options. Avoid pasta-heavy dishes.",
+    "foods_to_avoid": "White bread, pastries, sugary drinks, processed vegetarian meat replacements (most are high in sodium and refined carbs), excessive cheese, fried foods, alcohol."
+  },
+  {
+    "id": "FATLOSS-VEGAN",
+    "tags": {
+      "goal": "Lose fat",
+      "diet": "Vegan"
+    },
+    "title": "Fat Loss \u2014 Vegan",
+    "summary": "Vegan fat loss is absolutely achievable but requires the most nutritional planning of any dietary style. Protein is the biggest challenge \u2014 it must be deliberately built into every meal. Whole food plant-based eating is naturally high in fibre and volume, which helps with satiety and portion control.",
+    "calories": "Subtract 400 calories from TDEE. Vegan diets can be surprisingly calorie-dense (nuts, nut butters, avocado, oils) \u2014 track for 2 weeks to calibrate. The goal is high volume, high fibre, and high protein within the calorie target.",
+    "macros": "Protein: 0.8g per lb of bodyweight \u2014 requires serious intention on a vegan diet. Fat: 20-25% of calories. Carbs: the rest \u2014 prioritise legumes, vegetables, and whole grains over refined carbs.",
+    "meals": "BREAKFAST\n\u2022 Tofu scramble (5oz firm tofu crumbled + turmeric + nutritional yeast + spinach + peppers)\n\u2022 OR protein smoothie: plant protein powder (25g protein) + almond milk + banana + spinach + 1 tbsp flaxseed\n\u2022 OR overnight oats: \u00bd cup oats + almond milk + 2 tbsp hemp seeds + berries\n\nLUNCH\n\u2022 Large salad: mixed greens + 1 cup chickpeas or black beans + avocado (\u00bc) + cucumber + tahini dressing (1 tbsp)\n\u2022 OR lentil soup (2 cups) + 2 rye crispbreads\n\u2022 OR tempeh bowl (5oz) + roasted vegetables + \u00bd cup quinoa + soy sauce\n\nDINNER\n\u2022 Tofu stir-fry (6oz firm tofu) + large portion of mixed vegetables + \u00bd cup brown rice\n\u2022 OR black bean chilli (large bowl) + small corn tortilla\n\u2022 OR chickpea and vegetable curry + \u00bd cup basmati rice\n\nSNACKS\n\u2022 Edamame (\u00bd cup)\n\u2022 Roasted chickpeas\n\u2022 Apple + 1 tbsp almond butter\n\u2022 Vegan protein bar (check sugar content)",
+    "portion_control": "Nuts, nut butters, avocado, and oils are calorie-dense \u2014 measure them every time. Legumes are your protein backbone but also contain carbs \u2014 account for them. Fill half the plate with non-starchy vegetables at every meal before adding anything else.",
+    "struggle_tips": "PROTEIN: This is the hardest part of vegan fat loss. Tofu, tempeh, edamame, seitan, and legumes at every meal. A plant-based protein powder is strongly recommended to hit targets without extra carbs.\nB12 AND IRON: Supplement B12. Eat iron-rich plant foods (lentils, spinach, tofu) with vitamin C to improve absorption.\nEATING OUT: Thai, Indian, and Middle Eastern restaurants have the best vegan options. Ask for tofu or extra legumes.",
+    "foods_to_avoid": "All animal products, refined grains, sugary drinks, processed vegan junk food (vegan cheese, vegan desserts, packaged snacks), excessive oils, white rice and white bread."
+  },
+  {
+    "id": "FATLOSS-PALEO",
+    "tags": {
+      "goal": "Lose fat",
+      "diet": "Paleo"
+    },
+    "title": "Fat Loss \u2014 Paleo",
+    "summary": "Paleo fat loss eliminates processed foods, grains, legumes, and dairy \u2014 and replaces them with meat, fish, eggs, vegetables, fruit, nuts, and seeds. The elimination of processed carbs and sugar naturally reduces calorie intake for most people. Portion control focuses on protein and vegetables as the foundation of every meal.",
+    "calories": "Subtract 400 calories from TDEE. Paleo naturally reduces calorie intake by eliminating high-calorie processed foods. If fat loss stalls, reduce fruit and nut intake first \u2014 these are the easiest sources of hidden calories on paleo.",
+    "macros": "Protein: 0.85g per lb of bodyweight. Fat: 30-40% of calories (from meat, fish, eggs, avocado, nuts). Carbs: the rest \u2014 from vegetables and limited fruit only.",
+    "meals": "BREAKFAST\n\u2022 3 eggs scrambled + \u00bd avocado + handful of spinach cooked in coconut oil\n\u2022 OR sweet potato hash: diced sweet potato (\u00bd cup) + ground turkey + peppers + onion\n\u2022 Black coffee (no dairy)\n\nLUNCH\n\u2022 Large salad: mixed greens + 5oz grilled chicken or tuna + avocado (\u00bc) + cucumber + olive oil + lemon\n\u2022 OR lettuce wrap tacos: ground beef + salsa + avocado + lettuce cups\n\nDINNER\n\u2022 6oz salmon or other fish + large plate of roasted vegetables (broccoli, zucchini, peppers, asparagus)\n\u2022 OR grass-fed beef patty + roasted sweet potato (small) + side salad\n\u2022 OR chicken thighs (baked) + cauliflower rice + roasted carrots\n\nSNACKS\n\u2022 Hard boiled eggs (1-2)\n\u2022 Apple + handful of almonds\n\u2022 Beef jerky (no sugar, no nitrates)\n\u2022 Celery + almond butter (1 tbsp)",
+    "portion_control": "Paleo is naturally portion-friendly because whole foods are filling. The main overeating traps are nuts (easy to eat a handful too many) and fruit (natural sugar adds up). Measure nuts to 1oz. Limit fruit to 1-2 pieces per day on a fat loss phase. Protein and vegetables are essentially unlimited \u2014 lean on them.",
+    "struggle_tips": "EATING OUT: Grilled meat or fish + vegetables + salad fits paleo at almost any restaurant. Ask for no grains, no sauces (most contain sugar or soy).\nSNACK CRAVINGS: Paleo-compliant snacks still have calories. If you're snacking heavily, eat more protein at meals \u2014 hunger between meals usually means not enough protein at the previous meal.\nMEAL PREP: Paleo works best when food is prepared in advance. Batch cook protein on Sunday \u2014 chicken, ground beef, hard boiled eggs.",
+    "foods_to_avoid": "Grains (bread, pasta, rice, oats), legumes (beans, peanuts, soy), dairy, refined sugar, processed foods, seed oils (canola, soybean, sunflower), alcohol, artificial sweeteners."
+  },
+  {
+    "id": "FATLOSS-IF",
+    "tags": {
+      "goal": "Lose fat",
+      "diet": "Intermittent Fasting"
+    },
+    "title": "Fat Loss \u2014 Intermittent Fasting",
+    "summary": "Intermittent fasting creates a calorie deficit by compressing your eating window. The most popular protocol is 16:8 \u2014 fast for 16 hours, eat within an 8-hour window. Fat loss happens because you naturally eat fewer calories when you have less time to eat. What you eat within the window still matters enormously.",
+    "calories": "Subtract 400-500 calories from TDEE. Spread across your eating window \u2014 typically 2-3 meals. Don't try to eat all your normal day's food in a shorter window \u2014 the point is to eat less overall.",
+    "macros": "Protein: 0.85g per lb of bodyweight \u2014 critical to prioritise at every meal since you have fewer of them. Fat: 30% of calories. Carbs: the rest, timed around your workout if you train.",
+    "meals": "EATING WINDOW EXAMPLE: 12pm \u2013 8pm (16:8 protocol)\n\nMEAL 1 (12pm \u2014 break fast)\n\u2022 Large meal: 6oz chicken breast or salmon + large salad or roasted vegetables + \u00bd cup brown rice or sweet potato\n\u2022 This meal should be your largest \u2014 you're breaking an overnight fast\n\nMEAL 2 (4pm \u2014 mid-window)\n\u2022 5oz protein (any source) + vegetables + small amount of complex carbs\n\u2022 OR high-protein snack: Greek yoghurt + protein shake + fruit\n\nMEAL 3 (7:30pm \u2014 close to window close)\n\u2022 5-6oz protein + large portion of vegetables + healthy fat\n\u2022 Keep this meal lower in carbs \u2014 you're approaching the fast\n\nDURING THE FAST\n\u2022 Black coffee, plain tea, sparkling water \u2014 all acceptable\n\u2022 Nothing with calories. Even small amounts break the metabolic benefits of fasting.",
+    "portion_control": "With fewer meals, each one needs to be nutritionally complete. Don't skip vegetables to fit more protein \u2014 fibre keeps you full during the fast. The danger zone is breaking the fast with high-calorie, low-nutrition food \u2014 you're hungry and will overeat junk if it's available. Have your first meal ready.",
+    "struggle_tips": "HUNGER DURING FAST: Peaks around 8-10am then typically subsides. Black coffee suppresses appetite significantly. Stay busy during morning hours.\nSLEEP AND FASTING: Your sleeping hours count toward your fast \u2014 a 10pm-6am sleep means you only need to fast 6 more hours to hit 16. Much more manageable.\nSOCIAL EATING: Adjust your window for social situations \u2014 shift to 1pm-9pm on dinner-out days. Flexibility is sustainable.",
+    "foods_to_avoid": "Within your window: sugary drinks, ultra-processed food, refined carbs, alcohol (breaks the fast and adds empty calories). During fasting window: anything with calories."
+  },
+  {
+    "id": "FATLOSS-GLUTENFREE",
+    "tags": {
+      "goal": "Lose fat",
+      "diet": "Gluten-free"
+    },
+    "title": "Fat Loss \u2014 Gluten-Free",
+    "summary": "Gluten-free fat loss focuses on naturally gluten-free whole foods \u2014 rice, potatoes, meat, fish, eggs, vegetables, and fruit. The trap is gluten-free processed products \u2014 they are often higher in sugar and calories than their regular counterparts. Real food, not gluten-free substitutes, is the strategy.",
+    "calories": "Subtract 400 calories from TDEE. Avoid gluten-free bread, pasta, and baked goods \u2014 they are calorie-dense and often spike blood sugar more than regular versions. Build meals from naturally gluten-free whole foods instead.",
+    "macros": "Protein: 0.8g per lb of bodyweight. Fat: 30% of calories. Carbs: from rice, potatoes, vegetables, fruit, and legumes \u2014 not gluten-free packaged products.",
+    "meals": "BREAKFAST\n\u2022 3 eggs scrambled + vegetables + \u00bd cup cooked rice or 1 small potato (roasted)\n\u2022 OR Greek yoghurt + berries + 2 tbsp pumpkin seeds\n\u2022 OR smoothie: banana + spinach + protein powder (check label \u2014 GF) + almond milk\n\nLUNCH\n\u2022 5oz grilled chicken or fish + large salad (naturally GF dressing: olive oil + lemon)\n\u2022 OR rice bowl: \u00bd cup brown rice + 5oz protein + roasted vegetables + tamari (GF soy sauce)\n\u2022 OR lentil soup + side salad\n\nDINNER\n\u2022 6oz salmon or chicken + roasted potatoes (small) + large plate of roasted vegetables\n\u2022 OR ground turkey stir-fry + rice noodles (100g) + vegetables + tamari\n\u2022 OR steak + sweet potato + salad\n\nSNACKS\n\u2022 Rice cakes (2) + almond butter\n\u2022 Hard boiled eggs\n\u2022 Fruit + nuts (1oz)\n\u2022 Edamame",
+    "portion_control": "Rice and potatoes are the primary carb sources \u2014 measure them (\u00bd cup cooked rice, 1 medium potato). Gluten-free crackers and snack foods are easy to overeat \u2014 pre-portion them or avoid entirely. Protein and vegetables have no meaningful portion restriction \u2014 fill up on them.",
+    "struggle_tips": "LABEL READING: Gluten hides in sauces, marinades, dressings, and seasonings. Use tamari instead of soy sauce. Make your own sauces when possible.\nEATING OUT: Most restaurants can accommodate GF \u2014 grilled protein + vegetables + rice is available almost everywhere. Ask about cross-contamination if coeliac.\nGLUTEN-FREE JUNK FOOD: GF cookies, bread, and pasta are not health food. They're often worse for fat loss than their regular counterparts. Avoid them.",
+    "foods_to_avoid": "All wheat, barley, rye, and regular oats. Hidden gluten in: soy sauce, many salad dressings, soups, marinades, processed meats, beer. Gluten-free substitutes (bread, pasta, cookies) \u2014 treat as occasional, not daily."
+  },
+  {
+    "id": "MUSCLE-MEDITERRANEAN",
+    "tags": {
+      "goal": "Build muscle",
+      "diet": "Mediterranean"
+    },
+    "title": "Build Muscle \u2014 Mediterranean",
+    "summary": "The Mediterranean diet is excellent for muscle building \u2014 high in quality protein from fish, eggs, and legumes, rich in anti-inflammatory fats that support recovery, and carbohydrate-forward enough to fuel serious training. The focus shifts from deficit to surplus \u2014 eat more of the same quality foods.",
+    "calories": "Add 300-400 calories above your TDEE. Muscle building requires a calorie surplus \u2014 without it, training stimulus goes to waste. Gain weight slowly: 0.5-1 lb per week. If gaining faster, reduce by 200 calories.",
+    "macros": "Protein: 1g per lb of bodyweight \u2014 higher than typical Mediterranean guidance, but necessary for muscle growth. Carbs: 45-55% of calories \u2014 fuel for training. Fat: 25-30% from olive oil, fish, nuts.",
+    "meals": "BREAKFAST (large \u2014 fuel for the day)\n\u2022 4 eggs scrambled in olive oil + 2 slices whole grain toast + \u00bd avocado\n\u2022 OR Greek yoghurt (large \u2014 200g) + granola (\u00bc cup) + banana + 2 tbsp walnuts\n\nLUNCH (biggest meal)\n\u2022 7oz grilled chicken or tuna + 1 cup quinoa or chickpeas + large salad + olive oil dressing\n\u2022 OR lentil and vegetable soup (large bowl) + 2 slices whole grain bread + side Greek yoghurt\n\nPRE-WORKOUT SNACK\n\u2022 Banana + handful of almonds + Greek yoghurt\n\u2022 OR whole grain toast + 2 tbsp almond butter\n\nDINNER\n\u2022 7oz salmon or white fish + 1 cup brown rice or pasta (whole grain) + large portion of vegetables\n\u2022 OR chicken thighs + roasted vegetables + 1 cup couscous\n\nPOST-WORKOUT\n\u2022 Greek yoghurt + banana + drizzle of honey\n\u2022 OR protein shake if struggling to hit protein targets",
+    "portion_control": "On a muscle-building plan, the goal is to eat enough \u2014 not too little. If you're not gaining weight after 2 weeks, eat 200 more calories. The Mediterranean diet is filling \u2014 you may need to eat when not fully hungry to hit your surplus.",
+    "struggle_tips": "PROTEIN TARGET: Greek yoghurt, eggs, fish, and legumes at every meal. A protein shake can bridge the gap if needed.\nTIMING: Eat a carb + protein meal within 1-2 hours before training and within 1 hour after. This maximises muscle protein synthesis.\nSLEEP: 8 hours minimum. Muscle is built during sleep \u2014 this is not optional.",
+    "foods_to_avoid": "Alcohol (significantly impairs muscle protein synthesis), excessive processed food, sugary drinks that displace nutrient-dense calories."
+  },
+  {
+    "id": "MUSCLE-KETO",
+    "tags": {
+      "goal": "Build muscle",
+      "diet": "Keto"
+    },
+    "title": "Build Muscle \u2014 Keto",
+    "summary": "Building muscle on keto is possible but harder than on a higher-carb diet. Carbohydrates are the preferred fuel for intense resistance training \u2014 without them, performance may suffer. The strategy is maximising protein, keeping calories in a surplus, and accepting that muscle gain may be slower than on a standard diet.",
+    "calories": "Add 200-300 calories above TDEE. Keto muscle building requires a surplus but fat gain comes faster without carbs to partition nutrients into muscle. Keep the surplus modest and monitor progress monthly.",
+    "macros": "Protein: 1-1.2g per lb of bodyweight \u2014 higher than standard keto to compensate for the lack of carb-driven insulin for muscle protein synthesis. Fat: 60-65% of calories. Carbs: under 30g net \u2014 maintain ketosis.",
+    "meals": "BREAKFAST\n\u2022 4 eggs scrambled in butter + 3 strips bacon + \u00bd avocado + handful of spinach\n\u2022 OR smoked salmon (4oz) + 3 eggs + cream cheese + cucumber\n\nLUNCH\n\u2022 7oz ground beef or chicken thigh + large salad with avocado, olive oil, cheese\n\u2022 OR tuna salad (large portion) + celery + cucumber + hard boiled eggs\n\nPRE-WORKOUT\n\u2022 Hard boiled eggs (2-3) + cheese (1oz)\n\u2022 OR beef jerky (no sugar) + handful of macadamia nuts\n\nDINNER\n\u2022 8oz ribeye or salmon + roasted broccoli and cauliflower in butter + side salad\n\u2022 OR lamb chops + saut\u00e9ed spinach + creamy cauliflower mash with butter and cream\n\nPOST-WORKOUT\n\u2022 Protein shake (whey or egg white, check for carbs) + almond milk\n\u2022 OR cottage cheese (\u00bd cup) + walnuts",
+    "portion_control": "Eating enough is the challenge on keto muscle gain \u2014 fat is satiating and it is easy to under-eat. If not gaining weight, increase fat portions at each meal. Butter, olive oil, and fatty cuts of meat are your calorie-dense tools.",
+    "struggle_tips": "PERFORMANCE: Expect reduced training performance for 3-6 weeks as your body adapts to fat as fuel. Power output typically recovers but may never fully match carb-fuelled performance.\nCREATINE: Supplement creatine monohydrate 5g daily \u2014 it is especially important on keto to support explosive training performance.\nELECTROLYTES: Salt, magnesium, and potassium are critical on keto \u2014 supplement them or performance and recovery suffer.",
+    "foods_to_avoid": "All carbohydrates above 30g net per day, sugar, grains, fruit (except small amounts of berries), starchy vegetables, legumes."
+  },
+  {
+    "id": "MUSCLE-CARNIVORE",
+    "tags": {
+      "goal": "Build muscle",
+      "diet": "Carnivore"
+    },
+    "title": "Build Muscle \u2014 Carnivore",
+    "summary": "Carnivore muscle building is protein-forward and simple. Animal protein is the most bioavailable protein source available \u2014 absorption rates are high and amino acid profiles are complete. The strategy is eating enough calories from animal foods to support a surplus, with protein as the primary driver.",
+    "calories": "Add 300-400 calories above TDEE. Choose fattier cuts to hit the surplus \u2014 fatty ground beef (80/20), ribeye, lamb, and pork belly are your calorie-dense tools. Leaner cuts make the surplus harder to hit.",
+    "macros": "Protein: 1-1.2g per lb of bodyweight. Fat: the rest of your calories. Carbs: zero. The ratio of lean to fatty protein determines your macro split \u2014 adjust fat intake by choosing leaner or fattier cuts.",
+    "meals": "BREAKFAST (large)\n\u2022 4-5 eggs cooked in butter + 4 strips bacon + 4oz ground beef\n\u2022 OR 6oz smoked salmon + 3 eggs scrambled in butter\n\nLUNCH\n\u2022 8oz ground beef (80/20) pan-fried + 2 hard boiled eggs + cheese (1-2oz if dairy included)\n\u2022 OR chicken thighs (2 large, skin on) + 3 strips bacon\n\nPRE-WORKOUT\n\u2022 Beef jerky (no sugar) 2-3oz\n\u2022 OR hard boiled eggs (2-3)\n\nDINNER\n\u2022 10oz ribeye or NY strip cooked in butter\n\u2022 OR 8oz salmon + 2 eggs scrambled\n\u2022 OR lamb chops (2-3) + ground beef (4oz)\n\nPOST-WORKOUT\n\u2022 Whey protein shake (2 scoops) in water \u2014 if dairy is included\n\u2022 OR 3 hard boiled eggs + beef jerky",
+    "portion_control": "Eat to satiety on a muscle-building carnivore plan. If not gaining weight after 2 weeks, add one extra meal or increase portion size at dinner. Organ meats (liver, heart) are nutrient-dense additions \u2014 3-4oz of liver weekly covers most micronutrient needs.",
+    "struggle_tips": "DIGESTIVE ADAPTATION: Increased meat intake changes gut bacteria. Some people experience constipation or loose stools initially \u2014 this resolves within 2-4 weeks.\nMICRONUTRIENTS: Organ meats cover most gaps. Liver once or twice weekly is strongly recommended. Some carnivore athletes supplement vitamin C \u2014 debate exists on whether this is necessary.\nVARIETY: Rotate protein sources \u2014 beef, lamb, pork, poultry, and fish provide different nutrient profiles.",
+    "foods_to_avoid": "Everything non-animal. All plants, grains, vegetables, fruit, and processed foods."
+  },
+  {
+    "id": "MUSCLE-VEGETARIAN",
+    "tags": {
+      "goal": "Build muscle",
+      "diet": "Vegetarian"
+    },
+    "title": "Build Muscle \u2014 Vegetarian",
+    "summary": "Vegetarian muscle building is well-supported by research when protein targets are hit. Eggs and dairy are your most powerful tools \u2014 they provide complete proteins with excellent amino acid profiles. Legumes, tofu, and tempeh fill out the rest. The key is eating enough total protein across enough meals.",
+    "calories": "Add 300-400 calories above TDEE. Vegetarian muscle building is calorie-manageable because eggs and dairy are calorie-dense. Focus on hitting the protein target first, then fill remaining calories with carbs and healthy fats.",
+    "macros": "Protein: 1g per lb of bodyweight \u2014 achievable but requires deliberate planning. Carbs: 50-55% of calories \u2014 fuels training. Fat: 20-25% from eggs, dairy, olive oil, and nuts.",
+    "meals": "BREAKFAST (large)\n\u2022 4 eggs scrambled + 1 cup cottage cheese + 2 slices whole grain toast + banana\n\u2022 OR Greek yoghurt (200g) + 2 scoops protein powder (mixed in) + granola + berries\n\nLUNCH\n\u2022 Tofu stir-fry (7oz firm tofu) + 1 cup brown rice + large portion of vegetables\n\u2022 OR 3-egg omelette + 1 cup lentils + large salad\n\u2022 OR cottage cheese bowl (1 cup) + chickpeas (\u00bd cup) + vegetables + olive oil\n\nPRE-WORKOUT\n\u2022 Banana + Greek yoghurt + handful of oats\n\u2022 OR whole grain toast + 2 eggs + almond butter\n\nDINNER\n\u2022 Tempeh (6oz) + 1 cup quinoa + roasted vegetables + tahini sauce\n\u2022 OR paneer (5oz) curry + 1 cup basmati rice + side salad\n\u2022 OR egg fried rice (3 eggs + 1 cup rice + vegetables + soy sauce)\n\nPOST-WORKOUT\n\u2022 Whey protein shake (2 scoops) + banana\n\u2022 OR Greek yoghurt (large) + honey + granola",
+    "portion_control": "On a muscle gain plan, err toward eating more rather than less. Protein is the priority \u2014 if you're hitting 1g/lb and not gaining weight, add carbs at lunch and dinner. Vegetarian muscle building sometimes requires eating when not hungry.",
+    "struggle_tips": "PROTEIN DISTRIBUTION: Spread protein across 4 meals. Muscle protein synthesis is maximised with 30-40g per meal rather than all at once.\nIRON: Non-haem iron from plants is less absorbed than haem iron. Eat iron-rich foods (lentils, spinach, tofu) with vitamin C. Cook in cast iron pans.\nCREATINE: Vegetarians have lower baseline creatine stores \u2014 supplementing 5g daily produces significant strength and muscle gains.",
+    "foods_to_avoid": "Processed vegetarian substitutes high in sodium, excessive refined carbs, sugary drinks, alcohol (impairs muscle protein synthesis)."
+  },
+  {
+    "id": "MUSCLE-VEGAN",
+    "tags": {
+      "goal": "Build muscle",
+      "diet": "Vegan"
+    },
+    "title": "Build Muscle \u2014 Vegan",
+    "summary": "Vegan muscle building requires the most planning of any dietary approach but is entirely achievable. The two non-negotiables are: hitting protein targets and supplementing strategically. Without deliberate planning, vegan diets fall short on protein, B12, iron, zinc, and omega-3 \u2014 all critical for muscle growth and recovery.",
+    "calories": "Add 300-400 calories above TDEE. Vegan muscle gain is helped by calorie-dense foods: nut butters, tahini, avocado, and tofu. Don't rely solely on vegetables \u2014 they won't get you to a surplus.",
+    "macros": "Protein: 1-1.1g per lb of bodyweight. Carbs: 50-55% of calories. Fat: 25-30% from nuts, seeds, avocado, and oils. A plant-based protein powder is almost mandatory at this protein target.",
+    "meals": "BREAKFAST (large)\n\u2022 Tofu scramble (6oz) + 2 slices whole grain toast + \u00bd avocado + spinach\n\u2022 OR protein smoothie: 2 scoops plant protein + banana + oats (\u00bd cup) + almond butter (1 tbsp) + almond milk\n\nLUNCH\n\u2022 Tempeh bowl (6oz) + 1 cup brown rice + roasted vegetables + tahini\n\u2022 OR large lentil and chickpea salad + 2 tbsp hemp seeds + olive oil\n\u2022 OR soy protein stir-fry + 1 cup noodles + vegetables\n\nPRE-WORKOUT\n\u2022 Banana + 1 tbsp almond butter + plant protein shake\n\u2022 OR oat energy balls: oats + almond butter + plant protein + maple syrup\n\nDINNER\n\u2022 Large tofu or tempeh stir-fry + 1 cup brown rice or quinoa\n\u2022 OR black bean and sweet potato burrito (large, whole grain tortilla)\n\u2022 OR seitan (6oz) + roasted vegetables + mashed potatoes\n\nPOST-WORKOUT\n\u2022 Plant protein shake (2 scoops) + banana + oat milk\n\u2022 OR edamame (1 cup) + rice cakes + almond butter",
+    "portion_control": "Vegan muscle gain requires eating more than feels comfortable initially. Meals need to be large and protein-dense. If not gaining weight, add a fourth meal or increase nut butter and avocado portions.",
+    "struggle_tips": "SUPPLEMENTS (non-negotiable): B12, creatine 5g daily, omega-3 (algae-based), vitamin D, zinc. Creatine is especially impactful for vegan athletes who start with very low baseline levels.\nPROTEIN QUALITY: Combine protein sources to ensure complete amino acid profiles \u2014 rice + lentils, tofu + quinoa. Leucine is the key amino acid for muscle synthesis \u2014 highest in soy, lupine, and pea protein.\nTIMING: Protein immediately post-workout is more important on a vegan diet \u2014 plant proteins digest faster.",
+    "foods_to_avoid": "Processed vegan junk food, sugary drinks, refined carbs that displace nutrient-dense calories, excessive alcohol."
+  },
+  {
+    "id": "MUSCLE-PALEO",
+    "tags": {
+      "goal": "Build muscle",
+      "diet": "Paleo"
+    },
+    "title": "Build Muscle \u2014 Paleo",
+    "summary": "Paleo muscle building works well because protein quality is high and food quality is excellent. The limitation is carbohydrate availability for fuelling intense training \u2014 sweet potato, fruit, and white rice (some paleo followers include it) become important pre-workout fuel sources.",
+    "calories": "Add 300-400 calories above TDEE. Paleo muscle gain means eating more meat, fish, eggs, starchy vegetables, and fruit. Sweet potato and banana become important calorie and carb sources for training fuel.",
+    "macros": "Protein: 1g per lb of bodyweight \u2014 easily achievable on paleo. Carbs: 35-40% of calories from sweet potato, fruit, squash, and plantain. Fat: 30-35% from meat, fish, eggs, avocado, and nuts.",
+    "meals": "BREAKFAST (large)\n\u2022 4 eggs + 4oz ground turkey or beef + sweet potato hash (1 cup) + spinach\n\u2022 OR smoked salmon (5oz) + 3 eggs + avocado + sweet potato (\u00bd cup)\n\nLUNCH\n\u2022 7oz chicken breast or thigh + large salad + sweet potato (medium) + olive oil\n\u2022 OR ground beef bowl (7oz) + cauliflower rice + roasted vegetables + avocado\n\nPRE-WORKOUT\n\u2022 Banana + almond butter (1 tbsp) + hard boiled eggs (2)\n\u2022 OR sweet potato (small) + beef jerky\n\nDINNER\n\u2022 8oz salmon or steak + roasted sweet potato + large plate of roasted vegetables\n\u2022 OR chicken thighs (2) + plantain (roasted) + salad\n\u2022 OR lamb + roasted beets and carrots + arugula salad\n\nPOST-WORKOUT\n\u2022 Banana + egg white protein (2 scoops if using \u2014 check ingredients)\n\u2022 OR 3 hard boiled eggs + apple",
+    "portion_control": "Paleo muscle gain requires eating more than paleo fat loss \u2014 don't restrict. Increase sweet potato, fruit, and meat portions if not gaining weight. Nuts are calorie-dense but also easy to overeat \u2014 use them to add calories, not as a primary protein source.",
+    "struggle_tips": "CARB TIMING: Put sweet potato, fruit, and starchy vegetables around workouts \u2014 before for energy, after for glycogen replenishment.\nPROTEIN VARIETY: Rotate between beef, chicken, salmon, turkey, eggs, and organ meats for the full spectrum of amino acids and micronutrients.\nSLEEP: 8+ hours. Paleo's anti-inflammatory food profile supports recovery \u2014 combine with adequate sleep for best results.",
+    "foods_to_avoid": "Grains, legumes, dairy, refined sugar, processed foods, seed oils, alcohol."
+  },
+  {
+    "id": "MUSCLE-IF",
+    "tags": {
+      "goal": "Build muscle",
+      "diet": "Intermittent Fasting"
+    },
+    "title": "Build Muscle \u2014 Intermittent Fasting",
+    "summary": "Building muscle with intermittent fasting is possible but requires compressing more food into fewer hours. The eating window needs to contain enough protein and calories to support muscle growth \u2014 this means large, nutrient-dense meals. Leangaining (lean muscle gain via IF) is the classic approach.",
+    "calories": "Add 200-300 calories above TDEE, spread across your eating window. Gaining too fast on IF is easy if meals are large \u2014 monitor weekly and adjust if gaining more than 1 lb/week.",
+    "macros": "Protein: 1g per lb of bodyweight across 2-3 meals \u2014 40-50g per meal. Carbs: 50% of calories, timed around training. Fat: 25-30% of calories.",
+    "meals": "EATING WINDOW: 12pm \u2013 8pm (adjust to your schedule)\n\nMEAL 1 (12pm \u2014 largest meal, ideally around training)\n\u2022 8oz chicken breast or salmon + 1.5 cups brown rice or sweet potato + large salad\n\u2022 This is your primary anabolic meal \u2014 make it count\n\u2022 If training in the morning: eat this immediately post-workout\n\nMEAL 2 (4-5pm)\n\u2022 7oz protein (any source) + 1 cup carbs + vegetables\n\u2022 OR Greek yoghurt (large) + protein shake + banana + oats\n\nMEAL 3 (7:30pm \u2014 close window)\n\u2022 7oz protein + vegetables + moderate carbs\n\u2022 Keep fat moderate here \u2014 high fat slows digestion and may disrupt sleep\n\nPRE-FAST SNACK (if still in window and needed)\n\u2022 Cottage cheese (1 cup) \u2014 casein protein digests slowly and provides amino acids overnight\n\u2022 OR Greek yoghurt + handful of walnuts",
+    "portion_control": "Meals must be larger on IF to hit calorie and protein targets. This can be uncomfortable initially. Eat slowly and completely \u2014 skipping a meal in your window means missing growth opportunity. Liquid calories (shakes, smoothies) help when solid food feels like too much.",
+    "struggle_tips": "TRAINING TIMING: Train at the end of your fasting window or start of your eating window \u2014 this is when muscle building is most efficient. Training fasted (especially with caffeine) can work but performance may suffer.\nPROTEIN PER MEAL: With only 2-3 meals, each one needs 40-50g protein. This requires deliberate planning \u2014 most people drastically underestimate how much food that is.\nSLEEP: IF and good sleep are a powerful combination for growth hormone release. Don't compromise sleep to extend the fast.",
+    "foods_to_avoid": "Calorie-containing drinks during fasting window, junk food that wastes precious eating window calories, alcohol (severely impairs muscle protein synthesis and disrupts IF metabolic benefits)."
+  },
+  {
+    "id": "MUSCLE-GLUTENFREE",
+    "tags": {
+      "goal": "Build muscle",
+      "diet": "Gluten-free"
+    },
+    "title": "Build Muscle \u2014 Gluten-Free",
+    "summary": "Gluten-free muscle building is straightforward because the best muscle-building foods are naturally gluten-free \u2014 meat, fish, eggs, rice, potatoes, vegetables, and fruit. The trap is relying on gluten-free processed products as carb sources \u2014 they're often nutrient-poor. Stick to whole foods.",
+    "calories": "Add 300-400 calories above TDEE. Rice, potatoes, sweet potatoes, and gluten-free oats are your primary carb sources for fuelling training. Ensure each meal has a substantial protein source.",
+    "macros": "Protein: 1g per lb of bodyweight. Carbs: 50% of calories from rice, potatoes, GF oats, fruit. Fat: 25% from eggs, meat, fish, avocado, olive oil.",
+    "meals": "BREAKFAST (large)\n\u2022 4 eggs scrambled + 1 cup cooked rice or GF oats + banana\n\u2022 OR GF protein smoothie (2 scoops, check label) + oat milk + banana + almond butter\n\nLUNCH\n\u2022 7oz chicken or salmon + 1.5 cups brown rice + roasted vegetables + olive oil\n\u2022 OR rice noodle bowl (large) + 6oz protein + vegetables + tamari\n\nPRE-WORKOUT\n\u2022 Banana + rice cakes (3) + almond butter\n\u2022 OR sweet potato (medium) + hard boiled eggs (2)\n\nDINNER\n\u2022 8oz steak or salmon + baked potato (large) + side salad\n\u2022 OR chicken thighs + quinoa (1 cup) + roasted vegetables\n\u2022 OR ground turkey stir-fry + rice noodles + vegetables + tamari\n\nPOST-WORKOUT\n\u2022 GF protein shake (2 scoops, verified GF) + banana\n\u2022 OR Greek yoghurt (large) + rice cakes + honey",
+    "portion_control": "Muscle gain requires eating enough \u2014 don't restrict carbs on training days. Rice and potato portions should be generous: 1-1.5 cups cooked rice, 1-2 medium potatoes. Increase portions if not gaining weight after 2 weeks.",
+    "struggle_tips": "LABEL CHECKING: All supplements including protein powder and creatine should be certified GF. Cross-contamination is a risk with oats \u2014 use certified GF oats.\nEATING OUT: Asian restaurants are the most GF-friendly \u2014 rice-based dishes with tamari (GF soy sauce) are widely available. Confirm with staff.\nCREATINE: Standard creatine monohydrate is gluten-free \u2014 take 5g daily for meaningful strength and muscle gains.",
+    "foods_to_avoid": "Wheat, barley, rye, regular oats, soy sauce (use tamari), many marinades and sauces. Gluten-free processed substitutes \u2014 use whole food carbs instead."
+  },
+  {
+    "id": "RECOMP-MEDITERRANEAN",
+    "tags": {
+      "goal": "Lose fat + build muscle",
+      "diet": "Mediterranean"
+    },
+    "title": "Recomp \u2014 Mediterranean",
+    "summary": "Body recomposition \u2014 losing fat while building muscle simultaneously \u2014 is most achievable for beginners, those returning after a break, and those with higher body fat. The Mediterranean diet is ideal for recomp because it supports both goals: adequate protein for muscle, anti-inflammatory fats for recovery, and fibre for satiety on maintenance calories.",
+    "calories": "Eat at maintenance \u2014 your TDEE with no adjustment. Protein must be high to enable muscle gain while the deficit (created by protein's thermic effect and training) burns fat. Recomp is slow \u2014 expect 8-16 weeks before visible changes.",
+    "macros": "Protein: 1g per lb of bodyweight \u2014 this is the recomp lever. Carbs: 40% of calories, timed around training. Fat: 25-30% from olive oil, fish, and nuts.",
+    "meals": "BREAKFAST\n\u2022 3-4 eggs + 1 slice whole grain toast + \u00bd avocado + spinach\n\u2022 OR Greek yoghurt (large, plain) + berries + 2 tbsp walnuts\n\nLUNCH\n\u2022 6oz chicken or tuna + 1 cup chickpeas or quinoa + large salad + olive oil\n\nPRE-WORKOUT\n\u2022 Greek yoghurt + banana\n\u2022 OR whole grain toast + almond butter\n\nDINNER\n\u2022 6oz salmon + roasted vegetables + \u00bd cup brown rice\n\u2022 OR chicken + large salad + small portion legumes\n\nPOST-WORKOUT\n\u2022 Protein shake or Greek yoghurt + fruit",
+    "portion_control": "Maintenance calories requires precision \u2014 not too much, not too little. Weigh yourself weekly. Scale should stay roughly the same while body composition shifts. If gaining weight, cut 100 calories. If losing weight rapidly, add 100 calories.",
+    "struggle_tips": "PATIENCE: Recomp changes are visible in the mirror before the scale. Trust the process for 12 weeks before reassessing.\nPROTEIN TIMING: Protein at every meal and especially post-workout maximises muscle protein synthesis on maintenance calories.\nSLEEP: 8 hours is non-negotiable for recomp. Growth hormone peaks during deep sleep \u2014 this is when recomp happens.",
+    "foods_to_avoid": "Alcohol (kills recomp \u2014 impairs both fat loss and muscle gain), refined carbs, sugary drinks, excessive processed food."
+  },
+  {
+    "id": "RECOMP-KETO",
+    "tags": {
+      "goal": "Lose fat + build muscle",
+      "diet": "Keto"
+    },
+    "title": "Recomp \u2014 Keto",
+    "summary": "Keto recomp is one of the harder combinations \u2014 carbohydrates support muscle protein synthesis, and without them, muscle gain is slower. However, keto's fat-burning efficiency can make fat loss faster, leading to a net positive recomp effect over time. Protein must be very high and training must be consistent.",
+    "calories": "Eat at maintenance or 100-200 below. Keto's appetite suppression often creates a natural deficit \u2014 this is useful for recomp. Monitor weekly: if losing muscle (strength dropping), add 200 calories via fat.",
+    "macros": "Protein: 1.1-1.2g per lb \u2014 higher than standard keto to compensate for reduced insulin-driven muscle synthesis. Fat: 60-65% of calories. Carbs: under 25g net.",
+    "meals": "BREAKFAST\n\u2022 4 eggs + 3 strips bacon + \u00bd avocado + spinach in butter\n\nLUNCH\n\u2022 6oz ground beef or chicken thigh + large salad + avocado + olive oil\n\nPRE-WORKOUT\n\u2022 Hard boiled eggs (2-3) + cheese\n\u2022 OR beef jerky + macadamia nuts\n\nDINNER\n\u2022 7oz ribeye or salmon + roasted broccoli in butter + side salad\n\nPOST-WORKOUT\n\u2022 Protein shake (whey, low carb) + almond milk\n\u2022 OR cottage cheese (\u00bd cup) + walnuts",
+    "portion_control": "Maintenance on keto \u2014 eat to mild satiety, not stuffed. Keto hunger signals are reliable once fat-adapted. Creatine 5g daily is essential for maintaining training performance without carbs.",
+    "struggle_tips": "STRENGTH MAINTENANCE: Strength may dip initially on keto recomp. This is normal during fat adaptation. Push through weeks 3-6 before judging performance.\nELECTROLYTES: Supplement sodium, magnesium, and potassium daily. Deficiency is the most common cause of poor performance and fatigue on keto.\nCREATINE: 5g daily \u2014 critical for keto athletes.",
+    "foods_to_avoid": "All carbs above 25g net, sugar, grains, starchy vegetables, most fruit, alcohol."
+  },
+  {
+    "id": "RECOMP-PALEO",
+    "tags": {
+      "goal": "Lose fat + build muscle",
+      "diet": "Paleo"
+    },
+    "title": "Recomp \u2014 Paleo",
+    "summary": "Paleo recomp works well because food quality is high, protein is abundant, and anti-inflammatory eating supports recovery. Sweet potato, fruit, and starchy vegetables provide carbs for training without compromising the paleo framework.",
+    "calories": "Maintenance calories. Sweet potato and fruit around training windows. Protein at every meal.",
+    "macros": "Protein: 1g per lb of bodyweight. Carbs: 35-40% from sweet potato, fruit, and starchy vegetables. Fat: 30-35% from meat, fish, eggs, avocado, nuts.",
+    "meals": "BREAKFAST\n\u2022 3-4 eggs + sweet potato hash (\u00bd cup) + spinach + avocado\n\nLUNCH\n\u2022 6oz chicken + large salad + sweet potato (small) + olive oil\n\nPRE-WORKOUT\n\u2022 Banana + hard boiled eggs (2)\n\nDINNER\n\u2022 7oz salmon or steak + roasted vegetables + small portion starchy vegetable\n\nPOST-WORKOUT\n\u2022 Apple + beef jerky + hard boiled eggs",
+    "portion_control": "Maintenance is the target. Weigh weekly \u2014 scale should be roughly stable while the mirror changes. If gaining weight, reduce sweet potato and fruit. If losing too fast (and strength dropping), add more sweet potato at lunch.",
+    "struggle_tips": "CARB TIMING: All starchy carbs (sweet potato, plantain, fruit) go before and after training. Evenings are lower carb.\nNUTS: Easy to overeat and will push you into a surplus \u2014 measure them if recomp is stalling.\nSLEEP: Paleo's anti-inflammatory profile supports deep sleep. Prioritise 8 hours.",
+    "foods_to_avoid": "Grains, legumes, dairy, refined sugar, seed oils, alcohol, processed paleo snacks."
+  },
+  {
+    "id": "RECOMP-VEGETARIAN",
+    "tags": {
+      "goal": "Lose fat + build muscle",
+      "diet": "Vegetarian"
+    },
+    "title": "Recomp \u2014 Vegetarian",
+    "summary": "Vegetarian recomp is achievable with eggs, dairy, and plant proteins working together. Protein is the most critical variable \u2014 it must be at 1g per lb at maintenance calories to drive muscle gain while the body uses stored fat for energy.",
+    "calories": "Maintenance. Protein at 1g per lb is the non-negotiable. Carbs and fat fill the remaining calories. Track for at least 2 weeks \u2014 vegetarian recomp requires precision.",
+    "macros": "Protein: 1g per lb. Carbs: 45-50% timed around training. Fat: 25% from eggs, dairy, olive oil, nuts.",
+    "meals": "BREAKFAST\n\u2022 3-4 eggs + \u00bd cup oats + Greek yoghurt (small)\n\nLUNCH\n\u2022 Tofu or tempeh (6oz) + \u00bd cup quinoa + large salad\n\nPRE-WORKOUT\n\u2022 Greek yoghurt + banana\n\nDINNER\n\u2022 3-egg omelette + 1 cup lentils + roasted vegetables\n\nPOST-WORKOUT\n\u2022 Whey protein shake + banana\n\u2022 OR cottage cheese + berries",
+    "portion_control": "Maintenance means neither gaining nor losing weight. Protein is high enough to support muscle gain. The calorie deficit is created by protein's thermic effect alone. If weight drops more than 0.5 lb/week, add 100-200 calories via carbs.",
+    "struggle_tips": "CREATINE: Vegetarians have 30-40% lower baseline muscle creatine. Supplementing 5g daily produces disproportionately large strength and muscle gains compared to meat eaters.\nIRON: Pair plant iron sources with vitamin C. Low iron tanks energy and recovery.\nPROTEIN SPREAD: 30-40g protein across 4 meals maximises muscle protein synthesis.",
+    "foods_to_avoid": "Refined carbs, sugary drinks, excessive cheese (high fat, displaces protein calories), alcohol, processed vegetarian substitutes."
+  },
+  {
+    "id": "RECOMP-VEGAN",
+    "tags": {
+      "goal": "Lose fat + build muscle",
+      "diet": "Vegan"
+    },
+    "title": "Recomp \u2014 Vegan",
+    "summary": "Vegan recomp requires the most planning \u2014 protein targets are hardest to hit on maintenance calories without animal products. A plant-based protein powder is essentially mandatory. With correct supplementation and food planning, vegan recomp produces real results.",
+    "calories": "Maintenance. High protein is the lever \u2014 everything else fills around it. Track rigorously for the first 4 weeks.",
+    "macros": "Protein: 1-1.1g per lb \u2014 requires protein powder daily. Carbs: 50% timed around training. Fat: 20-25% from nuts, seeds, avocado.",
+    "meals": "BREAKFAST\n\u2022 Tofu scramble (5oz) + whole grain toast + spinach\n\u2022 OR protein smoothie: 2 scoops plant protein + banana + oats + almond milk\n\nLUNCH\n\u2022 Tempeh (6oz) + quinoa (\u00bd cup) + large salad + tahini\n\nPRE-WORKOUT\n\u2022 Banana + plant protein shake\n\nDINNER\n\u2022 Large tofu or seitan stir-fry + brown rice (\u00bd cup) + vegetables\n\nPOST-WORKOUT\n\u2022 Plant protein shake + oat milk + banana",
+    "portion_control": "Maintenance is the target. Monitor weekly. Protein powder makes hitting targets possible without overeating carbs and fat. Without it, vegan recomp is extremely difficult.",
+    "struggle_tips": "SUPPLEMENTS: B12, creatine 5g daily, algae omega-3, vitamin D, zinc. These are not optional for vegan recomp.\nLEUCINE: The key amino acid for muscle synthesis is lowest in plant proteins. Soy, pea, and rice protein blends are best. Leucine supplementation (2-3g per meal) can help.\nTIMING: Post-workout protein within 30 minutes is more critical on plant proteins due to faster digestion.",
+    "foods_to_avoid": "Processed vegan junk food, sugary drinks, refined carbs displacing protein calories, excessive oils adding empty calories, alcohol."
+  },
+  {
+    "id": "MAINTAIN-MEDITERRANEAN",
+    "tags": {
+      "goal": "Maintain and feel better",
+      "diet": "Mediterranean"
+    },
+    "title": "Maintain and Feel Better \u2014 Mediterranean",
+    "summary": "The Mediterranean diet is the most evidence-backed eating pattern for long-term health, energy, and wellbeing. At maintenance calories the goal is not restriction but optimisation \u2014 eating the best foods in the right amounts to feel and perform at your best every day.",
+    "calories": "Eat at TDEE \u2014 your maintenance level. No deficit, no surplus. If energy is high and weight is stable \u2014 you're on target.",
+    "macros": "Protein: 0.7-0.8g per lb. Fat: 35% from olive oil, fish, nuts, and avocado. Carbs: 45-50% from vegetables, whole grains, legumes, and fruit.",
+    "meals": "BREAKFAST\n\u2022 2 eggs + 1 slice whole grain toast + \u00bd avocado + coffee\n\u2022 OR Greek yoghurt + berries + walnuts + drizzle of honey\n\nLUNCH\n\u2022 Large salad + chickpeas + grilled chicken or fish + olive oil and lemon\n\u2022 OR lentil soup + whole grain bread + side salad\n\nDINNER\n\u2022 Grilled fish or chicken + roasted vegetables + small portion whole grain or legumes\n\u2022 OR vegetable-rich pasta (whole grain, small portion) + olive oil + parmesan\n\nSNACKS\n\u2022 Fruit + handful of nuts\n\u2022 Greek yoghurt\n\u2022 Olives + cucumber",
+    "portion_control": "Maintenance is about consistency not perfection. Eat slowly. Stop at 80% full. Allow occasional indulgences without guilt \u2014 the Mediterranean diet includes wine, good bread, and dessert in moderation. It is a lifestyle, not a diet.",
+    "struggle_tips": "ENERGY: If energy dips, increase complex carbs at lunch. If feeling heavy, reduce bread and pasta portions and increase vegetables.\nSLEEP: Mediterranean eating improves sleep quality \u2014 omega-3s from fish and magnesium from vegetables and nuts are natural sleep supporters.\nLONG TERM: The Mediterranean diet works because it is enjoyable. Cook with olive oil, eat with others, take time over meals.",
+    "foods_to_avoid": "Ultra-processed food, sugary drinks, fast food, seed oils. Moderate red wine is acceptable \u2014 excessive alcohol is not."
+  },
+  {
+    "id": "MAINTAIN-PALEO",
+    "tags": {
+      "goal": "Maintain and feel better",
+      "diet": "Paleo"
+    },
+    "title": "Maintain and Feel Better \u2014 Paleo",
+    "summary": "Paleo maintenance is about eating whole, unprocessed foods that support energy, mood, and long-term health. At maintenance the goal is not restriction but quality \u2014 the best version of yourself fed by the best foods available.",
+    "calories": "Eat at TDEE. Weight stable, energy high, sleep good \u2014 those are your metrics, not the scale.",
+    "macros": "Protein: 0.7-0.8g per lb. Fat: 35-40% from meat, fish, avocado, nuts. Carbs: 30-35% from sweet potato, fruit, and vegetables.",
+    "meals": "BREAKFAST\n\u2022 3 eggs + sweet potato hash + avocado\n\u2022 OR smoked salmon + eggs + cucumber\n\nLUNCH\n\u2022 Chicken or fish + large salad + olive oil\n\u2022 OR ground beef bowl + roasted vegetables + avocado\n\nDINNER\n\u2022 Steak or salmon + roasted vegetables\n\u2022 OR chicken thighs + sweet potato + salad\n\nSNACKS\n\u2022 Fruit + nuts\n\u2022 Hard boiled eggs\n\u2022 Beef jerky",
+    "portion_control": "Paleo maintenance is naturally self-regulating \u2014 whole foods are filling and the elimination of processed food removes the biggest sources of overconsumption. Eat when hungry, stop when full.",
+    "struggle_tips": "SOCIAL EATING: Paleo is the hardest diet to maintain socially. Plan for it \u2014 eat before events, choose grilled protein and salad at restaurants, allow occasional flexibility without it derailing the whole approach.\nVARIETY: Rotate proteins and vegetables. Boredom leads to non-paleo choices.\nORGAN MEATS: Liver once a week is a micronutrient insurance policy.",
+    "foods_to_avoid": "Grains, legumes, dairy, refined sugar, processed foods, seed oils."
+  },
+  {
+    "id": "MAINTAIN-GLUTENFREE",
+    "tags": {
+      "goal": "Maintain and feel better",
+      "diet": "Gluten-free"
+    },
+    "title": "Maintain and Feel Better \u2014 Gluten-Free",
+    "summary": "Gluten-free maintenance focuses on naturally GF whole foods for energy, health, and wellbeing. The goal is to feel your best \u2014 no bloating, good energy, stable mood \u2014 by eating clean, naturally GF foods rather than GF substitute products.",
+    "calories": "Eat at TDEE. Focus on food quality over quantity.",
+    "macros": "Protein: 0.7-0.8g per lb. Carbs: from rice, potatoes, GF oats, fruit. Fat: from meat, fish, eggs, olive oil, nuts.",
+    "meals": "BREAKFAST\n\u2022 Eggs + rice or GF oats + fruit\n\u2022 OR GF smoothie + almond milk + protein\n\nLUNCH\n\u2022 Grilled protein + rice + vegetables\n\u2022 OR large salad + chickpeas + olive oil\n\nDINNER\n\u2022 Salmon or chicken + potato or rice + roasted vegetables\n\nSNACKS\n\u2022 Rice cakes + almond butter\n\u2022 Fruit + nuts\n\u2022 Greek yoghurt",
+    "portion_control": "Eat regular sized portions of naturally GF whole foods. No need to restrict \u2014 focus on quality.",
+    "struggle_tips": "LABEL READING: Hidden gluten is the main maintenance challenge. Keep tamari, GF soy sauce, and GF condiments stocked at home.\nGF SUBSTITUTES: Occasional GF bread or pasta is fine for maintenance \u2014 just don't rely on them as daily staples.\nENERGY: If energy is low, increase complex GF carbs \u2014 rice, potatoes, oats.",
+    "foods_to_avoid": "Wheat, barley, rye, regular soy sauce, many packaged sauces and dressings. Check labels on all packaged foods."
+  },
+  {
+    "id": "RECOMP-CARNIVORE",
+    "tags": {
+      "goal": "Lose fat + build muscle",
+      "diet": "Carnivore"
+    },
+    "title": "Recomp \u2014 Carnivore",
+    "summary": "Carnivore recomp is surprisingly effective. High protein naturally supports muscle retention and growth, while zero carbs creates a metabolic environment that burns fat efficiently. The simplicity of the diet removes decision fatigue \u2014 eat animal products, train hard, sleep well.",
+    "calories": "Eat at maintenance or slightly below. Protein's high thermic effect (30% of calories burned in digestion) creates a natural deficit without counting. If weight isn't moving, choose leaner cuts. If strength is dropping, add fattier cuts.",
+    "macros": "Protein: 1.1-1.2g per lb of bodyweight. Fat: the remainder of your calories. Carbs: zero. Choose lean cuts (sirloin, chicken breast, white fish) on fat loss days; fattier cuts (ribeye, salmon, ground beef 80/20) on heavy training days.",
+    "meals": "BREAKFAST\n\u2022 3-4 eggs scrambled in butter + 3 strips bacon\n\u2022 OR 5oz ground beef + 2 eggs\n\nLUNCH\n\u2022 6oz chicken breast or sirloin + 2 hard boiled eggs\n\u2022 OR canned salmon + 3 slices deli turkey\n\nPRE-WORKOUT\n\u2022 2-3 hard boiled eggs + beef jerky (no sugar)\n\nDINNER\n\u2022 7oz ribeye or salmon cooked in butter\n\u2022 OR ground beef (6oz) + lamb chops (small)\n\nPOST-WORKOUT\n\u2022 Whey protein shake (if dairy included)\n\u2022 OR 3 hard boiled eggs",
+    "portion_control": "Eat to satiety \u2014 carnivore's protein and fat combination produces strong fullness signals. On recomp, stop at satisfied rather than stuffed. If not seeing body composition changes after 4 weeks, reduce fat portions slightly by choosing leaner cuts.",
+    "struggle_tips": "ADAPTATION: The first 3 weeks are the hardest. Cravings, fatigue, and digestive changes are all normal. Push through \u2014 most people feel markedly better by week 4.\nELECTROLYTES: Salt food heavily. Add magnesium and potassium supplements. Electrolyte imbalance is the most common cause of poor adaptation.\nMONITOR PROGRESS: Use progress photos and strength levels \u2014 not just the scale. Recomp shows in the mirror before the scale moves.",
+    "foods_to_avoid": "All plant foods, processed foods, sugar, seed oils. If dairy is included, full-fat only \u2014 cheese and butter. Limit if fat loss stalls."
+  },
+  {
+    "id": "RECOMP-IF",
+    "tags": {
+      "goal": "Lose fat + build muscle",
+      "diet": "Intermittent Fasting"
+    },
+    "title": "Recomp \u2014 Intermittent Fasting",
+    "summary": "IF recomp is a well-established approach \u2014 the fasting window promotes fat oxidation and growth hormone release, while the eating window delivers enough protein and calories for muscle maintenance and growth. The key is maximising protein quality and timing within the eating window.",
+    "calories": "Maintenance calories within your eating window. Do not restrict further \u2014 the fasting itself creates metabolic conditions for fat loss. Protein must be very high across your meals.",
+    "macros": "Protein: 1g per lb across 2-3 meals \u2014 35-50g per meal. Carbs: 45% of calories timed around training. Fat: 25-30%.",
+    "meals": "EATING WINDOW: 12pm-8pm (adjust as needed)\n\nMEAL 1 (12pm \u2014 largest, ideally post-workout)\n\u2022 7oz chicken or salmon + 1 cup rice or sweet potato + large salad\n\u2022 High protein, high carb \u2014 this meal drives muscle protein synthesis\n\nMEAL 2 (4-5pm)\n\u2022 6oz protein + vegetables + moderate carbs\n\u2022 OR Greek yoghurt (large) + protein shake + fruit\n\nMEAL 3 (7:30pm)\n\u2022 6oz protein + vegetables + lower carbs\n\u2022 Cottage cheese before closing window \u2014 slow digesting protein overnight\n\nDURING FAST\n\u2022 Black coffee, plain tea, sparkling water only",
+    "portion_control": "Maintenance is the target \u2014 not surplus, not deficit. The fasting window handles the fat loss side. The eating window handles the muscle side. Weigh weekly \u2014 scale should be roughly stable while body composition shifts over weeks.",
+    "struggle_tips": "TRAINING TIMING: Train at the end of your fast or beginning of your eating window for best recomp results. This times the anabolic response with nutrient availability.\nMORNING HUNGER: Peaks at 8-10am then drops. Black coffee kills it. Stay busy.\nSLEEP: IF naturally aligns with circadian rhythm when eating window ends 2-3 hours before bed. This improves sleep quality and growth hormone release \u2014 both critical for recomp.",
+    "foods_to_avoid": "Anything caloric during the fast. Junk food that wastes eating window calories. Alcohol \u2014 it impairs both fat loss and muscle synthesis."
+  },
+  {
+    "id": "RECOMP-GLUTENFREE",
+    "tags": {
+      "goal": "Lose fat + build muscle",
+      "diet": "Gluten-free"
+    },
+    "title": "Recomp \u2014 Gluten-Free",
+    "summary": "Gluten-free recomp uses naturally GF whole foods as the foundation \u2014 rice, potatoes, meat, fish, eggs, and vegetables. The approach is identical to standard recomp: maintenance calories, very high protein, carbs timed around training. GF substitute products are avoided in favour of whole foods.",
+    "calories": "Eat at maintenance. Protein at 1g per lb drives the recomp. Weigh weekly \u2014 stable weight with changing body composition is the goal.",
+    "macros": "Protein: 1g per lb. Carbs: 45% from rice, potatoes, GF oats, fruit. Fat: 25-30% from meat, fish, eggs, olive oil.",
+    "meals": "BREAKFAST\n\u2022 3-4 eggs + \u00bd cup GF oats + banana\n\u2022 OR GF protein smoothie + oat milk + fruit\n\nLUNCH\n\u2022 6oz chicken or fish + 1 cup brown rice + large salad\n\u2022 OR rice bowl + tempeh + vegetables + tamari\n\nPRE-WORKOUT\n\u2022 Rice cakes (3) + almond butter + banana\n\nDINNER\n\u2022 6oz salmon or chicken + potato or rice + roasted vegetables\n\nPOST-WORKOUT\n\u2022 GF protein shake + banana\n\u2022 OR Greek yoghurt + rice cakes + honey",
+    "portion_control": "Maintenance \u2014 not too much, not too little. High protein keeps hunger manageable. Rice and potato portions: \u00bd-1 cup cooked at each meal. Protein portions: 5-7oz per meal.",
+    "struggle_tips": "LABEL CHECK: Protein powders and supplements should be certified GF. Cross-contamination risk is real for those with coeliac disease.\nCARB TIMING: All GF carbs around training. Evenings lean toward protein and vegetables.\nPROGRESS: Track with photos and tape measure \u2014 recomp shows in measurements before the scale.",
+    "foods_to_avoid": "All gluten-containing foods. GF processed substitutes \u2014 use whole food carb sources. Regular soy sauce \u2014 use tamari."
+  },
+  {
+    "id": "MAINTAIN-CARNIVORE",
+    "tags": {
+      "goal": "Maintain and feel better",
+      "diet": "Carnivore"
+    },
+    "title": "Maintain and Feel Better \u2014 Carnivore",
+    "summary": "Carnivore maintenance is the simplest eating plan available \u2014 eat animal products, feel good, stay strong. No tracking, no measuring, no decisions. For those who thrive on carnivore, maintenance means continuing to eat this way while optimising for energy, sleep, and performance.",
+    "calories": "Eat to satiety. Carnivore is self-regulating \u2014 protein and fat together produce strong fullness signals. Weight stable, energy high, mood good \u2014 those are your metrics.",
+    "macros": "Protein: 0.8-1g per lb. Fat: the rest of your calories. Carbs: zero. Rotate between lean and fatty cuts based on hunger and energy.",
+    "meals": "BREAKFAST\n\u2022 3 eggs + bacon or sausage\n\u2022 OR ground beef + eggs\n\nLUNCH\n\u2022 Chicken, beef, or fish + hard boiled eggs\n\u2022 OR leftovers from dinner\n\nDINNER\n\u2022 Steak, salmon, lamb, or chicken \u2014 your preference\n\u2022 Cook in butter or tallow\n\nSNACKS (only if genuinely hungry)\n\u2022 Hard boiled eggs\n\u2022 Beef jerky (no sugar)\n\u2022 Cheese (if dairy included)",
+    "portion_control": "Eat when hungry, stop when full. This is the entirety of portion control on carnivore maintenance. Trust your appetite \u2014 it becomes reliable after the initial adaptation period.",
+    "struggle_tips": "ORGAN MEATS: Liver once or twice weekly is a micronutrient powerhouse. Covers most gaps that a nose-to-tail carnivore approach provides.\nVARIETY: Rotate protein sources \u2014 beef, pork, lamb, poultry, and fish for different nutrient profiles.\nSLEEP: Many carnivore adherents report improved sleep quality. Prioritise 7-9 hours.",
+    "foods_to_avoid": "All plant foods, processed meats with additives or sugar, seed oils. Keep it simple \u2014 if it came from an animal, it's in. If it didn't, it's out."
+  },
+  {
+    "id": "MAINTAIN-KETO",
+    "tags": {
+      "goal": "Maintain and feel better",
+      "diet": "Keto"
+    },
+    "title": "Maintain and Feel Better \u2014 Keto",
+    "summary": "Keto maintenance is about sustaining the metabolic state of ketosis while eating enough to fuel your life and training. The goal is steady energy, mental clarity, and stable weight \u2014 the hallmarks of well-maintained ketosis.",
+    "calories": "Eat at TDEE. Keto maintenance is naturally self-regulating once fat-adapted. Hunger signals are reliable \u2014 eat when hungry, stop when full.",
+    "macros": "Fat: 65-70% of calories. Protein: 0.7-0.8g per lb. Carbs: under 30g net daily \u2014 maintain ketosis.",
+    "meals": "BREAKFAST\n\u2022 3 eggs + bacon or cheese + coffee with cream or butter\n\u2022 OR smoked salmon + cream cheese + cucumber\n\nLUNCH\n\u2022 Chicken thighs + large salad + avocado + olive oil dressing\n\u2022 OR tuna salad + lettuce wraps + hard boiled eggs\n\nDINNER\n\u2022 Steak or salmon + roasted vegetables in butter\n\u2022 OR ground beef + zucchini noodles + cream sauce\n\nSNACKS\n\u2022 Cheese + nuts\n\u2022 Hard boiled eggs\n\u2022 Olives + deli meat",
+    "portion_control": "Maintenance on keto is self-regulating \u2014 eat to mild satiety. Fat is filling. If weight creeps up, reduce fat portions slightly. If energy drops, increase fat.",
+    "struggle_tips": "KETOSIS CHECKS: If energy or mental clarity drops, check carb intake \u2014 hidden carbs in sauces, dressings, and condiments are the most common culprit.\nELECTROLYTES: Maintain sodium, magnesium, and potassium supplementation long-term on keto. Deficiency causes fatigue and cramps.\nSOCIAL EATING: Steak and salad, burger without bun, grilled fish and vegetables \u2014 keto is manageable at most restaurants.",
+    "foods_to_avoid": "All carbs above 30g net daily. Sugar, grains, most fruit, legumes, starchy vegetables, beer, low-fat dairy products."
+  },
+  {
+    "id": "MAINTAIN-VEGETARIAN",
+    "tags": {
+      "goal": "Maintain and feel better",
+      "diet": "Vegetarian"
+    },
+    "title": "Maintain and Feel Better \u2014 Vegetarian",
+    "summary": "Vegetarian maintenance is about eating a varied, nutrient-rich plant-based diet with eggs and dairy providing complete proteins. The goal is sustained energy, good mood, and long-term health. Variety is the main tool \u2014 rotating vegetables, legumes, grains, and protein sources covers all nutritional bases.",
+    "calories": "Eat at TDEE. Balanced plates of protein, complex carbs, healthy fats, and plenty of vegetables.",
+    "macros": "Protein: 0.7g per lb from eggs, dairy, legumes, and tofu. Carbs: 50% from whole grains, legumes, and vegetables. Fat: 25% from eggs, dairy, olive oil, nuts.",
+    "meals": "BREAKFAST\n\u2022 2-3 eggs + whole grain toast + fruit\n\u2022 OR Greek yoghurt + granola + berries\n\nLUNCH\n\u2022 Large salad + chickpeas or lentils + feta + olive oil\n\u2022 OR tofu or tempeh stir-fry + brown rice\n\nDINNER\n\u2022 Pasta (whole grain) + tomato sauce + vegetables + parmesan\n\u2022 OR vegetable curry + chickpeas + basmati rice\n\u2022 OR frittata + side salad\n\nSNACKS\n\u2022 Fruit + nuts\n\u2022 Greek yoghurt\n\u2022 Hummus + vegetables",
+    "portion_control": "No restriction needed at maintenance \u2014 eat balanced portions and listen to hunger. The high fibre content of a vegetarian diet naturally prevents overeating.",
+    "struggle_tips": "IRON AND B12: Vegetarians are at risk of low iron and B12. Eat iron-rich foods (lentils, spinach, tofu) with vitamin C. Consider B12 supplementation.\nPROTEIN VARIETY: Rotate protein sources \u2014 eggs, cottage cheese, Greek yoghurt, tofu, tempeh, lentils, chickpeas \u2014 for complete amino acid coverage.\nMEAL PREP: Batch cook grains and legumes at the start of the week for easy assembly.",
+    "foods_to_avoid": "Highly processed vegetarian substitutes as daily staples, refined carbs, excessive sugar, alcohol."
+  },
+  {
+    "id": "MAINTAIN-VEGAN",
+    "tags": {
+      "goal": "Maintain and feel better",
+      "diet": "Vegan"
+    },
+    "title": "Maintain and Feel Better \u2014 Vegan",
+    "summary": "Vegan maintenance prioritises food variety and nutrient density to cover all bases without animal products. The focus is on feeling good \u2014 steady energy, good digestion, strong immunity. Supplementation is essential long-term on a vegan diet.",
+    "calories": "Eat at TDEE. Varied whole plant foods at maintenance. No restriction \u2014 focus on quality and variety.",
+    "macros": "Protein: 0.7g per lb from tofu, tempeh, legumes, and plant protein. Carbs: 55% from whole grains, legumes, vegetables, fruit. Fat: 25% from nuts, seeds, avocado, olive oil.",
+    "meals": "BREAKFAST\n\u2022 Tofu scramble + whole grain toast + spinach\n\u2022 OR smoothie: banana + spinach + plant protein + almond milk + flaxseed\n\u2022 OR oats + almond milk + banana + hemp seeds\n\nLUNCH\n\u2022 Large salad + chickpeas + tahini + whole grain pita\n\u2022 OR lentil soup + rye bread\n\u2022 OR tempeh bowl + brown rice + roasted vegetables\n\nDINNER\n\u2022 Tofu or seitan stir-fry + noodles or rice\n\u2022 OR black bean tacos + corn tortillas + avocado + salsa\n\u2022 OR vegetable and lentil curry + basmati rice\n\nSNACKS\n\u2022 Fruit + almond butter\n\u2022 Edamame\n\u2022 Hummus + vegetables\n\u2022 Trail mix (nuts + seeds + dried fruit)",
+    "portion_control": "Eat to hunger at maintenance. Vegan diets are high in fibre and volume \u2014 satiety is generally good. Watch calorie-dense foods like nuts, nut butters, and oils \u2014 easy to overeat.",
+    "struggle_tips": "SUPPLEMENTS (non-negotiable long-term): B12, vitamin D, omega-3 (algae-based), iodine, zinc, and iron if tested low. These are not optional on a vegan diet \u2014 deficiency develops slowly and silently.\nVARIETY: The wider the variety of plants, the better the micronutrient coverage. Aim for 30 different plants per week.\nSOCIAL EATING: Thai, Indian, Ethiopian, and Middle Eastern cuisines offer excellent vegan options. Plan ahead.",
+    "foods_to_avoid": "All animal products, processed vegan junk food as daily staples, refined sugar, excessive oils."
+  },
+  {
+    "id": "MAINTAIN-IF",
+    "tags": {
+      "goal": "Maintain and feel better",
+      "diet": "Intermittent Fasting"
+    },
+    "title": "Maintain and Feel Better \u2014 Intermittent Fasting",
+    "summary": "IF maintenance uses the eating window to deliver a day's worth of balanced nutrition while allowing the fasting window to support metabolic health, mental clarity, and cellular repair. The goal is steady energy, good focus, and stable weight \u2014 not restriction.",
+    "calories": "Eat at TDEE within your eating window. 2-3 complete meals. No snacking outside the window.",
+    "macros": "Protein: 0.7-0.8g per lb across meals. Carbs: 45-50%. Fat: 30%. Balanced across each meal.",
+    "meals": "EATING WINDOW EXAMPLE: 12pm-8pm\n\nMEAL 1 (12pm)\n\u2022 Complete meal: protein + carbs + vegetables + healthy fat\n\u2022 Grilled chicken + rice + salad + olive oil\n\u2022 OR eggs + sweet potato + vegetables\n\nMEAL 2 (4-5pm)\n\u2022 Moderate sized meal: protein + vegetables + smaller carb portion\n\u2022 OR Greek yoghurt + fruit + nuts as a bridge meal\n\nMEAL 3 (7:30pm)\n\u2022 Complete dinner: protein + vegetables + healthy fat\n\u2022 Lower in carbs than Meal 1 \u2014 you're winding down\n\nDURING FAST\n\u2022 Black coffee, plain tea, sparkling water",
+    "portion_control": "With a compressed eating window, each meal should be satisfying \u2014 not restrictive. Eat slowly and fully. Skipping meals within the window creates unnecessary restriction and hunger.",
+    "struggle_tips": "CONSISTENCY: The biggest benefit of IF comes from doing it consistently most days. Occasional flexibility is fine \u2014 don't let one off day become a week.\nMORNING ROUTINE: Build a non-food morning routine \u2014 exercise, meditation, reading, coffee. Keeping busy makes the fast easy.\nSLEEP: IF aligns naturally with good sleep hygiene when the eating window closes 2-3 hours before bed.",
+    "foods_to_avoid": "Calorie-containing foods and drinks during the fasting window. Junk food during the eating window \u2014 with fewer meals, every one counts."
+  },
+  {
+    "id": "FATLOSS-MEDITERRANEAN-EATINGOUT",
+    "tags": {
+      "goal": "Lose fat",
+      "diet": "Mediterranean",
+      "cooking": "eating out"
+    },
+    "title": "Fat Loss \u2014 Mediterranean (Eating Out)",
+    "summary": "Mediterranean fat loss when you eat out most of the time. Restaurant eating doesn't have to derail fat loss \u2014 it requires knowing what to order, how to modify dishes, and where hidden calories live. This plan gives you the framework for eating Mediterranean at any restaurant.",
+    "calories": "Subtract 400 calories from TDEE. Restaurant portions are typically 30-50% larger than home portions \u2014 visually split the plate and take half home, or order a starter as your main.",
+    "macros": "Protein: 0.8g per lb \u2014 order protein first. Fat: 30-35% \u2014 olive oil dressing, avocado, fish. Carbs: from vegetables, legumes, and small amounts of whole grains.",
+    "meals": "BREAKFAST (caf\u00e9 or home)\n\u2022 Eggs any style + side salad or avocado \u2014 ask for no toast or one slice\n\u2022 OR Greek yoghurt + fruit (most cafes have this)\n\u2022 Black coffee\n\nLUNCH (restaurant)\n\u2022 Grilled fish or chicken + side salad + vegetables \u2014 ask for dressing on the side\n\u2022 Greek salad + grilled protein added\n\u2022 Avoid: pasta dishes, pizza, bread baskets\n\u2022 Ask for: olive oil instead of butter, dressing on the side, extra vegetables instead of fries\n\nDINNER (restaurant)\n\u2022 Grilled salmon, sea bass, or chicken + roasted vegetables\n\u2022 Share a starter of hummus or olives instead of ordering your own\n\u2022 One glass of wine maximum \u2014 or skip\n\u2022 Avoid: creamy sauces, fried dishes, large pasta portions\n\nSNACKS (on the go)\n\u2022 Nuts (pre-portioned 1oz bag)\n\u2022 Greek yoghurt from a caf\u00e9\n\u2022 Apple + string cheese",
+    "portion_control": "The 50% rule: when a restaurant plate arrives, visually identify half and mentally commit to stopping there. Ask for a box immediately if it helps. Never eat bread before the meal \u2014 200 hidden calories before the main arrives.",
+    "struggle_tips": "ORDERING STRATEGY: Protein + vegetables + salad is available at virtually every restaurant. Ask confidently \u2014 staff are used to modifications.\nHIDDEN CALORIES: Dressings (200-400 cal), sauces, bread, and cooking oils are the main culprits. Ask for sauces on the side always.\nALCOHOL: Each glass of wine is 120-150 calories and lowers inhibition around food choices. Limit or skip on fat loss phase.",
+    "foods_to_avoid": "Bread baskets, creamy pasta, fried dishes, sugary cocktails, desserts, anything described as crispy, battered, or smothered."
+  },
+  {
+    "id": "FATLOSS-KETO-EATINGOUT",
+    "tags": {
+      "goal": "Lose fat",
+      "diet": "Keto",
+      "cooking": "eating out"
+    },
+    "title": "Fat Loss \u2014 Keto (Eating Out)",
+    "summary": "Keto eating out is manageable once you know the rules. Almost every restaurant has a keto-compatible option \u2014 it just requires knowing how to order and what to avoid. The three pillars: protein, fat, and zero hidden carbs in sauces or dressings.",
+    "calories": "400-500 below TDEE. Restaurant portions of protein and fat are usually generous \u2014 portion control matters less than carb avoidance on keto eating out.",
+    "macros": "Fat: 65-70%. Protein: 0.85g per lb. Carbs: under 25g net \u2014 this is the non-negotiable.",
+    "meals": "BREAKFAST\n\u2022 Eggs (any style) + bacon + avocado \u2014 skip toast, ask for extra eggs instead\n\u2022 OR smoked salmon + cream cheese + cucumber (most hotel buffets have this)\n\nLUNCH\n\u2022 Burger without the bun \u2014 most places will do a lettuce wrap\n\u2022 Steak salad with olive oil dressing\n\u2022 Grilled chicken + side salad, no croutons, dressing on side\n\u2022 Avoid: wraps, sandwiches, anything in a bun, soups with unknown ingredients\n\nDINNER\n\u2022 Steak + side salad + steamed vegetables (ask for butter not oil)\n\u2022 Grilled fish + roasted vegetables, ask for no sauce or sauce on side\n\u2022 Ask to substitute: fries \u2192 side salad; rice \u2192 extra vegetables\n\nSNACKS\n\u2022 Hard boiled eggs (keep in bag)\n\u2022 Cheese from a deli\n\u2022 Nuts (1oz pre-portioned)\n\u2022 Deli meat roll-ups",
+    "portion_control": "Protein portions at restaurants are usually 6-10oz \u2014 appropriate for keto. Fat is filling \u2014 don't add extra. The main portion control issue on keto eating out is hidden carbs in sauces derailing ketosis, not overeating.",
+    "struggle_tips": "SAUCE VIGILANCE: Most restaurant sauces contain sugar or starch. Always ask for sauce on the side or skip entirely. Use olive oil and lemon instead.\nASIAN RESTAURANTS: Soy sauce has carbs \u2014 ask for no sauce or bring your own tamari packet. Rice dishes can be ordered without rice.\nFAST FOOD KETO: Burger patty + cheese + lettuce + tomato works at most chains. Avoid diet sodas \u2014 they can trigger insulin response.",
+    "foods_to_avoid": "All bread, rice, pasta, potatoes, sugary sauces, sweetened dressings, beer, most cocktails, desserts, anything breaded or battered."
+  },
+  {
+    "id": "FATLOSS-VEGAN-EATINGOUT",
+    "tags": {
+      "goal": "Lose fat",
+      "diet": "Vegan",
+      "cooking": "eating out"
+    },
+    "title": "Fat Loss \u2014 Vegan (Eating Out)",
+    "summary": "Vegan fat loss while eating out is the most challenging combination \u2014 hidden animal products, limited protein options, and high-carb defaults are everywhere. But with the right restaurant choices and ordering strategy, it is manageable.",
+    "calories": "300-400 below TDEE. Vegan restaurant options skew carb-heavy \u2014 actively seek protein at every meal to avoid fat loss plateaus from inadequate protein.",
+    "macros": "Protein: 0.8g per lb \u2014 hardest to hit while eating out vegan. Prioritise tofu, tempeh, edamame, and legume-based dishes. Carbs: 45% from whole sources. Fat: 20-25%.",
+    "meals": "BREAKFAST\n\u2022 Smoothie bowl (check for honey) + extra seeds or nuts\n\u2022 Avocado toast on whole grain (ask for no butter) + fruit\n\u2022 Oatmeal with almond milk + banana + flaxseed\n\nLUNCH\n\u2022 Thai restaurant: tofu stir-fry with vegetables + brown rice (small) \u2014 ask for no fish sauce, no egg\n\u2022 Indian: dal (lentil) + vegetable curry + small naan or rice \u2014 avoid paneer and ghee\n\u2022 Salad bar: load with chickpeas, edamame, lentils, seeds \u2014 light dressing\n\u2022 Mexican: bean tacos + salsa + guacamole (small) \u2014 corn tortillas, skip sour cream and cheese\n\nDINNER\n\u2022 Sushi: edamame + vegetable rolls + miso soup \u2014 ask for no mayo\n\u2022 Italian: pasta e fagioli or tomato-based pasta (moderate portion) + side salad\n\u2022 Middle Eastern: falafel + tabbouleh + hummus (small) + salad\n\nSNACKS\n\u2022 Edamame at Japanese restaurants\n\u2022 Fruit from a caf\u00e9\n\u2022 Nuts (pre-portioned)",
+    "portion_control": "Vegan restaurant options often come in large carb-forward portions. Eat half of grain-based dishes and supplement with extra salad or vegetables. Hummus and guacamole are healthy but calorie-dense \u2014 small portions only.",
+    "struggle_tips": "BEST CUISINES: Thai, Indian, Japanese, Middle Eastern, and Mexican offer the most vegan protein options when eating out.\nHIDDEN ANIMAL PRODUCTS: Fish sauce in Thai, ghee in Indian, egg in pasta \u2014 always ask. Most restaurants are used to this.\nPROTEIN CHALLENGE: If struggling to hit protein eating out, keep a vegan protein bar in your bag as backup.",
+    "foods_to_avoid": "Fried foods, large grain portions without protein, sugary sauces, vegan desserts, alcohol, creamy vegan dishes (often high in coconut cream or oils)."
+  },
+  {
+    "id": "MUSCLE-MEDITERRANEAN-EATINGOUT",
+    "tags": {
+      "goal": "Build muscle",
+      "diet": "Mediterranean",
+      "cooking": "eating out"
+    },
+    "title": "Build Muscle \u2014 Mediterranean (Eating Out)",
+    "summary": "Building muscle while eating out on a Mediterranean diet is genuinely straightforward \u2014 grilled protein, olive oil, vegetables, and whole grains are available almost everywhere. The challenge is eating enough volume to support a surplus when restaurant portions are unpredictable.",
+    "calories": "300-400 above TDEE. Restaurant meals can be large or small \u2014 if a meal feels small, order a side of protein or an extra starter. Never leave a meal feeling like you didn't eat enough on a muscle gain plan.",
+    "macros": "Protein: 1g per lb \u2014 order protein first and build around it. Carbs: 50% from grains, legumes, and vegetables. Fat: 25-30% from olive oil, fish, nuts.",
+    "meals": "BREAKFAST\n\u2022 Large egg dish \u2014 omelette with vegetables + 2 slices whole grain toast + fruit\n\u2022 OR Greek yoghurt (large) + granola + berries + side of eggs\n\nLUNCH\n\u2022 Grilled fish or chicken + large grain salad (tabbouleh, grain bowl) + extra bread\n\u2022 Greek salad + grilled protein + pita bread\n\u2022 Ask for extra protein portion \u2014 most restaurants will add 2oz more for a small charge\n\nPRE-WORKOUT SNACK\n\u2022 Banana + packet of nuts + Greek yoghurt cup (grab and go)\n\nDINNER\n\u2022 Grilled salmon or sea bass + pasta or rice side + roasted vegetables + bread\n\u2022 Lamb or chicken + rice or couscous + side salad\n\u2022 Don't skip the bread \u2014 it contributes to the surplus\n\nPOST-WORKOUT\n\u2022 Greek yoghurt + banana + nuts (if still within eating window)\n\u2022 OR protein shake blended at home before or after restaurant visit",
+    "portion_control": "On muscle gain, finish your plate and consider ordering sides. Restaurant bread, rice, and pasta portions are your calorie surplus tools \u2014 use them intentionally.",
+    "struggle_tips": "PROTEIN FIRST: When ordering, identify the protein source and confirm the portion is adequate. A 4oz chicken breast won't build much muscle \u2014 ask for the 8oz.\nSUPPLEMENT AROUND EATING OUT: A protein shake before or after a restaurant meal bridges the gap when the protein content is uncertain.\nCONSISTENCY: Eating out every day on a muscle gain plan is possible but harder \u2014 one home-cooked meal prep day per week makes the rest of the week easier.",
+    "foods_to_avoid": "Alcohol (impairs muscle protein synthesis), very low protein meals that waste your surplus on empty calories, excessive fried food."
+  },
+  {
+    "id": "FATLOSS-VEGETARIAN-EATINGOUT",
+    "tags": {
+      "goal": "Lose fat",
+      "diet": "Vegetarian",
+      "cooking": "eating out"
+    },
+    "title": "Fat Loss \u2014 Vegetarian (Eating Out)",
+    "summary": "Vegetarian fat loss while eating out requires actively seeking protein-rich options and avoiding the carb-heavy vegetarian defaults most restaurants offer. Knowing which cuisines support your goals makes eating out much easier.",
+    "calories": "400 below TDEE. Track loosely \u2014 restaurant meals are hard to measure precisely. Prioritise protein and vegetables. Keep carb portions to half the plate.",
+    "macros": "Protein: 0.8g per lb from eggs, dairy, tofu, and legumes. Carbs: 40% \u2014 half what restaurants typically serve. Fat: 25-30%.",
+    "meals": "BREAKFAST\n\u2022 Omelette (2-3 eggs) + vegetables + feta \u2014 skip the toast or have one slice\n\u2022 OR Greek yoghurt parfait + fruit \u2014 ask for no granola if watching calories\n\nLUNCH\n\u2022 Indian: dal + vegetable curry + raita (yoghurt) \u2014 skip naan or have half\n\u2022 Mexican: bean and cheese burrito bowl (no rice) + salsa + guacamole (small)\n\u2022 Salad bar: eggs + cheese + legumes + lots of vegetables + light dressing\n\u2022 Italian: caprese salad + minestrone soup + side salad \u2014 avoid pasta mains\n\nDINNER\n\u2022 Vegetable stir-fry with tofu + half portion rice\n\u2022 Vegetarian sushi: avocado rolls + edamame + miso soup\n\u2022 Greek: spanakopita (small) + large salad + tzatziki\n\nSNACKS\n\u2022 Greek yoghurt cup\n\u2022 String cheese + apple\n\u2022 Hard boiled eggs (keep in bag)",
+    "portion_control": "Restaurant vegetarian dishes trend toward carbs \u2014 pasta, pizza, grain bowls. Always ask for extra protein and reduce the carb portion to half. Load up on any available salad or vegetable sides.",
+    "struggle_tips": "BEST CUISINES: Indian (dal, paneer, raita), Greek (eggs, feta, legumes), Japanese (edamame, egg dishes), Mexican (beans, eggs).\nPROTEIN GAP: If a meal has no clear protein source, add a side of eggs, cheese, or yoghurt.\nDRESSINGS: Ask for dressing on the side \u2014 restaurant dressings are often 200-300 extra calories.",
+    "foods_to_avoid": "Bread baskets, creamy pasta, fried vegetarian options, sugary drinks, desserts, excessive cheese portions."
+  },
+  {
+    "id": "FATLOSS-MEDITERRANEAN-MEALPREP",
+    "tags": {
+      "goal": "Lose fat",
+      "diet": "Mediterranean",
+      "cooking": "meal prep"
+    },
+    "title": "Fat Loss \u2014 Mediterranean (Meal Prep)",
+    "summary": "Mediterranean fat loss built around Sunday meal prep. Four hours on Sunday produces five days of lunches and dinners, removing daily food decisions and making the deficit automatic. Consistency is the biggest driver of fat loss \u2014 meal prep is the biggest driver of consistency.",
+    "calories": "400 below TDEE. Meal prep makes this precise \u2014 you know exactly what's in every container.",
+    "macros": "Protein: 0.8g per lb. Fat: 30% from olive oil, fish, nuts. Carbs: 40-45% from legumes, vegetables, whole grains.",
+    "meals": "SUNDAY PREP (4 hours):\n\u2022 Cook 2 lbs chicken breast \u2014 bake at 400\u00b0F with olive oil, lemon, herbs. Slice and store.\n\u2022 Cook 1 batch brown rice or quinoa (2 cups dry)\n\u2022 Hard boil 10-12 eggs\n\u2022 Roast 3 trays of mixed vegetables (peppers, zucchini, broccoli, eggplant) with olive oil\n\u2022 Make 1 large batch of lentil soup or chickpea stew\n\u2022 Pre-wash and portion salad greens into containers\n\nDAILY MEALS:\nBREAKFAST (5 min assembly)\n\u2022 2 hard boiled eggs + Greek yoghurt + berries\n\nLUNCH (grab from fridge)\n\u2022 Container: chicken breast (5oz) + \u00bd cup quinoa + roasted vegetables + olive oil + lemon\n\nDINNER (10 min assembly)\n\u2022 Lentil soup (reheated) + side salad + 1 slice whole grain bread\n\u2022 OR fresh salmon (10 min to cook) + prepped roasted vegetables + quinoa\n\nSNACKS (pre-portioned)\n\u2022 1oz nuts in small bags\n\u2022 Greek yoghurt cups\n\u2022 Pre-cut vegetables + 2 tbsp hummus",
+    "portion_control": "Pre-portioning is the ultimate portion control tool. Build containers Sunday with exact portions \u2014 5oz protein, \u00bd cup grains, 1 cup vegetables, 1 tbsp olive oil. No guessing Monday through Friday.",
+    "struggle_tips": "VARIETY: Rotate 2-3 protein sources each week (chicken, fish, legumes) so meal prep doesn't get boring.\nFRESH ELEMENTS: Add fresh elements daily \u2014 different herbs, a squeeze of lemon, a different sauce \u2014 to keep prepped meals feeling new.\nFRIDAY FLEXIBILITY: Save Friday dinner for a restaurant or takeaway within your plan \u2014 built-in flexibility prevents weekend derailment.",
+    "foods_to_avoid": "Same as standard Mediterranean fat loss \u2014 avoid refined carbs, sugary dressings, processed foods, and alcohol."
+  },
+  {
+    "id": "FATLOSS-KETO-MEALPREP",
+    "tags": {
+      "goal": "Lose fat",
+      "diet": "Keto",
+      "cooking": "meal prep"
+    },
+    "title": "Fat Loss \u2014 Keto (Meal Prep)",
+    "summary": "Keto meal prep removes the biggest challenge of keto eating \u2014 avoiding hidden carbs in convenience food. When food is prepared in advance, staying under 25g net carbs is automatic. Sunday prep powers the entire week.",
+    "calories": "400-500 below TDEE. Prepped keto meals are naturally calorie-controlled \u2014 protein and fat satiate without the need for calorie-dense carbs.",
+    "macros": "Fat: 65-70%. Protein: 0.85g per lb. Carbs: under 25g net daily.",
+    "meals": "SUNDAY PREP:\n\u2022 Cook 2 lbs ground beef \u2014 season with salt, pepper, garlic. Store in portions.\n\u2022 Bake 2 lbs chicken thighs (skin on) \u2014 olive oil, salt, herbs\n\u2022 Hard boil 12 eggs\n\u2022 Roast 3 trays low-carb vegetables: broccoli, cauliflower, zucchini, peppers in butter or olive oil\n\u2022 Make cauliflower rice (1 large head, riced and saut\u00e9ed in butter)\n\u2022 Pre-portion nuts into 1oz bags\n\nDAILY MEALS:\nBREAKFAST\n\u2022 3 prepped hard boiled eggs + reheated bacon (cook a batch Sunday) + \u00bd avocado\n\nLUNCH\n\u2022 Container: ground beef or chicken thigh (5-6oz) + roasted vegetables + avocado\n\nDINNER\n\u2022 Fresh protein cooked quickly (steak, salmon, eggs \u2014 all under 15 min) + cauliflower rice + side salad\n\u2022 OR reheated chicken thigh + roasted vegetables + olive oil\n\nSNACKS\n\u2022 Pre-portioned nuts (1oz bags)\n\u2022 String cheese\n\u2022 Hard boiled egg",
+    "portion_control": "Pre-portioned containers remove all decisions. Each lunch container: 5-6oz protein, 1.5 cups roasted vegetables, \u00bd avocado. Everything measured Sunday.",
+    "struggle_tips": "FRESHNESS: Roasted vegetables keep 4-5 days in the fridge. Cooked ground beef keeps 4 days. Cook half the chicken Sunday, half Wednesday for freshness.\nSAUCES: Make a batch of keto-friendly sauce Sunday \u2014 garlic butter, pesto (no pine nuts), or tahini \u2014 to vary flavour across the week.\nFAT SOURCES: Avocado, cheese, and olive oil are easy to add fresh daily to prepped meals.",
+    "foods_to_avoid": "All carbs above 25g net. Any sauce or seasoning blend with hidden sugars or starches. Processed keto products \u2014 bars, cookies \u2014 that displace real food."
+  },
+  {
+    "id": "MUSCLE-VEGAN-MEALPREP",
+    "tags": {
+      "goal": "Build muscle",
+      "diet": "Vegan",
+      "cooking": "meal prep"
+    },
+    "title": "Build Muscle \u2014 Vegan (Meal Prep)",
+    "summary": "Vegan muscle gain meal prep is essential \u2014 hitting 1g protein per lb of bodyweight from plant sources requires planning. Sunday prep builds high-protein, calorie-sufficient meals for the entire week and removes the daily struggle of finding enough vegan protein.",
+    "calories": "300-400 above TDEE. Each prepped meal needs to be substantial \u2014 vegan muscle gain requires volume.",
+    "macros": "Protein: 1g per lb \u2014 a protein powder is part of this plan. Carbs: 50-55%. Fat: 20-25%.",
+    "meals": "SUNDAY PREP:\n\u2022 Press and bake 2 blocks firm tofu (400\u00b0F, 25 min, cubed with tamari and sesame oil)\n\u2022 Cook 2 blocks tempeh \u2014 slice and pan-fry with soy sauce and garlic\n\u2022 Cook 3 cups dry lentils or 2 cans each chickpeas and black beans\n\u2022 Cook 4 cups dry brown rice or quinoa\n\u2022 Roast 3 trays vegetables \u2014 broccoli, sweet potato, peppers, cauliflower\n\u2022 Mix 5 plant protein shakes into individual mason jars (dry \u2014 add liquid daily)\n\nDAILY MEALS:\nBREAKFAST (5 min)\n\u2022 Overnight oats (prepped Sunday): oats + almond milk + banana + 2 tbsp hemp seeds + plant protein scoop\n\nLUNCH (grab from fridge)\n\u2022 Container: tempeh or tofu (6oz) + \u00bd cup quinoa + roasted vegetables + tahini\n\nPRE-WORKOUT\n\u2022 Plant protein shake + banana\n\nDINNER (10 min)\n\u2022 Large lentil or chickpea bowl + \u00bd cup brown rice + fresh avocado + hot sauce\n\u2022 OR tofu stir-fry with prepped vegetables + fresh noodles (10 min cook)\n\nPOST-WORKOUT\n\u2022 Plant protein shake + oat milk + banana",
+    "portion_control": "Muscle gain means eating full portions \u2014 don't under-fill containers. Each meal: 6oz protein source, 1 cup grains, generous vegetables, sauce. If not gaining weight after 2 weeks, increase grain and nut butter portions.",
+    "struggle_tips": "PROTEIN POWDER: Essential for vegan muscle meal prep. A pea/rice blend provides the best amino acid profile. Add to smoothies, oats, and shakes.\nCREATINE: 5g daily \u2014 mix into your morning oats or protein shake. The single most impactful supplement for vegan athletes.\nVARIETY: Alternate tofu and tempeh week to week. Swap quinoa for brown rice. Change the roasted vegetables. Keeps prep meals from getting monotonous.",
+    "foods_to_avoid": "Processed vegan substitutes as primary protein sources, refined carbs displacing nutrient-dense calories, excessive oils adding empty calories, alcohol."
+  }
+]
